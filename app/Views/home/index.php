@@ -80,4 +80,58 @@ declare(strict_types=1);
             </p>
         </div>
     </section>
+
+    <section id="como-funciona" class="method" aria-labelledby="method-title">
+        <div class="page-container">
+            <div class="method__intro">
+                <p class="section-kicker section-kicker--light">Como funciona</p>
+                <h2 id="method-title" class="method__title">Primeiro, observe.<br>Depois, dê nome ao que acontece.</h2>
+                <p class="method__lead">
+                    Em poucos minutos, você percorre dez situações comuns envolvendo dinheiro. Não há resposta certa, madura ou bonita: importa reconhecer a reação que aparece com mais frequência.
+                </p>
+            </div>
+
+            <ol class="method__steps">
+                <li class="method-step">
+                    <span class="method-step__number" aria-hidden="true">01</span>
+                    <h3>Observe a situação</h3>
+                    <p>Escolha a alternativa que mais se aproxima do que realmente acontece com você em cada cena.</p>
+                </li>
+                <li class="method-step">
+                    <span class="method-step__number" aria-hidden="true">02</span>
+                    <h3>Descreva o comportamento</h3>
+                    <p>Em vez de se explicar ou se julgar, repare no que você faz quando aquela situação aparece.</p>
+                </li>
+                <li class="method-step">
+                    <span class="method-step__number" aria-hidden="true">03</span>
+                    <h3>Reconheça o que se repete</h3>
+                    <p>Você termina com um comportamento concreto para observar, não com um rótulo sobre quem você é.</p>
+                </li>
+            </ol>
+
+            <div class="method__scenes" aria-labelledby="scenes-title">
+                <div class="method__scenes-heading">
+                    <p class="method__scenes-label">As dez cenas</p>
+                    <h3 id="scenes-title">Situações comuns. Respostas que contam uma história.</h3>
+                </div>
+
+                <ol class="scene-list">
+                    <li><span>01</span>O dinheiro entrou</li>
+                    <li><span>02</span>Você teve um dia difícil</li>
+                    <li><span>03</span>Alguém pede ajuda</li>
+                    <li><span>04</span>Você quer muito alguma coisa</li>
+                    <li><span>05</span>Existe uma conta que você não quer ver</li>
+                    <li><span>06</span>Você conseguiu guardar dinheiro</li>
+                    <li><span>07</span>Alguém próximo começa a ganhar muito bem</li>
+                    <li><span>08</span>Você ganhou bem por algo que foi fácil para você</li>
+                    <li><span>09</span>Você pensa no futuro</li>
+                    <li><span>10</span>Agora esqueça o dinheiro por um instante</li>
+                </ol>
+            </div>
+
+            <p class="method__closing">
+                “Eu sou assim” transforma um comportamento em identidade. “Eu faço isso quando algo acontece” abre uma investigação.
+            </p>
+        </div>
+    </section>
 </main>
