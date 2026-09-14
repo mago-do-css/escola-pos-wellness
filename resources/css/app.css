@@ -350,13 +350,1054 @@
     background: rgba(236, 232, 221, .45);
   }
 
-  .stage-placeholder {
-    min-height: 9rem;
-    padding-block: 3rem;
-    color: var(--bronze);
+  .patterns {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--ink);
     background: var(--cream);
+  }
+
+  .patterns__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .section-kicker {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: 0;
+    color: var(--bronze);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .section-kicker::before {
+    width: 2.5rem;
+    height: 1px;
+    content: "";
+    background: var(--bronze);
+  }
+
+  .patterns__title {
+    max-width: 10ch;
+    margin: 0;
     font-family: "Arizona Flare", Georgia, serif;
-    font-size: 1.25rem;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .patterns__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .75);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .patterns__grid {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(37, 31, 24, .3);
+  }
+
+  .pattern-card {
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    border-right: 1px solid rgba(37, 31, 24, .22);
+    border-bottom: 1px solid rgba(37, 31, 24, .3);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .pattern-card__number {
+    color: var(--bronze);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .pattern-card h3 {
+    max-width: 10ch;
+    margin: auto 0 1rem;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .98;
+  }
+
+  .pattern-card p {
+    max-width: 24rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .72);
+    font-size: .95rem;
+    line-height: 1.48;
+  }
+
+  .pattern-card--featured {
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .pattern-card--featured .pattern-card__number {
+    color: var(--gold);
+  }
+
+  .pattern-card--featured p {
+    color: rgba(236, 232, 221, .76);
+  }
+
+  .patterns__note {
+    max-width: 40rem;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+    color: var(--bronze);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    letter-spacing: -.025em;
+    line-height: 1.12;
+  }
+
+  .method {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .section-kicker--light {
+    color: rgba(236, 232, 221, .72);
+  }
+
+  .section-kicker--light::before {
+    background: var(--gold);
+  }
+
+  .method__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .method__title {
+    max-width: 12ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .method__lead {
+    max-width: 29rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .method__steps {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(236, 232, 221, .28);
+  }
+
+  .method-step {
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    border-right: 1px solid rgba(236, 232, 221, .18);
+    border-bottom: 1px solid rgba(236, 232, 221, .28);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .method-step__number {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .method-step h3 {
+    max-width: 11ch;
+    margin: auto 0 1rem;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.75rem, 2.6vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .98;
+  }
+
+  .method-step p {
+    max-width: 23rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .7);
+    font-size: .95rem;
+    line-height: 1.48;
+  }
+
+  .method__scenes {
+    display: grid;
+    gap: 2rem;
+    margin-top: clamp(4.5rem, 8vw, 8rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(236, 232, 221, .28);
+  }
+
+  .method__scenes-label {
+    margin: 0 0 .9rem;
+    color: var(--gold);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .method__scenes-heading h3 {
+    max-width: 17ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.75rem, 3vw, 2.7rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .scene-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .scene-list li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: .75rem;
+    border-bottom: 1px solid rgba(236, 232, 221, .2);
+    padding-block: .9rem;
+    color: rgba(236, 232, 221, .88);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.12rem, 1.6vw, 1.4rem);
+    letter-spacing: -.02em;
+    line-height: 1.12;
+  }
+
+  .scene-list li:first-child {
+    border-top: 1px solid rgba(236, 232, 221, .2);
+  }
+
+  .scene-list span {
+    padding-top: .18rem;
+    color: var(--gold);
+    font-family: "Neue Haas", Arial, sans-serif;
+    font-size: .68rem;
+    letter-spacing: .08em;
+  }
+
+  .method__closing {
+    max-width: 49rem;
+    margin: clamp(4rem, 8vw, 7.5rem) 0 0;
+    color: var(--gold);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    letter-spacing: -.03em;
+    line-height: 1.06;
+  }
+
+  .outcome {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--ink);
+    background: #d9cab5;
+  }
+
+  .outcome__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .outcome__title {
+    max-width: 12ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .outcome__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .75);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .outcome__body {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .outcome__map {
+    display: flex;
+    min-height: 22rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .outcome__map-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .outcome__map-heading p,
+  .outcome__discovery-label,
+  .outcome__before {
+    margin: 0;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .outcome__map-heading p {
+    color: rgba(236, 232, 221, .72);
+  }
+
+  .outcome__index {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .outcome__formula {
+    margin: 2rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.65rem, 3.4vw, 3.15rem);
+    letter-spacing: -.04em;
+    line-height: 1.12;
+  }
+
+  .outcome__formula span {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .outcome__discovery {
+    display: flex;
+    min-height: 15rem;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(37, 31, 24, .34);
+    padding: 1.5rem;
+  }
+
+  .outcome__discovery-label {
+    color: var(--bronze);
+  }
+
+  .outcome__discovery > p:last-child {
+    max-width: 25rem;
+    margin: 2rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.55rem, 2.8vw, 2.45rem);
+    letter-spacing: -.035em;
+    line-height: 1.04;
+  }
+
+  .outcome__changes {
+    display: grid;
+    margin: clamp(3.5rem, 7vw, 6rem) 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(37, 31, 24, .34);
+  }
+
+  .outcome__changes li {
+    display: flex;
+    min-height: 13rem;
+    flex-direction: column;
+    border-right: 1px solid rgba(37, 31, 24, .25);
+    border-bottom: 1px solid rgba(37, 31, 24, .34);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .outcome__changes li > span {
+    color: var(--bronze);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .outcome__before {
+    margin: auto 0 .8rem;
+    color: rgba(37, 31, 24, .62);
+  }
+
+  .outcome__changes li > p:last-child {
+    max-width: 15ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .limits {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--bronze);
+  }
+
+  .limits__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .limits__title {
+    max-width: 13ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .limits__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .82);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .limits__sequence {
+    display: grid;
+    gap: 2rem;
+    border-top: 1px solid rgba(236, 232, 221, .38);
+    border-bottom: 1px solid rgba(236, 232, 221, .38);
+    padding-block: 1.25rem;
+  }
+
+  .limits__sequence-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .limits__sequence-heading p {
+    margin: 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .limits__sequence-heading span {
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  .limits__signals {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .limits__signals li {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    border-top: 1px solid rgba(236, 232, 221, .25);
+    color: var(--cream);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .limits__signals li::before {
+    width: .55rem;
+    height: .55rem;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    content: "";
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+  }
+
+  .limits__consequence {
+    max-width: 35rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .8);
+    font-size: clamp(1rem, 1.35vw, 1.1rem);
+    line-height: 1.55;
+  }
+
+  .limits__question {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .limits__question-index {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--gold);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .limits__question-index::before {
+    width: 2.5rem;
+    height: 1px;
+    content: "";
+    background: var(--gold);
+  }
+
+  .limits__question p {
+    max-width: 25ch;
+    margin: 0;
+    color: var(--gold);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.1rem, 4.7vw, 4.6rem);
+    letter-spacing: -.045em;
+    line-height: .94;
+    text-wrap: balance;
+  }
+
+  .fruit {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .fruit__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .fruit__title {
+    max-width: 12ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .fruit__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .fruit__steps {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(236, 232, 221, .28);
+  }
+
+  .fruit__steps li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: .75rem;
+    min-height: 14rem;
+    border-right: 1px solid rgba(236, 232, 221, .18);
+    border-bottom: 1px solid rgba(236, 232, 221, .28);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .fruit__steps > li > span {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .fruit__steps li > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fruit__steps p {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .fruit__steps h3 {
+    max-width: 13ch;
+    margin: auto 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .fruit__closing {
+    display: grid;
+    gap: 1.75rem;
+    margin-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .fruit__closing p {
+    max-width: 28rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .75);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.55;
+  }
+
+  .fruit__closing .fruit__closing-emphasis {
+    max-width: 27ch;
+    color: var(--gold);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    letter-spacing: -.045em;
+    line-height: .95;
+  }
+
+  .capture {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--ink);
+    background: #d9cab5;
+  }
+
+  .capture__layout {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .capture__intro {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .capture__title {
+    max-width: 10ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(3rem, 6.5vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .9;
+    text-wrap: balance;
+  }
+
+  .capture__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .75);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .capture__note {
+    max-width: 25rem;
+    margin: .5rem 0 0;
+    color: var(--bronze);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    letter-spacing: -.03em;
+    line-height: 1.08;
+  }
+
+  .capture__form {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .capture__form-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(236, 232, 221, .28);
+    padding-bottom: 1rem;
+  }
+
+  .capture__form-heading span {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .capture__form-heading p {
+    margin: 0;
+    color: rgba(236, 232, 221, .72);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .capture__field {
+    display: grid;
+    gap: .65rem;
+  }
+
+  .capture__field label {
+    color: rgba(236, 232, 221, .72);
+    font-size: .76rem;
+    letter-spacing: .04em;
+  }
+
+  .capture__field input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(236, 232, 221, .48);
+    border-radius: 0;
+    padding: .35rem 0 .75rem;
+    outline: 0;
+    color: var(--cream);
+    background: transparent;
+    font: inherit;
+    font-size: 1.1rem;
+  }
+
+  .capture__field input:focus {
+    border-color: var(--gold);
+  }
+
+  .capture__field input:invalid:not(:placeholder-shown) {
+    border-color: #df9281;
+  }
+
+  .capture__consent {
+    display: grid;
+    grid-template-columns: 1.1rem minmax(0, 1fr);
+    gap: .75rem;
+    align-items: start;
+    margin-top: .25rem;
+    color: rgba(236, 232, 221, .7);
+    font-size: .84rem;
+    line-height: 1.45;
+  }
+
+  .capture__consent input {
+    width: 1rem;
+    height: 1rem;
+    margin: .15rem 0 0;
+    accent-color: var(--gold);
+  }
+
+  .capture__submit {
+    width: 100%;
+    margin-top: .5rem;
+    border: 0;
+    color: var(--ink);
+    background: var(--cream);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease;
+  }
+
+  .capture__submit:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+
+  .capture__feedback {
+    min-height: 1.3rem;
+    margin: -.65rem 0 0;
+    color: var(--gold);
+    font-size: .82rem;
+    line-height: 1.4;
+  }
+
+  .capture__form.is-invalid .capture__feedback {
+    color: #df9281;
+  }
+
+  .faq {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .faq__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .faq__title {
+    max-width: 11ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .faq__list {
+    border-top: 1px solid rgba(236, 232, 221, .3);
+  }
+
+  .faq__item {
+    border-bottom: 1px solid rgba(236, 232, 221, .3);
+  }
+
+  .faq__item summary {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+    padding-block: 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.5rem, 2.7vw, 2.45rem);
+    letter-spacing: -.035em;
+    line-height: 1.03;
+  }
+
+  .faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq__item summary::after {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    place-items: center;
+    content: "+";
+    color: var(--gold);
+    font-family: "Neue Haas", Arial, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    transition: transform .2s ease;
+  }
+
+  .faq__item[open] summary::after {
+    transform: rotate(45deg);
+  }
+
+  .faq__item summary:focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: -1px;
+  }
+
+  .faq__item p {
+    max-width: 39rem;
+    margin: 0;
+    padding: 0 3rem 1.5rem 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: clamp(.98rem, 1.35vw, 1.08rem);
+    line-height: 1.55;
+  }
+
+  .site-footer {
+    padding-top: clamp(3.5rem, 7vw, 6.5rem);
+    color: var(--cream);
+    background: var(--bronze);
+  }
+
+  .site-footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(236, 232, 221, .34);
+    padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .site-footer__brand {
+    display: block;
+    width: min(10rem, 45vw);
+  }
+
+  .site-footer__brand img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .site-footer__cta {
+    min-height: 2.8rem;
+    padding-inline: 1rem;
+    color: var(--ink);
+    background: var(--cream);
+    transition: background-color .2s ease, transform .2s ease;
+  }
+
+  .site-footer__cta:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+
+  .site-footer__content {
+    display: grid;
+    gap: 3rem;
+    padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .site-footer__statement {
+    max-width: 15ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    letter-spacing: -.045em;
+    line-height: .95;
+  }
+
+  .site-footer__nav {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__nav-group {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__nav-heading,
+  .site-footer__social > p {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .site-footer__nav a {
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    color: rgba(236, 232, 221, .86);
+    font-size: .9rem;
+    transition: border-color .2s ease, color .2s ease;
+  }
+
+  .site-footer__nav a:hover {
+    border-color: var(--cream);
+    color: #fff;
+  }
+
+  .site-footer__social {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__social p {
+    margin: 0;
+  }
+
+  .site-footer__social-links {
+    display: flex;
+    gap: .65rem;
+  }
+
+  .site-footer__social-links a {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border: 1px solid rgba(236, 232, 221, .46);
+    color: var(--cream);
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
+  }
+
+  .site-footer__social-links a:hover {
+    border-color: var(--cream);
+    color: var(--ink);
+    background: var(--cream);
+    transform: translateY(-2px);
+  }
+
+  .social-mark {
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: -.08em;
+    line-height: 1;
+  }
+
+  .social-mark--instagram {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid currentColor;
+    border-radius: .3rem;
+    font-size: .54rem;
+    letter-spacing: -.12em;
+  }
+
+  .social-mark--linkedin {
+    align-self: end;
+    font-size: .95rem;
+    letter-spacing: -.16em;
+  }
+
+  .social-mark--youtube {
+    font-size: .7rem;
+    letter-spacing: 0;
+  }
+
+  .site-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(236, 232, 221, .26);
+    padding-block: 1.25rem;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    letter-spacing: .06em;
+  }
+
+  .site-footer__bottom a {
+    color: inherit;
+  }
+
+  .site-footer__bottom a:hover {
+    color: var(--cream);
+  }
+
+  .site-footer__bottom a span {
+    margin-left: .35rem;
+    color: var(--gold);
   }
 
   @media (min-width: 640px) {
@@ -387,6 +1428,245 @@
 
     .hero__note {
       display: block;
+    }
+
+    .patterns__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .section-kicker,
+    .patterns__title {
+      grid-column: 1;
+    }
+
+    .patterns__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .patterns__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pattern-card {
+      min-height: 21rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .pattern-card:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .pattern-card--featured {
+      grid-column: span 2;
+    }
+
+    .method__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .method__intro .section-kicker,
+    .method__title {
+      grid-column: 1;
+    }
+
+    .method__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .method__steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .method-step {
+      min-height: 22rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .method-step:last-child {
+      border-right: 0;
+    }
+
+    .method__scenes {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+    }
+
+    .scene-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
+
+    .scene-list li:nth-child(2) {
+      border-top: 1px solid rgba(236, 232, 221, .2);
+    }
+
+    .outcome__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .outcome__intro .section-kicker,
+    .outcome__title {
+      grid-column: 1;
+    }
+
+    .outcome__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .outcome__body {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      gap: 0;
+    }
+
+    .outcome__map,
+    .outcome__discovery {
+      min-height: 28rem;
+      padding: 2rem;
+    }
+
+    .outcome__changes {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .outcome__changes li {
+      min-height: 16rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .outcome__changes li:last-child {
+      border-right: 0;
+    }
+
+    .limits__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .limits__intro .section-kicker,
+    .limits__title {
+      grid-column: 1;
+    }
+
+    .limits__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .limits__sequence {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+    }
+
+    .limits__sequence-heading {
+      display: block;
+    }
+
+    .limits__sequence-heading span {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .limits__signals {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
+
+    .limits__signals li:nth-child(2) {
+      border-top: 1px solid rgba(236, 232, 221, .25);
+    }
+
+    .limits__consequence {
+      grid-column: 2;
+    }
+
+    .limits__question {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+      align-items: start;
+    }
+
+    .limits__question p {
+      grid-column: 2;
+    }
+
+    .fruit__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .fruit__intro .section-kicker,
+    .fruit__title {
+      grid-column: 1;
+    }
+
+    .fruit__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .fruit__steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fruit__steps li {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      min-height: 21rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .fruit__steps li:last-child {
+      border-right: 0;
+    }
+
+    .fruit__closing {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+    }
+
+    .fruit__closing .fruit__closing-emphasis {
+      grid-column: 2;
+    }
+
+    .capture__layout {
+      grid-template-columns: minmax(0, 1.1fr) minmax(22rem, .9fr);
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .capture__form {
+      padding: 2rem;
+    }
+
+    .faq__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .faq__intro .section-kicker,
+    .faq__title {
+      grid-column: 1;
+    }
+
+    .faq__list {
+      max-width: 56rem;
+      margin-left: auto;
+    }
+
+    .site-footer__content {
+      grid-template-columns: minmax(0, 1.35fr) minmax(12rem, .65fr) minmax(10rem, .5fr);
+      column-gap: 4rem;
     }
   }
 
@@ -427,6 +1707,39 @@
     .button--text {
       width: auto !important;
       justify-content: flex-start;
+    }
+
+    .patterns__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pattern-card:nth-child(even) {
+      border-right: 0;
+    }
+
+    .pattern-card {
+      min-height: 15.5rem;
+    }
+
+    .pattern-card--featured {
+      grid-column: span 2;
+    }
+
+    .method-step {
+      min-height: 15.5rem;
+    }
+
+    .outcome__changes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .outcome__changes li:nth-child(even) {
+      border-right: 0;
+    }
+
+    .outcome__changes li:last-child {
+      grid-column: span 2;
+      border-right: 0;
     }
   }
 
