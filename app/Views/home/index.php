@@ -261,4 +261,42 @@ declare(strict_types=1);
             </div>
         </div>
     </section>
+
+    <section id="receber-mapa" class="capture" aria-labelledby="capture-title">
+        <div class="page-container capture__layout">
+            <div class="capture__intro">
+                <p class="section-kicker">Mapa do Dinheiro</p>
+                <h2 id="capture-title" class="capture__title">Comece por aquilo que se repete.</h2>
+                <p class="capture__lead">
+                    Receba uma experiência breve para observar, com mais clareza, o que acontece na sua relação com dinheiro — sem rótulos e sem julgamentos.
+                </p>
+                <p class="capture__note">Leva poucos minutos. Você começa escolhendo o que vale observar.</p>
+            </div>
+
+            <form class="capture__form" data-capture-form novalidate>
+                <div class="capture__form-heading">
+                    <span aria-hidden="true">01</span>
+                    <p>Receba o mapa</p>
+                </div>
+
+                <div class="capture__field">
+                    <label for="lead-name">Seu nome</label>
+                    <input id="lead-name" name="name" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="capture__field">
+                    <label for="lead-email">Seu melhor e-mail</label>
+                    <input id="lead-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <label class="capture__consent">
+                    <input name="consent" type="checkbox" required>
+                    <span>Quero receber o Mapa do Dinheiro e as comunicações relacionadas a esta experiência.</span>
+                </label>
+
+                <button class="button capture__submit" type="submit">Quero receber o mapa</button>
+                <p class="capture__feedback" data-capture-feedback role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
 </main>

@@ -29,3 +29,20 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
   header?.classList.toggle('is-scrolled', window.scrollY > 24);
 }, { passive: true });
+
+const captureForm = document.querySelector('[data-capture-form]');
+const captureFeedback = document.querySelector('[data-capture-feedback]');
+
+captureForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  if (!captureForm.checkValidity()) {
+    captureForm.classList.add('is-invalid');
+    captureFeedback.textContent = 'Revise os campos indicados para continuar.';
+    captureForm.reportValidity();
+    return;
+  }
+
+  captureForm.classList.remove('is-invalid');
+  captureFeedback.textContent = 'Formulário pronto para conectar ao seu serviço de captura.';
+});
