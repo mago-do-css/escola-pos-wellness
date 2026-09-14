@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 ?>
-<main>
+<main id="top">
     <section class="hero" aria-labelledby="hero-title">
         <div class="hero__shade" aria-hidden="true"></div>
         <?php require dirname(__DIR__) . '/partials/navbar.php'; ?>
@@ -332,3 +332,29 @@ declare(strict_types=1);
         </div>
     </section>
 </main>
+
+<footer class="site-footer">
+    <div class="page-container">
+        <div class="site-footer__top">
+            <a class="site-footer__brand" href="#top" aria-label="Pós-Wellness — voltar ao início">
+                <img src="/assets/images/logo-pos-wellness-offwhite.svg" alt="Pós-Wellness">
+            </a>
+            <a class="button site-footer__cta" href="#receber-mapa">Quero receber o mapa</a>
+        </div>
+
+        <div class="site-footer__content">
+            <p class="site-footer__statement">Uma pausa para observar o que se repete antes de tentar mudar.</p>
+            <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#o-que-voce-recebe">O que você recebe</a>
+                <a href="#limites">Limites do mapa</a>
+                <a href="#duvidas">Dúvidas</a>
+            </nav>
+        </div>
+
+        <div class="site-footer__bottom">
+            <span>© <?= date('Y') ?> Pós-Wellness</span>
+            <a href="#top">Voltar ao início <span aria-hidden="true">↑</span></a>
+        </div>
+    </div>
+</footer>

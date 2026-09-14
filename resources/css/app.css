@@ -1225,6 +1225,104 @@
     line-height: 1.55;
   }
 
+  .site-footer {
+    padding-top: clamp(3.5rem, 7vw, 6.5rem);
+    color: var(--cream);
+    background: var(--bronze);
+  }
+
+  .site-footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(236, 232, 221, .34);
+    padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .site-footer__brand {
+    display: block;
+    width: min(10rem, 45vw);
+  }
+
+  .site-footer__brand img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .site-footer__cta {
+    min-height: 2.8rem;
+    padding-inline: 1rem;
+    color: var(--ink);
+    background: var(--cream);
+    transition: background-color .2s ease, transform .2s ease;
+  }
+
+  .site-footer__cta:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+
+  .site-footer__content {
+    display: grid;
+    gap: 3rem;
+    padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .site-footer__statement {
+    max-width: 15ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    letter-spacing: -.045em;
+    line-height: .95;
+  }
+
+  .site-footer__nav {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__nav a {
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    color: rgba(236, 232, 221, .86);
+    font-size: .9rem;
+    transition: border-color .2s ease, color .2s ease;
+  }
+
+  .site-footer__nav a:hover {
+    border-color: var(--cream);
+    color: #fff;
+  }
+
+  .site-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(236, 232, 221, .26);
+    padding-block: 1.25rem;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    letter-spacing: .06em;
+  }
+
+  .site-footer__bottom a {
+    color: inherit;
+  }
+
+  .site-footer__bottom a:hover {
+    color: var(--cream);
+  }
+
+  .site-footer__bottom a span {
+    margin-left: .35rem;
+    color: var(--gold);
+  }
+
   @media (min-width: 640px) {
     .page-container {
       width: min(100% - 4rem, 84rem);
@@ -1487,6 +1585,11 @@
     .faq__list {
       max-width: 56rem;
       margin-left: auto;
+    }
+
+    .site-footer__content {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
     }
   }
 
