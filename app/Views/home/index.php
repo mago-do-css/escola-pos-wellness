@@ -19,7 +19,7 @@ declare(strict_types=1);
 
                 <div class="hero__actions">
                     <a class="button button--primary" href="#receber-mapa">Quero receber o mapa</a>
-                    <a class="button button--text" href="#como-funciona">Entenda como funciona</a>
+                    <a class="button button--text" href="#o-que-voce-repete">Entenda como funciona</a>
                 </div>
             </div>
 
@@ -37,9 +37,47 @@ declare(strict_types=1);
         </div>
     </section>
 
-    <section id="como-funciona" class="stage-placeholder" aria-label="Próxima seção">
+    <section id="o-que-voce-repete" class="patterns" aria-labelledby="patterns-title">
         <div class="page-container">
-            <p>Como funciona</p>
+            <div class="patterns__intro">
+                <p class="section-kicker">Antes de tentar corrigir</p>
+                <h2 id="patterns-title" class="patterns__title">O que você repete<br>sem perceber?</h2>
+                <p class="patterns__lead">
+                    Às vezes, o que parece ser apenas uma dificuldade com dinheiro é uma resposta que volta sempre que uma situação acontece. O Mapa do Dinheiro começa por aqui: observar, com mais precisão, o que você faz.
+                </p>
+            </div>
+
+            <ol class="patterns__grid">
+                <li class="pattern-card">
+                    <span class="pattern-card__number" aria-hidden="true">01</span>
+                    <h3>Gastar demais</h3>
+                    <p>O dinheiro entra e logo encontra um destino — mesmo quando você tinha outro plano.</p>
+                </li>
+                <li class="pattern-card">
+                    <span class="pattern-card__number" aria-hidden="true">02</span>
+                    <h3>Não conseguir guardar</h3>
+                    <p>Guardar parece importante, mas algo sempre acontece antes de o valor ficar.</p>
+                </li>
+                <li class="pattern-card">
+                    <span class="pattern-card__number" aria-hidden="true">03</span>
+                    <h3>Ter medo de gastar</h3>
+                    <p>Mesmo quando é possível, gastar pode trazer culpa, tensão ou a sensação de risco.</p>
+                </li>
+                <li class="pattern-card">
+                    <span class="pattern-card__number" aria-hidden="true">04</span>
+                    <h3>Ajudar sempre</h3>
+                    <p>As necessidades dos outros parecem vir antes, inclusive quando isso aperta a sua vida.</p>
+                </li>
+                <li class="pattern-card pattern-card--featured">
+                    <span class="pattern-card__number" aria-hidden="true">05</span>
+                    <h3>Ver o dinheiro desaparecer</h3>
+                    <p>Entrou, passou por você e saiu. Sem clareza de como ou por quê.</p>
+                </li>
+            </ol>
+
+            <p class="patterns__note">
+                Não é sobre definir quem você é. É sobre reconhecer o que você faz quando algo acontece.
+            </p>
         </div>
     </section>
 </main>

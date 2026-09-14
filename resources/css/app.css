@@ -350,13 +350,118 @@
     background: rgba(236, 232, 221, .45);
   }
 
-  .stage-placeholder {
-    min-height: 9rem;
-    padding-block: 3rem;
-    color: var(--bronze);
+  .patterns {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--ink);
     background: var(--cream);
+  }
+
+  .patterns__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .section-kicker {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin: 0;
+    color: var(--bronze);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .section-kicker::before {
+    width: 2.5rem;
+    height: 1px;
+    content: "";
+    background: var(--bronze);
+  }
+
+  .patterns__title {
+    max-width: 10ch;
+    margin: 0;
     font-family: "Arizona Flare", Georgia, serif;
-    font-size: 1.25rem;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .patterns__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .75);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .patterns__grid {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(37, 31, 24, .3);
+  }
+
+  .pattern-card {
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    border-right: 1px solid rgba(37, 31, 24, .22);
+    border-bottom: 1px solid rgba(37, 31, 24, .3);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .pattern-card__number {
+    color: var(--bronze);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .pattern-card h3 {
+    max-width: 10ch;
+    margin: auto 0 1rem;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .98;
+  }
+
+  .pattern-card p {
+    max-width: 24rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .72);
+    font-size: .95rem;
+    line-height: 1.48;
+  }
+
+  .pattern-card--featured {
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .pattern-card--featured .pattern-card__number {
+    color: var(--gold);
+  }
+
+  .pattern-card--featured p {
+    color: rgba(236, 232, 221, .76);
+  }
+
+  .patterns__note {
+    max-width: 40rem;
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0 0;
+    color: var(--bronze);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    letter-spacing: -.025em;
+    line-height: 1.12;
   }
 
   @media (min-width: 640px) {
@@ -387,6 +492,39 @@
 
     .hero__note {
       display: block;
+    }
+
+    .patterns__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .section-kicker,
+    .patterns__title {
+      grid-column: 1;
+    }
+
+    .patterns__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .patterns__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pattern-card {
+      min-height: 21rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .pattern-card:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .pattern-card--featured {
+      grid-column: span 2;
     }
   }
 
@@ -427,6 +565,22 @@
     .button--text {
       width: auto !important;
       justify-content: flex-start;
+    }
+
+    .patterns__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pattern-card:nth-child(even) {
+      border-right: 0;
+    }
+
+    .pattern-card {
+      min-height: 15.5rem;
+    }
+
+    .pattern-card--featured {
+      grid-column: span 2;
     }
   }
 
