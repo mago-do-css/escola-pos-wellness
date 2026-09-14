@@ -348,9 +348,23 @@ declare(strict_types=1);
                 <a href="#como-funciona">Como funciona</a>
                 <a href="#o-que-voce-recebe">O que você recebe</a>
                 <a href="#limites">Limites do mapa</a>
-                <a href="#duvidas">Dúvidas</a>
-            </nav>
-        </div>
+                    <a href="#duvidas">Dúvidas</a>
+                </nav>
+                <div class="site-footer__social">
+                    <p>Continue a investigação</p>
+                    <div class="site-footer__social-links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            <span class="social-mark social-mark--linkedin" aria-hidden="true">in</span>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">
+                            <span class="social-mark social-mark--youtube" aria-hidden="true">▶</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         <div class="site-footer__bottom">
             <span>© <?= date('Y') ?> Pós-Wellness</span>

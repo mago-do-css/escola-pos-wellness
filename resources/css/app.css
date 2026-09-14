@@ -1298,6 +1298,72 @@
     color: #fff;
   }
 
+  .site-footer__social {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__social p {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .site-footer__social-links {
+    display: flex;
+    gap: .65rem;
+  }
+
+  .site-footer__social-links a {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border: 1px solid rgba(236, 232, 221, .46);
+    color: var(--cream);
+    transition: border-color .2s ease, background-color .2s ease, color .2s ease, transform .2s ease;
+  }
+
+  .site-footer__social-links a:hover {
+    border-color: var(--cream);
+    color: var(--ink);
+    background: var(--cream);
+    transform: translateY(-2px);
+  }
+
+  .social-mark {
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: -.08em;
+    line-height: 1;
+  }
+
+  .social-mark--instagram {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid currentColor;
+    border-radius: .3rem;
+    font-size: .54rem;
+    letter-spacing: -.12em;
+  }
+
+  .social-mark--linkedin {
+    align-self: end;
+    font-size: .95rem;
+    letter-spacing: -.16em;
+  }
+
+  .social-mark--youtube {
+    font-size: .7rem;
+    letter-spacing: 0;
+  }
+
   .site-footer__bottom {
     display: flex;
     flex-wrap: wrap;
@@ -1588,7 +1654,7 @@
     }
 
     .site-footer__content {
-      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      grid-template-columns: minmax(0, 1.35fr) minmax(12rem, .65fr) minmax(10rem, .5fr);
       column-gap: 4rem;
     }
   }
