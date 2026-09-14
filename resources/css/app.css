@@ -890,6 +890,108 @@
     text-wrap: balance;
   }
 
+  .fruit {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .fruit__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .fruit__title {
+    max-width: 12ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .fruit__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .fruit__steps {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(236, 232, 221, .28);
+  }
+
+  .fruit__steps li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: .75rem;
+    min-height: 14rem;
+    border-right: 1px solid rgba(236, 232, 221, .18);
+    border-bottom: 1px solid rgba(236, 232, 221, .28);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .fruit__steps > li > span {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .fruit__steps li > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fruit__steps p {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .fruit__steps h3 {
+    max-width: 13ch;
+    margin: auto 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .fruit__closing {
+    display: grid;
+    gap: 1.75rem;
+    margin-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .fruit__closing p {
+    max-width: 28rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .75);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.55;
+  }
+
+  .fruit__closing .fruit__closing-emphasis {
+    max-width: 27ch;
+    color: var(--gold);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    letter-spacing: -.045em;
+    line-height: .95;
+  }
+
   @media (min-width: 640px) {
     .page-container {
       width: min(100% - 4rem, 84rem);
@@ -1086,6 +1188,46 @@
     }
 
     .limits__question p {
+      grid-column: 2;
+    }
+
+    .fruit__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .fruit__intro .section-kicker,
+    .fruit__title {
+      grid-column: 1;
+    }
+
+    .fruit__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .fruit__steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fruit__steps li {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      min-height: 21rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .fruit__steps li:last-child {
+      border-right: 0;
+    }
+
+    .fruit__closing {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+    }
+
+    .fruit__closing .fruit__closing-emphasis {
       grid-column: 2;
     }
   }

@@ -220,4 +220,45 @@ declare(strict_types=1);
             </div>
         </div>
     </section>
+
+    <section id="dinheiro-e-fruto" class="fruit" aria-labelledby="fruit-title">
+        <div class="page-container">
+            <div class="fruit__intro">
+                <p class="section-kicker section-kicker--light">Dinheiro é fruto</p>
+                <h2 id="fruit-title" class="fruit__title">Você começou olhando para aquilo que aparece.</h2>
+                <p class="fruit__lead">
+                    Ainda não precisamos correr para a raiz. Primeiro, é importante reconhecer o fruto e observar como você chega até ele.
+                </p>
+            </div>
+
+            <ol class="fruit__steps">
+                <li>
+                    <span aria-hidden="true">01</span>
+                    <div>
+                        <p>Primeiro</p>
+                        <h3>Reconhecemos o fruto.</h3>
+                    </div>
+                </li>
+                <li>
+                    <span aria-hidden="true">02</span>
+                    <div>
+                        <p>Depois</p>
+                        <h3>Observamos como chegamos até ele.</h3>
+                    </div>
+                </li>
+                <li>
+                    <span aria-hidden="true">03</span>
+                    <div>
+                        <p>Mais adiante</p>
+                        <h3>Poderemos perguntar para que esse comportamento serve e onde ele encontra a sua história.</h3>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="fruit__closing">
+                <p>Mas não precisamos responder tudo hoje.</p>
+                <p class="fruit__closing-emphasis">Hoje você já fez algo importante: escolheu o que vai observar.</p>
+            </div>
+        </div>
+    </section>
 </main>
