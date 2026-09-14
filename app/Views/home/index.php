@@ -185,4 +185,39 @@ declare(strict_types=1);
             </ol>
         </div>
     </section>
+
+    <section id="limites" class="limits" aria-labelledby="limits-title">
+        <div class="page-container">
+            <div class="limits__intro">
+                <p class="section-kicker section-kicker--light">Os limites do mapa</p>
+                <h2 id="limits-title" class="limits__title">Você sabe o que costuma fazer.<br>Ainda não sabe como chega até lá.</h2>
+                <p class="limits__lead">
+                    Reconhecer um comportamento é o primeiro passo. Mas, entre uma situação e uma decisão com dinheiro, há coisas que podem passar rápido demais para serem percebidas.
+                </p>
+            </div>
+
+            <div class="limits__sequence" aria-labelledby="sequence-title">
+                <div class="limits__sequence-heading">
+                    <p id="sequence-title">Entre uma situação e uma decisão</p>
+                    <span aria-hidden="true">↓</span>
+                </div>
+
+                <ul class="limits__signals">
+                    <li>Um pensamento</li>
+                    <li>Uma emoção</li>
+                    <li>Uma urgência</li>
+                    <li>Uma necessidade de aliviar alguma coisa</li>
+                    <li>Uma vontade de controlar</li>
+                    <li>Um impulso</li>
+                </ul>
+
+                <p class="limits__consequence">E, muitas vezes, quando tudo isso aparece, o dinheiro já se moveu.</p>
+            </div>
+
+            <div class="limits__question">
+                <span class="limits__question-index" aria-hidden="true">Próxima pergunta</span>
+                <p>Se eu já sei o que faço, o que acontece antes?</p>
+            </div>
+        </div>
+    </section>
 </main>

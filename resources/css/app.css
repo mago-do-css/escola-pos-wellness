@@ -758,6 +758,138 @@
     line-height: 1.02;
   }
 
+  .limits {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--cream);
+    background: var(--bronze);
+  }
+
+  .limits__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .limits__title {
+    max-width: 13ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .limits__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .82);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .limits__sequence {
+    display: grid;
+    gap: 2rem;
+    border-top: 1px solid rgba(236, 232, 221, .38);
+    border-bottom: 1px solid rgba(236, 232, 221, .38);
+    padding-block: 1.25rem;
+  }
+
+  .limits__sequence-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .limits__sequence-heading p {
+    margin: 0;
+    color: rgba(236, 232, 221, .76);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .limits__sequence-heading span {
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  .limits__signals {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .limits__signals li {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    border-top: 1px solid rgba(236, 232, 221, .25);
+    color: var(--cream);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
+  .limits__signals li::before {
+    width: .55rem;
+    height: .55rem;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+    content: "";
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+  }
+
+  .limits__consequence {
+    max-width: 35rem;
+    margin: 0;
+    color: rgba(236, 232, 221, .8);
+    font-size: clamp(1rem, 1.35vw, 1.1rem);
+    line-height: 1.55;
+  }
+
+  .limits__question {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .limits__question-index {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--gold);
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .limits__question-index::before {
+    width: 2.5rem;
+    height: 1px;
+    content: "";
+    background: var(--gold);
+  }
+
+  .limits__question p {
+    max-width: 25ch;
+    margin: 0;
+    color: var(--gold);
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.1rem, 4.7vw, 4.6rem);
+    letter-spacing: -.045em;
+    line-height: .94;
+    text-wrap: balance;
+  }
+
   @media (min-width: 640px) {
     .page-container {
       width: min(100% - 4rem, 84rem);
@@ -902,6 +1034,59 @@
 
     .outcome__changes li:last-child {
       border-right: 0;
+    }
+
+    .limits__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .limits__intro .section-kicker,
+    .limits__title {
+      grid-column: 1;
+    }
+
+    .limits__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .limits__sequence {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+    }
+
+    .limits__sequence-heading {
+      display: block;
+    }
+
+    .limits__sequence-heading span {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .limits__signals {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 2rem;
+    }
+
+    .limits__signals li:nth-child(2) {
+      border-top: 1px solid rgba(236, 232, 221, .25);
+    }
+
+    .limits__consequence {
+      grid-column: 2;
+    }
+
+    .limits__question {
+      grid-template-columns: minmax(14rem, .65fr) minmax(0, 1.35fr);
+      column-gap: 4rem;
+      align-items: start;
+    }
+
+    .limits__question p {
+      grid-column: 2;
     }
   }
 
