@@ -299,4 +299,36 @@ declare(strict_types=1);
             </form>
         </div>
     </section>
+
+    <section id="duvidas" class="faq" aria-labelledby="faq-title">
+        <div class="page-container">
+            <div class="faq__intro">
+                <p class="section-kicker section-kicker--light">Dúvidas frequentes</p>
+                <h2 id="faq-title" class="faq__title">Antes de começar, talvez você queira saber.</h2>
+            </div>
+
+            <div class="faq__list">
+                <details class="faq__item" open>
+                    <summary>O que é o Mapa do Dinheiro?</summary>
+                    <p>É uma experiência breve para reconhecer um comportamento que se repete na sua relação com dinheiro. O ponto de partida não é explicar tudo, mas observar o que acontece com mais precisão.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>Quanto tempo leva?</summary>
+                    <p>Leva poucos minutos. Você percorre situações comuns e escolhe as respostas que mais se aproximam do que realmente acontece com você.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>Existem respostas certas?</summary>
+                    <p>Não. A proposta não é encontrar a resposta mais madura, bonita ou esperada. É reconhecer a reação que aparece com mais frequência.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>Vou receber um diagnóstico?</summary>
+                    <p>Não. O Mapa não define quem você é. Ele ajuda você a nomear um comportamento concreto que pode observar na sua própria vida.</p>
+                </details>
+                <details class="faq__item">
+                    <summary>O Mapa é gratuito?</summary>
+                    <p>Sim. Esta primeira experiência é gratuita e foi feita para ajudar você a começar a enxergar o que se repete.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 </main>
