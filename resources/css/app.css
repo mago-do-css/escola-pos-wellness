@@ -1285,6 +1285,21 @@
     gap: .9rem;
   }
 
+  .site-footer__nav-group {
+    display: grid;
+    align-content: start;
+    gap: .9rem;
+  }
+
+  .site-footer__nav-heading,
+  .site-footer__social > p {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
   .site-footer__nav a {
     width: fit-content;
     border-bottom: 1px solid transparent;
@@ -1306,10 +1321,6 @@
 
   .site-footer__social p {
     margin: 0;
-    color: rgba(236, 232, 221, .62);
-    font-size: .72rem;
-    letter-spacing: .12em;
-    text-transform: uppercase;
   }
 
   .site-footer__social-links {

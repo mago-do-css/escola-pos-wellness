@@ -344,14 +344,17 @@ declare(strict_types=1);
 
         <div class="site-footer__content">
             <p class="site-footer__statement">Uma pausa para observar o que se repete antes de tentar mudar.</p>
-            <nav class="site-footer__nav" aria-label="Navegação do rodapé">
-                <a href="#como-funciona">Como funciona</a>
-                <a href="#o-que-voce-recebe">O que você recebe</a>
-                <a href="#limites">Limites do mapa</a>
-                    <a href="#duvidas">Dúvidas</a>
-                </nav>
+                <div class="site-footer__nav-group">
+                    <p class="site-footer__nav-heading">Mapa do Dinheiro</p>
+                    <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+                        <a href="#como-funciona">Como funciona</a>
+                        <a href="#o-que-voce-recebe">O que você recebe</a>
+                        <a href="#limites">Limites do mapa</a>
+                        <a href="#duvidas">Dúvidas</a>
+                    </nav>
+                </div>
                 <div class="site-footer__social">
-                    <p>Continue a investigação</p>
+                    <p>Redes sociais</p>
                     <div class="site-footer__social-links">
                         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
                             <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
