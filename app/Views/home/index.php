@@ -134,4 +134,55 @@ declare(strict_types=1);
             </p>
         </div>
     </section>
+
+    <section id="o-que-voce-recebe" class="outcome" aria-labelledby="outcome-title">
+        <div class="page-container">
+            <div class="outcome__intro">
+                <p class="section-kicker">O que você recebe</p>
+                <h2 id="outcome-title" class="outcome__title">Você não sai com um rótulo.<br>Sai com algo para observar.</h2>
+                <p class="outcome__lead">
+                    Ao terminar, você terá uma pergunta mais clara sobre a sua relação com dinheiro — e um comportamento concreto que vale a pena acompanhar.
+                </p>
+            </div>
+
+            <div class="outcome__body">
+                <div class="outcome__map">
+                    <div class="outcome__map-heading">
+                        <span class="outcome__index" aria-hidden="true">01</span>
+                        <p>Meu primeiro mapa</p>
+                    </div>
+                    <p class="outcome__formula">
+                        Quando <span>algo acontece</span>,<br>
+                        eu costumo <span>agir de uma forma</span>.<br>
+                        Logo depois, sinto <span>alguma coisa</span>.
+                    </p>
+                </div>
+
+                <div class="outcome__discovery">
+                    <p class="outcome__discovery-label">A sua primeira descoberta</p>
+                    <p>
+                        Em vez de uma ideia vaga como “tenho problema com dinheiro”, você começa a enxergar uma situação e a resposta que costuma aparecer nela.
+                    </p>
+                </div>
+            </div>
+
+            <ol class="outcome__changes">
+                <li>
+                    <span aria-hidden="true">01</span>
+                    <p class="outcome__before">Antes</p>
+                    <p>“Eu sou gastador.”</p>
+                </li>
+                <li>
+                    <span aria-hidden="true">02</span>
+                    <p class="outcome__before">Agora</p>
+                    <p>“Quando acontece X, eu costumo fazer Y.”</p>
+                </li>
+                <li>
+                    <span aria-hidden="true">03</span>
+                    <p class="outcome__before">O que muda</p>
+                    <p>Uma identidade se transforma em uma investigação.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
 </main>

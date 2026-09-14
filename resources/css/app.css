@@ -613,6 +613,151 @@
     line-height: 1.06;
   }
 
+  .outcome {
+    padding-block: clamp(5.5rem, 10vw, 10rem);
+    color: var(--ink);
+    background: #d9cab5;
+  }
+
+  .outcome__intro {
+    display: grid;
+    gap: 1.5rem;
+    padding-bottom: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .outcome__title {
+    max-width: 12ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.8rem, 6vw, 5.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .93;
+    text-wrap: balance;
+  }
+
+  .outcome__lead {
+    max-width: 30rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .75);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+  }
+
+  .outcome__body {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .outcome__map {
+    display: flex;
+    min-height: 22rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .outcome__map-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .outcome__map-heading p,
+  .outcome__discovery-label,
+  .outcome__before {
+    margin: 0;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .outcome__map-heading p {
+    color: rgba(236, 232, 221, .72);
+  }
+
+  .outcome__index {
+    color: var(--gold);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .outcome__formula {
+    margin: 2rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.65rem, 3.4vw, 3.15rem);
+    letter-spacing: -.04em;
+    line-height: 1.12;
+  }
+
+  .outcome__formula span {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .outcome__discovery {
+    display: flex;
+    min-height: 15rem;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(37, 31, 24, .34);
+    padding: 1.5rem;
+  }
+
+  .outcome__discovery-label {
+    color: var(--bronze);
+  }
+
+  .outcome__discovery > p:last-child {
+    max-width: 25rem;
+    margin: 2rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.55rem, 2.8vw, 2.45rem);
+    letter-spacing: -.035em;
+    line-height: 1.04;
+  }
+
+  .outcome__changes {
+    display: grid;
+    margin: clamp(3.5rem, 7vw, 6rem) 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(37, 31, 24, .34);
+  }
+
+  .outcome__changes li {
+    display: flex;
+    min-height: 13rem;
+    flex-direction: column;
+    border-right: 1px solid rgba(37, 31, 24, .25);
+    border-bottom: 1px solid rgba(37, 31, 24, .34);
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+
+  .outcome__changes li > span {
+    color: var(--bronze);
+    font-size: .73rem;
+    letter-spacing: .1em;
+  }
+
+  .outcome__before {
+    margin: auto 0 .8rem;
+    color: rgba(37, 31, 24, .62);
+  }
+
+  .outcome__changes li > p:last-child {
+    max-width: 15ch;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    letter-spacing: -.035em;
+    line-height: 1.02;
+  }
+
   @media (min-width: 640px) {
     .page-container {
       width: min(100% - 4rem, 84rem);
@@ -718,6 +863,46 @@
     .scene-list li:nth-child(2) {
       border-top: 1px solid rgba(236, 232, 221, .2);
     }
+
+    .outcome__intro {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      column-gap: 4rem;
+    }
+
+    .outcome__intro .section-kicker,
+    .outcome__title {
+      grid-column: 1;
+    }
+
+    .outcome__lead {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: end;
+    }
+
+    .outcome__body {
+      grid-template-columns: minmax(0, 1.35fr) minmax(16rem, .65fr);
+      gap: 0;
+    }
+
+    .outcome__map,
+    .outcome__discovery {
+      min-height: 28rem;
+      padding: 2rem;
+    }
+
+    .outcome__changes {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .outcome__changes li {
+      min-height: 16rem;
+      padding: 1.6rem 1.75rem 1.85rem;
+    }
+
+    .outcome__changes li:last-child {
+      border-right: 0;
+    }
   }
 
   @media (max-width: 639px) {
@@ -777,6 +962,19 @@
 
     .method-step {
       min-height: 15.5rem;
+    }
+
+    .outcome__changes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .outcome__changes li:nth-child(even) {
+      border-right: 0;
+    }
+
+    .outcome__changes li:last-child {
+      grid-column: span 2;
+      border-right: 0;
     }
   }
 
