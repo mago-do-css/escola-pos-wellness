@@ -2,16 +2,28 @@
 
 declare(strict_types=1);
 ?>
+<link rel="stylesheet" href="/assets/css/radar-landing.css">
 <main id="top" class="bg-cream text-ink">
     <section class="bg-ink text-cream">
         <?php require dirname(__DIR__) . '/partials/radar-navbar.php'; ?>
         <div class="page-container grid gap-10 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(30rem,.95fr)] lg:items-center lg:py-24">
             <div>
                 <p class="section-kicker section-kicker--light">Radar do Dinheiro · 7 dias</p>
-                <h1 class="mt-6 max-w-[11ch] font-display text-[clamp(3.25rem,6.3vw,6.5rem)] leading-[.9] tracking-[-.05em]">Você já sabe o que costuma fazer com o dinheiro. O que ainda pode não enxergar é como chega até isso.</h1>
-                <p class="mt-7 max-w-2xl text-lg leading-relaxed text-cream/80">Durante sete dias, acompanhe uma situação real da sua vida financeira e construa o seu Radar do Dinheiro: a sequência entre o que acontece, o que passa pela sua cabeça, o que você sente, o impulso, a ação e o que vem depois.</p>
+                <!-- <h1 class="mt-6 max-w-[11ch] font-display text-[clamp(3.25rem,6.3vw,6.5rem)] leading-[.9] tracking-[-.05em]"><p class="mt-7 max-w-2xl text-lg leading-relaxed text-cream/80">Durante sete dias, acompanhe uma situação real da sua vida financeira e construa o seu Radar do Dinheiro: a sequência entre o que acontece, o que passa pela sua cabeça, o que você sente, o impulso, a ação e o que vem depois.</p> -->
+              <h1 class="
+    mt-6
+    max-w-[13ch]
+    font-display
+    text-[4rem]
+    leading-[.95]
+    tracking-[-.045em]
+    max-lg:text-[3.25rem]
+    max-md:text-[2.75rem]
+">
+    Você já sabe o que costuma fazer com o dinheiro. O que ainda pode não enxergar é como chega até isso.
+</h1>
                 <p class="mt-5 max-w-xl font-display text-2xl leading-tight text-gold">Não é para se controlar melhor. É para conseguir observar melhor.</p>
-                <a class="button button--primary mt-8" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar por R$29</a>
+                <a class="button button--primary mt-8" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar</a>
                 <p class="mt-3 max-w-md text-sm leading-relaxed text-cream/65">Pagamento único. Mapa do Dinheiro incluído para quem ainda não fez. Acesso digital liberado conforme confirmação do pagamento.</p>
             </div>
             <div class="border border-cream/25 bg-bronze/30 p-3 sm:p-5">
@@ -26,7 +38,7 @@ declare(strict_types=1);
                     </div>
                 <?php endif; ?>
                 <p class="mt-4 text-sm leading-relaxed text-cream/70">Assista à explicação de Sávio Reginatto e Mari Steffan e entenda por que uma compra, um Pix ou uma fatura ignorada podem começar antes da ação que você percebe.</p>
-                <a class="button button--primary mt-5 w-full" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar por R$29</a>
+                <a class="button button--primary mt-5 w-full" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar</a>
             </div>
         </div>
     </section>
@@ -102,8 +114,22 @@ declare(strict_types=1);
 
     <section id="faq" class="bg-ink py-20 text-cream lg:py-32"><div class="page-container"><p class="section-kicker section-kicker--light">Objeções e FAQ</p><h2 class="mt-6 max-w-[11ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Perguntas que podem aparecer antes de começar.</h2><div class="mt-14 border-t border-cream/30"><?php $faqs = [['Eu já sei qual é o meu problema com dinheiro. Por que faria o Radar?','Porque reconhecer o comportamento e perceber a sequência são coisas diferentes. “Eu gasto demais” descreve o final; o Radar acompanha o que aconteceu antes, durante e logo depois.'],['Preciso fazer o Mapa do Dinheiro antes?','Não. Se você ainda não fez, o Mapa está incluído para ajudar a escolher um comportamento concreto.'],['Vou descobrir por que faço isso?','Não necessariamente. O Radar responde a uma pergunta mais precisa: como isso acontece?'],['Isso é terapia?','Não. É uma experiência estruturada de observação e não substitui psicoterapia, acompanhamento clínico nem atendimento profissional.'],['É um método para controlar gastos?','Não. O objetivo não é impedir a ação, mas observar a urgência e a sequência ao redor dela.'],['E se o comportamento não acontecer durante os sete dias?','Você pode observar uma situação próxima dele. A proposta procura repetição e contexto, não perfeição.'],['O que eu tenho no final?','Um Radar preenchido com contexto, pensamento, afeto, impulso, comportamento, efeito imediato e consequência.']]; foreach ($faqs as $i => [$question, $answer]): ?><details class="border-b border-cream/30 py-5" <?= $i === 0 ? 'open' : '' ?>><summary class="cursor-pointer font-display text-2xl leading-tight tracking-[-.03em]"><?= $question ?></summary><p class="mt-4 max-w-3xl pr-8 leading-relaxed text-cream/75"><?= $answer ?></p></details><?php endforeach; ?></div></div></section>
 
-    <section id="oferta" class="bg-[#d9cab5] py-20 lg:py-32"><div class="page-container grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(24rem,.8fr)]"><div><p class="section-kicker">Começar o Radar</p><h2 class="mt-6 max-w-[12ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Se você já reconhece o que repete, o próximo passo é observar como chega até isso.</h2></div><article class="bg-ink p-7 text-cream sm:p-10"><p class="text-sm uppercase tracking-[.16em] text-gold">Radar do Dinheiro</p><p class="mt-5 font-display text-3xl leading-tight tracking-[-.04em]">Experiência guiada de 7 dias para construir a sua sequência.</p><p class="mt-7 text-lg leading-relaxed text-cream/75">Inclui 7 conduções diárias, perguntas e exercícios de observação, construção do Radar preenchido e Mapa do Dinheiro para quem ainda não fez.</p><div class="mt-9 border-y border-cream/25 py-6"><p class="text-sm uppercase tracking-[.14em] text-cream/65">Pagamento único</p><p class="mt-2 text-lg text-cream/65 line-through">De R$<?= $referencePrice ?></p><p class="font-display text-6xl tracking-[-.06em] text-gold">R$29</p><?php if ($referencePrice === 58): ?><p class="mt-2 text-sm text-cream/70">50% de redução · pagamento único</p><?php else: ?><p class="mt-2 text-sm text-cream/70">Pagamento único.</p><?php endif; ?></div><a class="button button--primary mt-8 w-full" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar por R$29</a><p class="mt-4 text-center text-sm leading-relaxed text-cream/65">Sem assinatura. Sem urgência artificial. Comece quando fizer sentido acompanhar uma situação por sete dias.</p></article></div></section>
+    <section id="oferta" class="bg-[#d9cab5] py-20 lg:py-32"><div class="page-container grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(24rem,.8fr)]"><div><p class="section-kicker">Começar o Radar</p><h2 class="mt-6 max-w-[12ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Se você já reconhece o que repete, o próximo passo é observar como chega até isso.</h2></div><article class="bg-ink p-7 text-cream sm:p-10"><p class="text-sm uppercase tracking-[.16em] text-gold">Radar do Dinheiro</p><p class="mt-5 font-display text-3xl leading-tight tracking-[-.04em]">Experiência guiada de 7 dias para construir a sua sequência.</p><p class="mt-7 text-lg leading-relaxed text-cream/75">Inclui 7 conduções diárias, perguntas e exercícios de observação, construção do Radar preenchido e Mapa do Dinheiro para quem ainda não fez.</p><div class="mt-9 border-y border-cream/25 py-6"><p class="text-sm uppercase tracking-[.14em] text-cream/65">Pagamento único</p><p class="mt-2 text-lg text-cream/65 line-through">De R$<?= $referencePrice ?></p><p class="font-display text-6xl tracking-[-.06em] text-gold">R$29</p><?php if ($referencePrice === 58): ?><p class="mt-2 text-sm text-cream/70">50% de redução · pagamento único</p><?php else: ?><p class="mt-2 text-sm text-cream/70">Pagamento único.</p><?php endif; ?></div><a class="button button--primary mt-8 w-full" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Radar</a><p class="mt-4 text-center text-sm leading-relaxed text-cream/65">Sem assinatura. Sem urgência artificial. Comece quando fizer sentido acompanhar uma situação por sete dias.</p></article></div></section>
 
-    <section class="bg-ink py-20 text-cream lg:py-32"><div class="page-container"><p class="section-kicker section-kicker--light">Radar do Dinheiro</p><h2 class="mt-6 max-w-[12ch] font-display text-[clamp(3.25rem,6.3vw,6.5rem)] leading-[.9] tracking-[-.05em]">O que você faz com o dinheiro é o final mais fácil de enxergar. O Radar começa um pouco antes.</h2><div class="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,.8fr)]"><p class="max-w-xl text-lg leading-relaxed text-cream/75">No contexto. Na frase rápida. No que o corpo sente. Na urgência. Na ação. No que muda nos primeiros minutos. E no que permanece depois.</p><div><p class="font-display text-4xl leading-tight tracking-[-.04em] text-gold">Como isso acontece?</p><a class="button button--primary mt-7" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Construir meu Radar por R$29</a><p class="mt-3 text-sm leading-relaxed text-cream/65">Experiência guiada de sete dias · Mapa do Dinheiro incluído · pagamento único.</p></div></div></div></section>
+    <section class="bg-ink py-20 text-cream lg:py-32"><div class="page-container"><p class="section-kicker section-kicker--light">Radar do Dinheiro</p>
+    <!-- <h2 class="mt-6 max-w-[12ch] font-display text-[clamp(3.25rem,6.3vw,6.5rem)] leading-[.9] tracking-[-.05em]">O que você faz com o dinheiro é o final mais fácil de enxergar. O Radar começa um pouco antes.</h2> -->
+     <h2 class="
+    mt-6
+    max-w-[14ch]
+    font-display
+    text-[3.75rem]
+    leading-[.96]
+    tracking-[-.045em]
+    max-lg:text-[3rem]
+    max-md:text-[2.5rem]
+">
+    O que você faz com o dinheiro é o final mais fácil de enxergar. O Radar começa um pouco antes.
+</h2>
+    <div class="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,.8fr)]"><p class="max-w-xl text-lg leading-relaxed text-cream/75">No contexto. Na frase rápida. No que o corpo sente. Na urgência. Na ação. No que muda nos primeiros minutos. E no que permanece depois.</p><div><p class="font-display text-4xl leading-tight tracking-[-.04em] text-gold">Como isso acontece?</p><a class="button button--primary mt-7" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Construir meu Radar por R$29</a><p class="mt-3 text-sm leading-relaxed text-cream/65">Experiência guiada de sete dias · Mapa do Dinheiro incluído · pagamento único.</p></div></div></div></section>
 </main>
 <footer class="bg-bronze py-14 text-cream"><div class="page-container grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto]"><div><img class="w-40" src="/assets/images/logo-pos-wellness-offwhite.svg" alt="Pós-Wellness"><p class="mt-8 max-w-2xl font-display text-3xl leading-tight tracking-[-.04em]">A Escola Pós-Wellness investiga o que vem depois da consciência: o ponto em que compreender deixa de ser suficiente e a vida pede sustentação.</p><p class="mt-4 text-cream/70">Depois da consciência, a vida.</p></div><nav class="grid content-start gap-3 text-cream/80" aria-label="Rodapé"><a href="#o-radar">O Radar</a><a href="#sete-dias">Como funciona</a><a href="#faq">FAQ</a><a href="#top">Voltar ao início ↑</a></nav></div></footer>
