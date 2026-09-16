@@ -2,4 +2,7 @@
 /.idea/
 /.vscode/
 .DS_Store
+.dockerfile
 npm-debug.log*
+.yml
+.yaml
