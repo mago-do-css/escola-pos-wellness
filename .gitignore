@@ -2,4 +2,17 @@
 /.idea/
 /.vscode/
 .DS_Store
+.dockerfile
 npm-debug.log*
+.yml
+.yaml
+yml
+yaml
+
+# Infraestrutura usada somente no ambiente de desenvolvimento local.
+Dockerfile.dev
+Dockerfile.local
+compose.dev.yaml
+compose.local.yaml
+docker-compose.dev.yml
+docker-compose.local.yml
