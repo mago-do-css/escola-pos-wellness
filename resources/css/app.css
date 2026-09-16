@@ -91,6 +91,116 @@
       linear-gradient(0deg, rgba(37, 31, 24, .45) 0%, transparent 42%);
   }
 
+  .download-page {
+    position: relative;
+    display: grid;
+    min-height: 100svh;
+    overflow: hidden;
+    color: var(--cream);
+    background-color: var(--ink);
+    background-image: url("/assets/images/gradiente-com-moedas.png");
+    background-position: 58% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .download-page__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(37, 31, 24, .94) 0%, rgba(37, 31, 24, .82) 48%, rgba(37, 31, 24, .45) 100%);
+  }
+
+  .download-page__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .download-page__brand {
+    display: block;
+    width: 10.5rem;
+  }
+
+  .download-page__brand img {
+    display: block;
+    width: 100%;
+  }
+
+  .download-card {
+    align-self: center;
+    width: min(100%, 42rem);
+    padding: clamp(2rem, 5vw, 4.5rem) 0;
+  }
+
+  .download-card__eyebrow {
+    margin: 0 0 1rem;
+    color: #d6b280;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .download-card h1 {
+    max-width: 40rem;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6.25rem);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: .92;
+  }
+
+  .download-card__description {
+    max-width: 33rem;
+    margin: 1.75rem 0 0;
+    color: rgba(236, 232, 221, .88);
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.45;
+  }
+
+  .download-progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    color: rgba(236, 232, 221, .78);
+    font-size: .875rem;
+  }
+
+  .download-progress__number {
+    display: inline-grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid rgba(236, 232, 221, .6);
+    border-radius: 999px;
+    color: var(--cream);
+    font-size: 1.1rem;
+  }
+
+  .download-card__fallback {
+    margin-top: 2rem;
+  }
+
+  .download-card__fallback p {
+    max-width: 27rem;
+    margin: 0 0 1rem;
+    color: rgba(236, 232, 221, .78);
+    font-size: .95rem;
+    line-height: 1.4;
+  }
+
+  .download-page__footer {
+    margin: 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .75rem;
+  }
+
   .site-header {
     position: relative;
     z-index: 20;
@@ -1671,6 +1781,37 @@
   }
 
   @media (max-width: 639px) {
+    .download-page {
+      background-position: 64% center;
+    }
+
+    .download-page__shade {
+      background:
+        linear-gradient(90deg, rgba(37, 31, 24, .94), rgba(37, 31, 24, .58)),
+        linear-gradient(0deg, rgba(37, 31, 24, .7), rgba(37, 31, 24, .08) 72%);
+    }
+
+    .download-page__inner {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .download-page__brand {
+      width: 8.6rem;
+    }
+
+    .download-card {
+      padding: 2rem 0;
+    }
+
+    .download-card h1 {
+      font-size: clamp(3.25rem, 16vw, 4.5rem);
+    }
+
+    .download-progress {
+      margin-top: 2rem;
+    }
+
     .hero {
       min-height: 47rem;
       background-position: 64% center;
