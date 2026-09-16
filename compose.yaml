@@ -2,6 +2,12 @@ services:
   web:
     build:
       context: .
-    ports:
-      - "8080:80"
+    container_name: pos-wellness-site
     restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: "Rede Proxy"
