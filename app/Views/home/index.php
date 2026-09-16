@@ -134,7 +134,7 @@ declare(strict_types=1);
                 </p>
             </div>
 
-            <form class="capture__form" data-capture-form novalidate>
+            <form class="capture__form" data-capture-form data-thank-you-url="/obrigado-mapa-do-dinheiro" novalidate>
                 <div class="capture__form-heading">
                     <span aria-hidden="true">01</span>
                     <p>Receba gratuitamente</p>

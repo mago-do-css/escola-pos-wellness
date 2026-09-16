@@ -44,5 +44,6 @@ captureForm?.addEventListener('submit', (event) => {
   }
 
   captureForm.classList.remove('is-invalid');
-  captureFeedback.textContent = 'Formulário pronto para conectar ao seu serviço de captura.';
+  captureFeedback.textContent = 'Tudo certo. Preparando seu acesso…';
+  window.location.assign(captureForm.dataset.thankYouUrl || '/obrigado-mapa-do-dinheiro');
 });
