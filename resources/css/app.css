@@ -201,6 +201,149 @@
     font-size: .75rem;
   }
 
+  .thank-you-page {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .thank-you-page__shade {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 78% 18%, rgba(187, 133, 51, .37), transparent 28rem),
+      linear-gradient(135deg, #312418 0%, var(--ink) 58%);
+  }
+
+  .thank-you-page__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: clamp(4rem, 9vw, 8rem);
+  }
+
+  .thank-you-page__brand {
+    display: block;
+    width: 10.5rem;
+  }
+
+  .thank-you-page__brand img {
+    display: block;
+    width: 100%;
+  }
+
+  .thank-you-page__content {
+    max-width: 58rem;
+    margin: clamp(4rem, 9vw, 8rem) auto 0;
+  }
+
+  .thank-you-page__eyebrow,
+  .vsl__heading > p {
+    margin: 0;
+    color: #d6b280;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .thank-you-page h1 {
+    max-width: 52rem;
+    margin: 1rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -.055em;
+    line-height: .9;
+  }
+
+  .thank-you-page__lead {
+    max-width: 42rem;
+    margin: 1.8rem 0 0;
+    color: rgba(236, 232, 221, .85);
+    font-size: clamp(1.05rem, 1.55vw, 1.25rem);
+    line-height: 1.5;
+  }
+
+  .vsl {
+    margin-top: clamp(3rem, 7vw, 5rem);
+  }
+
+  .vsl__heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .vsl__heading h2 {
+    max-width: 28rem;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-weight: 400;
+    letter-spacing: -.04em;
+    line-height: .98;
+  }
+
+  .vsl__embed,
+  .vsl__placeholder {
+    position: relative;
+    display: grid;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    place-content: center;
+    border: 1px solid rgba(236, 232, 221, .2);
+    background: linear-gradient(135deg, rgba(187, 133, 51, .42), rgba(37, 31, 24, .6));
+  }
+
+  .vsl__embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .vsl__placeholder {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .vsl__placeholder p {
+    margin: 1rem 0 .45rem;
+    color: #d6b280;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .15em;
+  }
+
+  .vsl__placeholder strong {
+    max-width: 20rem;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 400;
+    line-height: 1.02;
+  }
+
+  .vsl__play {
+    display: inline-grid;
+    width: 4rem;
+    height: 4rem;
+    margin-inline: auto;
+    place-items: center;
+    border: 1px solid var(--cream);
+    border-radius: 50%;
+    padding-left: .2rem;
+    font-size: 1rem;
+  }
+
+  .thank-you-page__download {
+    margin-top: 2rem;
+  }
+
   .site-header {
     position: relative;
     z-index: 20;
@@ -1781,6 +1924,32 @@
   }
 
   @media (max-width: 639px) {
+    .thank-you-page__inner {
+      padding-top: 1.5rem;
+    }
+
+    .thank-you-page__brand {
+      width: 8.6rem;
+    }
+
+    .thank-you-page__content {
+      margin-top: 4rem;
+    }
+
+    .thank-you-page h1 {
+      font-size: clamp(3.15rem, 15vw, 4.5rem);
+    }
+
+    .vsl__heading {
+      display: grid;
+      gap: .75rem;
+    }
+
+    .vsl__embed,
+    .vsl__placeholder {
+      aspect-ratio: 1 / 1;
+    }
+
     .download-page {
       background-position: 64% center;
     }
