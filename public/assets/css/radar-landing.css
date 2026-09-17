@@ -715,3 +715,66 @@ footer nav a {
     font-size: clamp(2.2rem, 9.5vw, 3.1rem);
   }
 }
+
+.radar-editorial-media {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgb(79 48 37 / 0.22);
+  background: #c9b69d;
+}
+
+.radar-editorial-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.radar-editorial-media:hover img {
+  transform: scale(1.025);
+}
+
+.radar-editorial-media--product {
+  max-width: 62rem;
+  margin-inline: auto;
+  aspect-ratio: 16 / 8;
+  border-color: rgb(255 247 233 / 0.26);
+}
+
+.radar-editorial-media--days,
+.radar-editorial-media--stages {
+  aspect-ratio: 16 / 10;
+}
+
+.radar-editorial-media--filled {
+  aspect-ratio: 1 / 1;
+  border-color: rgb(255 247 233 / 0.26);
+}
+
+.radar-editorial-media--practice {
+  aspect-ratio: 16 / 8;
+}
+
+@media (max-width: 1023px) {
+  .radar-editorial-media--filled {
+    max-width: 38rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .radar-editorial-media--product,
+  .radar-editorial-media--practice {
+    aspect-ratio: 4 / 3;
+  }
+
+  .radar-editorial-media--filled {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .radar-editorial-media img {
+    transition: none;
+  }
+}
