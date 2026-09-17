@@ -229,16 +229,28 @@ declare(strict_types=1);
 
                 <div class="site-footer__social-links">
                     <a href="https://www.instagram.com/pos_wellness?stkn=MW85bmp1cGtnamR3YQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Pós-Wellness">
-                        <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4.15"></circle>
+                            <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
+                        </svg>
                     </a>
                     <a href="https://www.instagram.com/consumo.felicidade?stkn=MWg2cTNzYmdpaGtuOQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Consumo Felicidade">
-                        <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4.15"></circle>
+                            <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"></circle>
+                        </svg>
                     </a>
                     <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <span class="social-mark social-mark--youtube" aria-hidden="true">▶</span>
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.8 2.8 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.8 2.8 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.8 2.8 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"></path>
+                        </svg>
                     </a>
                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <span class="social-mark social-mark--linkedin" aria-hidden="true">in</span>
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M5.1 3.5a2.35 2.35 0 1 0 0 4.7 2.35 2.35 0 0 0 0-4.7ZM3 9.7h4.2V21H3V9.7Zm6.8 0h4v1.55h.06c.56-1.05 1.92-2.15 3.96-2.15C22 9.1 22.8 11.8 22.8 15.3V21h-4.2v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.3-1.94 2.66V21H10.8V9.7Z"></path>
+                        </svg>
                     </a>
                 </div>
             </div>
