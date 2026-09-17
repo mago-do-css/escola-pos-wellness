@@ -640,3 +640,13 @@ footer nav a {
     letter-spacing: -0.045em;
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+  #top > section:first-child h1 {
+    font-size: clamp(2.75rem, 3.4vw, 3.9rem);
+  }
+
+  #top h2.font-display {
+    font-size: clamp(2.6rem, 4.2vw, 4rem);
+  }
+}
