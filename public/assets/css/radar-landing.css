@@ -6,6 +6,8 @@
   --radar-ink: #251f18;
   --radar-bronze: #8e5829;
   --radar-gold: #bb8533;
+  --radar-gold-hover: #d4a45f;
+  --radar-gold-active: #9e6c24;
   --radar-cream: #ece8dd;
   --radar-sand: #d9cab5;
 
@@ -102,11 +104,12 @@ footer a {
     background-color var(--radar-transition),
     color var(--radar-transition),
     border-color var(--radar-transition),
+    box-shadow var(--radar-transition),
     transform var(--radar-transition);
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .button:focus-visible,
@@ -117,16 +120,76 @@ footer a:focus-visible,
   outline-offset: 4px;
 }
 
-.button--primary {
+#top .button--primary {
   border-color: var(--radar-gold);
   background: var(--radar-gold);
   color: var(--radar-ink);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.16);
 }
 
-.button--primary:hover {
-  border-color: var(--radar-cream);
-  background: var(--radar-cream);
+#top .button--primary:hover {
+  border-color: var(--radar-gold-hover);
+  background: var(--radar-gold-hover);
   color: var(--radar-ink);
+  box-shadow: 0 12px 26px rgb(0 0 0 / 0.22);
+}
+
+#top .button--primary:active {
+  border-color: var(--radar-gold-active);
+  background: var(--radar-gold-active);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.16);
+  transform: translateY(0);
+}
+
+#top .button--ink {
+  border-color: var(--radar-ink);
+  background: var(--radar-ink);
+  color: var(--radar-cream);
+  box-shadow: 0 8px 20px rgb(37 31 24 / 0.18);
+}
+
+#top .button--ink:hover {
+  border-color: var(--radar-bronze);
+  background: var(--radar-bronze);
+  color: var(--radar-cream);
+  box-shadow: 0 12px 26px rgb(37 31 24 / 0.24);
+}
+
+#top .button--ink:active {
+  background: #6f421f;
+  transform: translateY(0);
+}
+
+.button:focus-visible {
+  outline-color: var(--radar-gold-hover);
+  box-shadow: 0 0 0 5px rgb(212 164 95 / 0.3);
+}
+
+#top .site-header__cta {
+  border-color: var(--radar-gold);
+  background: var(--radar-gold);
+  color: var(--radar-ink);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.14);
+  transition:
+    background-color var(--radar-transition),
+    border-color var(--radar-transition),
+    box-shadow var(--radar-transition),
+    color var(--radar-transition),
+    transform var(--radar-transition);
+}
+
+#top .site-header__cta:hover {
+  border-color: var(--radar-gold-hover);
+  background: var(--radar-gold-hover);
+  color: var(--radar-ink);
+  box-shadow: 0 9px 22px rgb(0 0 0 / 0.2);
+  transform: translateY(-1px);
+}
+
+#top .site-header__cta:focus-visible {
+  outline: 2px solid var(--radar-gold-hover);
+  outline-offset: 4px;
 }
 
 /* Backgrounds */
