@@ -223,6 +223,25 @@ declare(strict_types=1);
                     <a href="#duvidas">Dúvidas</a>
                 </nav>
             </div>
+
+            <div class="site-footer__social">
+                <p>Redes sociais</p>
+
+                <div class="site-footer__social-links">
+                    <a href="https://www.instagram.com/pos_wellness?stkn=MW85bmp1cGtnamR3YQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Pós-Wellness">
+                        <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
+                    </a>
+                    <a href="https://www.instagram.com/consumo.felicidade?stkn=MWg2cTNzYmdpaGtuOQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Consumo Felicidade">
+                        <span class="social-mark social-mark--instagram" aria-hidden="true">ig</span>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <span class="social-mark social-mark--youtube" aria-hidden="true">▶</span>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <span class="social-mark social-mark--linkedin" aria-hidden="true">in</span>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="site-footer__bottom">
