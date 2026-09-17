@@ -650,3 +650,23 @@ footer nav a {
     font-size: clamp(2.6rem, 4.2vw, 4rem);
   }
 }
+
+@media (min-width: 1501px) {
+  #top > section:first-child h1 {
+    font-size: clamp(3rem, 3.5vw, 4rem);
+  }
+
+  #top h2.font-display {
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+  }
+}
+
+@media (max-width: 1023px) {
+  #top > section:first-child h1 {
+    font-size: clamp(2.7rem, 10vw, 3.65rem);
+  }
+
+  #top h2.font-display {
+    font-size: clamp(2.35rem, 8.5vw, 3.4rem);
+  }
+}
