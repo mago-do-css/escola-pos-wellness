@@ -690,3 +690,28 @@ footer nav a {
     font-size: clamp(2.5rem, 3.85vw, 3.9rem);
   }
 }
+
+/* Escala compacta dos títulos, alinhada ao padrão responsivo do Mapa do Dinheiro. */
+@media (min-width: 1400px) {
+  #top h2.font-display {
+    font-size: clamp(2.35rem, 3.7vw, 3.8rem);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+  #top h2.font-display {
+    font-size: clamp(2.4rem, 3.9vw, 3.85rem);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  #top h2.font-display {
+    font-size: clamp(2.3rem, 5.7vw, 3.6rem);
+  }
+}
+
+@media (max-width: 639px) {
+  #top h2.font-display {
+    font-size: clamp(2.2rem, 9.5vw, 3.1rem);
+  }
+}
