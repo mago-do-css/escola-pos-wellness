@@ -670,3 +670,23 @@ footer nav a {
     font-size: clamp(2.35rem, 8.5vw, 3.4rem);
   }
 }
+
+@media (min-width: 1400px) {
+  .page-container {
+    width: min(100% - 5rem, 76rem);
+  }
+
+  #top .py-20,
+  #top .lg\:py-32 {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  #top > section:first-child h1 {
+    font-size: clamp(2.85rem, 3.15vw, 3.7rem);
+  }
+
+  #top h2.font-display {
+    font-size: clamp(2.5rem, 3.85vw, 3.9rem);
+  }
+}

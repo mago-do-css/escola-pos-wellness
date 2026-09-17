@@ -2161,6 +2161,59 @@
     }
   }
 
+  @media (min-width: 1400px) {
+    .page-container {
+      width: min(100% - 5rem, 76rem);
+    }
+
+    .hero__content {
+      gap: 2.5rem;
+      padding-block: clamp(3.5rem, 8vh, 6.25rem) 2.5rem;
+    }
+
+    .hero__title {
+      font-size: clamp(3rem, 6.3vw, 5.85rem);
+    }
+
+    .patterns,
+    .method,
+    .outcome,
+    .limits,
+    .fruit,
+    .capture,
+    .faq {
+      padding-block: clamp(4.5rem, 7.5vw, 7.5rem);
+    }
+
+    .patterns__title,
+    .method__title,
+    .outcome__title,
+    .limits__title,
+    .fruit__title,
+    .faq__title {
+      font-size: clamp(2.5rem, 4.1vw, 4.2rem);
+    }
+
+    .capture__title {
+      font-size: clamp(2.6rem, 4.45vw, 4.5rem);
+    }
+
+    .download-card h1,
+    .thank-you-page h1 {
+      font-size: clamp(2.85rem, 5.1vw, 5rem);
+    }
+
+    .download-page__inner,
+    .thank-you-page__inner {
+      padding-top: 1.75rem;
+      padding-bottom: 1.75rem;
+    }
+
+    .thank-you-page__content {
+      margin-top: clamp(3.5rem, 7vw, 6rem);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
