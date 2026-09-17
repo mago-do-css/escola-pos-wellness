@@ -433,6 +433,31 @@ footer a:focus-visible,
   color: var(--radar-gold);
 }
 
+/* Quality of observation */
+.observation-section {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.observation-section__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.observation-section__cta {
+  margin-top: clamp(2rem, 4vw, 3.25rem);
+}
+
+.observation-section__content {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.observation-section__media {
+  margin: 0;
+}
+
 /* FAQ */
 #faq details {
   overflow: hidden;
@@ -515,6 +540,19 @@ footer nav a {
 }
 
 @media (min-width: 1024px) {
+  .observation-section {
+    grid-template-columns: minmax(0, 0.9fr) minmax(23rem, 1.1fr);
+    align-items: stretch;
+  }
+
+  .observation-section__intro {
+    min-height: 100%;
+  }
+
+  .observation-section__cta {
+    margin-top: auto;
+  }
+
   .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 

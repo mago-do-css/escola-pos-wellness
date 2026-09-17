@@ -107,7 +107,30 @@ declare(strict_types=1);
         </div>
     </section>
 
-    <section class="py-20 lg:py-32"><div class="page-container"><p class="section-kicker">O que muda na qualidade da observação</p><div class="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)]"><h2 class="max-w-[12ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Você não recebe uma explicação pronta. Recebe melhores condições para enxergar o que aconteceu.</h2><ul class="space-y-4 text-lg leading-relaxed text-ink/75"><li>Trocar rótulos amplos por um comportamento observável.</li><li>Perceber o contexto que costuma desaparecer quando você olha apenas para a decisão.</li><li>Capturar pensamentos rápidos próximos da ação.</li><li>Diferenciar uma vontade de uma urgência de agir.</li><li>Reunir sete elementos em um Radar preenchido, baseado em uma situação real.</li><li>Sair de “eu faço isso de novo” para “como eu chego até isso?”.</li></ul></div><div class="mt-12 grid gap-10 lg:grid-cols-[minmax(0,.9fr)_minmax(23rem,1.1fr)] lg:items-center"><a class="button button--ink" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir essa sequência</a><figure class="radar-editorial-media radar-editorial-media--practice"><img src="/assets/images/radar/pratica-de-observacao.png" alt="Pessoa registrando uma observação em seu caderno" loading="lazy"></figure></div></div></section>
+    <section class="py-20 lg:py-32">
+        <div class="page-container">
+            <p class="section-kicker">O que muda na qualidade da observação</p>
+            <div class="observation-section mt-6">
+                <div class="observation-section__intro">
+                    <h2 class="max-w-[12ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Você não recebe uma explicação pronta. Recebe melhores condições para enxergar o que aconteceu.</h2>
+                    <a class="button button--ink observation-section__cta" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir essa sequência</a>
+                </div>
+                <div class="observation-section__content">
+                    <ul class="space-y-4 text-lg leading-relaxed text-ink/75">
+                        <li>Trocar rótulos amplos por um comportamento observável.</li>
+                        <li>Perceber o contexto que costuma desaparecer quando você olha apenas para a decisão.</li>
+                        <li>Capturar pensamentos rápidos próximos da ação.</li>
+                        <li>Diferenciar uma vontade de uma urgência de agir.</li>
+                        <li>Reunir sete elementos em um Radar preenchido, baseado em uma situação real.</li>
+                        <li>Sair de “eu faço isso de novo” para “como eu chego até isso?”.</li>
+                    </ul>
+                    <figure class="radar-editorial-media radar-editorial-media--practice observation-section__media">
+                        <img src="/assets/images/radar/pratica-de-observacao.png" alt="Pessoa registrando uma observação em seu caderno" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="bg-[#d9cab5] py-20 lg:py-32"><div class="page-container"><p class="section-kicker">O que você recebe</p><div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(23rem,.8fr)] lg:items-end"><h2 class="mt-6 max-w-[12ch] font-display text-[clamp(3rem,5.8vw,5.8rem)] leading-[.92] tracking-[-.05em]">Uma experiência completa para construir o seu primeiro Radar do Dinheiro.</h2><figure class="radar-editorial-media radar-editorial-media--stages"><img src="/assets/images/radar/etapas-do-radar.webp" alt="Radar do Dinheiro e suas etapas de autoconhecimento, diagnóstico e planejamento" loading="lazy"></figure></div><div class="mt-14 grid border-t border-ink/25 md:grid-cols-2 lg:grid-cols-3"><?php $included = [['7 conduções diárias','Uma orientação por dia, com Sávio Reginatto e Mari Steffan.'],['Perguntas e exercícios de observação','Você registra situações concretas ao longo da semana.'],['Seu Radar preenchido','Contexto, pensamento, afeto, impulso, comportamento, efeito imediato e consequência organizados.'],['Mapa do Dinheiro incluído','Para escolher um comportamento concreto se você ainda não fez o produto gratuito.'],['Pergunta de continuidade','Depois de “como isso acontece?”, pode surgir “para que isso pode estar servindo?”.']]; foreach ($included as [$title, $text]): ?><article class="min-h-56 border-b border-r border-ink/25 p-6"><h3 class="font-display text-3xl leading-none tracking-[-.04em]"><?= $title ?></h3><p class="mt-5 leading-relaxed text-ink/70"><?= $text ?></p></article><?php endforeach; ?></div></div></section>
 
