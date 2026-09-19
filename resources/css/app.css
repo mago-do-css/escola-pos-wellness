@@ -2352,6 +2352,55 @@
     }
   }
 
+  /* Página de obrigado do Radar: escala mais compacta para preservar o encaixe dos blocos. */
+  .radar-thank-you h1 {
+    font-size: clamp(2.65rem, 10vw, 3.8rem);
+    line-height: .94;
+  }
+
+  .radar-thank-you .vsl__heading h2 {
+    font-size: clamp(1.6rem, 6.2vw, 2.15rem);
+  }
+
+  .radar-thank-you .radar-thank-you__offer h2 {
+    font-size: clamp(2rem, 8vw, 2.85rem);
+    line-height: 1;
+  }
+
+  @media (min-width: 640px) {
+    .radar-thank-you h1 {
+      font-size: clamp(2.8rem, 5.2vw, 4.2rem);
+    }
+
+    .radar-thank-you .vsl__heading h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+    }
+
+    .radar-thank-you .radar-thank-you__offer h2 {
+      font-size: clamp(2.1rem, 3.7vw, 3.05rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .radar-thank-you h1 {
+      font-size: clamp(3rem, 4.5vw, 4.5rem);
+    }
+
+    .radar-thank-you .vsl__heading h2 {
+      font-size: clamp(1.8rem, 2.4vw, 2.25rem);
+    }
+
+    .radar-thank-you .radar-thank-you__offer h2 {
+      font-size: clamp(2.2rem, 3.1vw, 3.15rem);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .radar-thank-you h1 {
+      font-size: clamp(3.1rem, 4vw, 4.6rem);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
