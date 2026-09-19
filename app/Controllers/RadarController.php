@@ -11,7 +11,8 @@ final class RadarController
     public function index(): void
     {
         $pageTitle = 'Radar do Dinheiro | Escola Pós-Wellness';
-        $checkoutUrl = RadarLanding::checkoutHref();
+        $checkoutUrl = '#oferta';
+        $planCheckoutUrl = RadarLanding::checkoutHref();
         $vslUrl = RadarLanding::VSL_URL;
         $hasVsl = RadarLanding::hasVsl();
         $referencePrice = RadarLanding::REFERENCE_PRICE;
