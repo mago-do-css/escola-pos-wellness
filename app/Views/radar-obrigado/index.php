@@ -5,6 +5,7 @@ declare(strict_types=1);
 /** @var string $vslVideoUrl */
 /** @var string $vslPosterUrl */
 /** @var string $productMockupUrl */
+/** @var string $radarReadingImageUrl */
 ?>
 <main class="thank-you-page radar-thank-you">
     <div class="thank-you-page__shade" aria-hidden="true"></div>
@@ -24,10 +25,9 @@ declare(strict_types=1);
                     </p>
                     <p class="radar-thank-you__question">Se esse comportamento produz algo naquele momento, para que ele pode estar servindo?</p>
                 </div>
-                <div class="image-placeholder image-placeholder--portrait" role="img" aria-label="Espaço reservado para imagem de uma pessoa com o Radar do Dinheiro nas mãos">
-                    <span>Imagem sugerida</span>
-                    <strong>Pessoa segurando o Radar do Dinheiro, em um momento de observação.</strong>
-                </div>
+                <figure class="radar-thank-you__hero-image">
+                    <img src="<?= htmlspecialchars($radarReadingImageUrl, ENT_QUOTES, 'UTF-8') ?>" alt="Pessoa lendo o Radar do Dinheiro">
+                </figure>
             </div>
 
             <section class="vsl" id="vsl" aria-labelledby="vsl-title">
