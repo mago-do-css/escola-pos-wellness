@@ -11,7 +11,8 @@ final class RadarObrigadoController
     public function index(): void
     {
         $pageTitle = 'Obrigado | Radar do Dinheiro | Pós-Wellness';
-        $vslEmbedUrl = RadarObrigado::VSL_EMBED_URL;
+        $vslVideoUrl = RadarObrigado::VSL_VIDEO_URL;
+        $vslPosterUrl = RadarObrigado::VSL_POSTER_URL;
         $view = dirname(__DIR__) . '/Views/radar-obrigado/index.php';
 
         ob_start();
