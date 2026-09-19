@@ -2395,6 +2395,13 @@
     }
   }
 
+  @media (min-width: 1280px) {
+    .radar-thank-you .thank-you-page__content {
+      max-width: 74rem;
+      margin-inline: 0;
+    }
+  }
+
   @media (min-width: 1400px) {
     .radar-thank-you h1 {
       font-size: clamp(3.1rem, 4vw, 4.6rem);
