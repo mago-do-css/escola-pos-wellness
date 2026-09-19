@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 /** @var string $vslVideoUrl */
 /** @var string $vslPosterUrl */
+/** @var string $productMockupUrl */
 ?>
 <main class="thank-you-page radar-thank-you">
     <div class="thank-you-page__shade" aria-hidden="true"></div>
@@ -60,10 +61,9 @@ declare(strict_types=1);
                     <a class="button button--primary" href="#vsl">Quero entender o próximo passo</a>
                     <p class="radar-thank-you__note">Ao final, você terá o seu Mapa da Função: uma hipótese construída a partir da sua própria experiência.</p>
                 </div>
-                <div class="image-placeholder image-placeholder--product" role="img" aria-label="Espaço reservado para mockup do produto Por Trás do Dinheiro">
-                    <span>Imagem sugerida</span>
-                    <strong>Mockup do produto Por Trás do Dinheiro com o Mapa da Função aberto.</strong>
-                </div>
+                <figure class="radar-thank-you__product-mockup">
+                    <img src="<?= htmlspecialchars($productMockupUrl, ENT_QUOTES, 'UTF-8') ?>" alt="Mockup do produto Por Trás do Dinheiro">
+                </figure>
             </section>
 
             <section class="radar-thank-you__path" aria-label="Caminho da investigação">

@@ -466,6 +466,22 @@
     background: linear-gradient(145deg, rgba(187, 133, 51, .23), rgba(236, 232, 221, .04));
   }
 
+  .radar-thank-you__product-mockup {
+    display: grid;
+    min-height: 25rem;
+    margin: 0;
+    place-items: center;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(187, 133, 51, .23), rgba(236, 232, 221, .04));
+  }
+
+  .radar-thank-you__product-mockup img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
   .radar-thank-you__path {
     display: grid;
     gap: 1rem;
