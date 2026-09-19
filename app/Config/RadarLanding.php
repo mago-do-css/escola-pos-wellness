@@ -8,7 +8,7 @@ final class RadarLanding
 {
     /** Configure antes da publicação. */
     public const VSL_URL = '';
-    public const CHECKOUT_URL = '';
+    public const CHECKOUT_URL = 'https://pay.kiwify.com.br/l9rlpRq';
     public const REFERENCE_PRICE = 58;
 
     public static function checkoutHref(): string

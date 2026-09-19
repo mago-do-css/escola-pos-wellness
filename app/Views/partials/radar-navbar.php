@@ -13,7 +13,7 @@ declare(strict_types=1);
             <a href="#radar-preenchido">O que você constrói</a>
             <a href="#faq">FAQ</a>
         </nav>
-        <a class="site-header__cta" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Começar meu Radar</a>
+        <a class="site-header__cta" href="#oferta">Começar meu Radar</a>
         <button class="site-header__toggle" type="button" aria-label="Abrir menu" aria-controls="radar-mobile-navigation" aria-expanded="false" data-menu-toggle>
             <span></span><span></span>
         </button>
