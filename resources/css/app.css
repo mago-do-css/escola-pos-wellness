@@ -344,6 +344,147 @@
     margin-top: 2rem;
   }
 
+  .radar-thank-you__hero,
+  .radar-thank-you__offer {
+    display: grid;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .radar-thank-you__hero {
+    margin-top: 1rem;
+  }
+
+  .radar-thank-you__question {
+    max-width: 38rem;
+    margin: 1.75rem 0 0;
+    color: #d6b280;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.7rem, 3vw, 2.65rem);
+    letter-spacing: -.04em;
+    line-height: 1.04;
+  }
+
+  .image-placeholder {
+    display: grid;
+    min-height: 16rem;
+    place-content: center;
+    border: 1px dashed rgba(236, 232, 221, .45);
+    padding: 2rem;
+    background: rgba(236, 232, 221, .05);
+    text-align: center;
+  }
+
+  .image-placeholder span {
+    color: #d6b280;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+
+  .image-placeholder strong {
+    max-width: 20rem;
+    margin-top: .9rem;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    line-height: 1.05;
+  }
+
+  .image-placeholder--portrait {
+    min-height: 23rem;
+  }
+
+  .radar-thank-you__offer {
+    margin-top: clamp(4rem, 9vw, 7rem);
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    background: rgba(236, 232, 221, .08);
+  }
+
+  .radar-thank-you__offer h2 {
+    max-width: 39rem;
+    margin: 1rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: -.05em;
+    line-height: .96;
+  }
+
+  .radar-thank-you__offer p:not(.thank-you-page__eyebrow):not(.radar-thank-you__note) {
+    max-width: 42rem;
+    margin: 1.5rem 0 0;
+    color: rgba(236, 232, 221, .8);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .radar-thank-you__offer ul {
+    display: grid;
+    gap: .75rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    color: rgba(236, 232, 221, .88);
+  }
+
+  .radar-thank-you__offer li {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+  }
+
+  .radar-thank-you__offer li::before {
+    content: "•";
+    color: #d6b280;
+  }
+
+  .radar-thank-you__note {
+    max-width: 33rem;
+    margin: 1.25rem 0 0;
+    color: rgba(236, 232, 221, .66);
+    font-size: .88rem;
+    line-height: 1.5;
+  }
+
+  .image-placeholder--product {
+    min-height: 25rem;
+    background: linear-gradient(145deg, rgba(187, 133, 51, .23), rgba(236, 232, 221, .04));
+  }
+
+  .radar-thank-you__path {
+    display: grid;
+    gap: 1rem;
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    border-top: 1px solid rgba(236, 232, 221, .2);
+    padding-top: 2rem;
+  }
+
+  .radar-thank-you__path p,
+  .radar-thank-you__path > span {
+    margin: 0;
+  }
+
+  .radar-thank-you__path p {
+    color: #d6b280;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: 1.35rem;
+  }
+
+  .radar-thank-you__path p span {
+    display: block;
+    margin-top: .3rem;
+    color: rgba(236, 232, 221, .65);
+    font-family: "Neue Haas Grotesk Text Pro", Arial, sans-serif;
+    font-size: .85rem;
+    letter-spacing: .01em;
+  }
+
+  .radar-thank-you__path > span {
+    color: rgba(236, 232, 221, .5);
+  }
+
   .site-header {
     position: relative;
     z-index: 20;
@@ -2187,6 +2328,27 @@
 
     .thank-you-page__content {
       margin-top: clamp(3.5rem, 7vw, 6rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .radar-thank-you__hero {
+      grid-template-columns: minmax(0, 1.25fr) minmax(18rem, .75fr);
+      align-items: end;
+    }
+
+    .radar-thank-you__offer {
+      grid-template-columns: minmax(0, 1.2fr) minmax(20rem, .8fr);
+      align-items: stretch;
+    }
+
+    .radar-thank-you__path {
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .radar-thank-you__path > span {
+      text-align: center;
     }
   }
 
