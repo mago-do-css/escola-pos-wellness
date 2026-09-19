@@ -21,6 +21,7 @@ use App\Controllers\HomeController;
 use App\Controllers\RadarController;
 use App\Controllers\MapaDownloadController;
 use App\Controllers\MapaObrigadoController;
+use App\Controllers\RadarObrigadoController;
 use App\Core\Router;
 
 $router = new Router();
@@ -29,6 +30,7 @@ $router->get('/', [HomeController::class, 'index']);
 $router->get('/baixar-mapa-do-dinheiro', [MapaDownloadController::class, 'index']);
 $router->get('/obrigado-mapa-do-dinheiro', [MapaObrigadoController::class, 'index']);
 $router->get('/radar-do-dinheiro', [RadarController::class, 'index']);
+$router->get('/obrigado-radar-do-dinheiro', [RadarObrigadoController::class, 'index']);
 
 $router->dispatch(
     $_SERVER['REQUEST_METHOD'],
