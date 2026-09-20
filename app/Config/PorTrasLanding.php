@@ -7,7 +7,7 @@ namespace App\Config;
 final class PorTrasLanding
 {
     /** Informe a URL do checkout do produto Por Trás do Dinheiro. */
-    public const CHECKOUT_URL = '';
+    public const CHECKOUT_URL = 'https://pay.kiwify.com.br/Kl1kULi';
 
     /** Informe a URL do checkout do upsell Dinheiro é Fruto. */
     public const UPSELL_CHECKOUT_URL = '';
