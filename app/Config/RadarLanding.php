@@ -6,8 +6,8 @@ namespace App\Config;
 
 final class RadarLanding
 {
-    /** Configure antes da publicação. */
-    public const VSL_URL = '';
+    public const VSL_VIDEO_URL = '/assets/videos/vsl-radar-29.mp4';
+    public const VSL_POSTER_URL = '/assets/images/thumbnail-page-radar-do-dinheiro.png';
     public const CHECKOUT_URL = 'https://pay.kiwify.com.br/l9rlpRq';
     public const REFERENCE_PRICE = 58;
 
@@ -18,6 +18,6 @@ final class RadarLanding
 
     public static function hasVsl(): bool
     {
-        return self::VSL_URL !== '';
+        return self::VSL_VIDEO_URL !== '';
     }
 }

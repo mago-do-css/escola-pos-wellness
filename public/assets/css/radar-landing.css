@@ -46,7 +46,8 @@ footer * {
 
 #top img,
 footer img,
-#top iframe {
+#top iframe,
+#top video {
   display: block;
   max-width: 100%;
 }
@@ -385,7 +386,8 @@ footer a:focus-visible,
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.16);
 }
 
-#top iframe {
+#top iframe,
+#top video {
   border: 0;
 }
 

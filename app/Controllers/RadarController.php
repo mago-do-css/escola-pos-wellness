@@ -13,7 +13,8 @@ final class RadarController
         $pageTitle = 'Radar do Dinheiro | Escola Pós-Wellness';
         $checkoutUrl = '#oferta';
         $planCheckoutUrl = RadarLanding::checkoutHref();
-        $vslUrl = RadarLanding::VSL_URL;
+        $vslVideoUrl = RadarLanding::VSL_VIDEO_URL;
+        $vslPosterUrl = RadarLanding::VSL_POSTER_URL;
         $hasVsl = RadarLanding::hasVsl();
         $referencePrice = RadarLanding::REFERENCE_PRICE;
         $view = dirname(__DIR__) . '/Views/radar/index.php';

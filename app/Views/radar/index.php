@@ -29,12 +29,15 @@ declare(strict_types=1);
             <div class="border border-cream/25 bg-bronze/30 p-3 sm:p-5">
                 <p class="mb-3 font-display text-2xl tracking-[-.03em]">Antes de tentar mudar, veja o caminho.</p>
                 <?php if ($hasVsl): ?>
-                    <iframe class="aspect-video w-full bg-black" src="<?= htmlspecialchars($vslUrl, ENT_QUOTES, 'UTF-8') ?>" title="Vídeo de apresentação do Radar do Dinheiro" loading="lazy" allowfullscreen></iframe>
+                    <video class="aspect-video w-full bg-black" controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                        <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
+                        Seu navegador não oferece suporte para reproduzir este vídeo.
+                    </video>
                 <?php else: ?>
                     <div class="flex aspect-video flex-col items-center justify-center border border-cream/30 bg-ink p-8 text-center">
                         <span class="grid h-14 w-14 place-items-center rounded-full border border-gold text-gold" aria-hidden="true">▶</span>
                         <p class="mt-5 font-display text-3xl">VSL do Radar do Dinheiro</p>
-                        <p class="mt-2 max-w-sm text-sm leading-relaxed text-cream/65">Configure a URL da VSL em <code>app/Config/RadarLanding.php</code> antes da publicação.</p>
+                        <p class="mt-2 max-w-sm text-sm leading-relaxed text-cream/65">A VSL do Radar do Dinheiro estará disponível em breve.</p>
                     </div>
                 <?php endif; ?>
                 <p class="mt-4 text-sm leading-relaxed text-cream/70">Assista à explicação de Sávio Reginatto e Mari Steffan e entenda por que uma compra, um Pix ou uma fatura ignorada podem começar antes da ação que você percebe.</p>
