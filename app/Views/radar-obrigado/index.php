@@ -46,7 +46,7 @@ declare(strict_types=1);
 
             <section class="radar-thank-you__offer" aria-labelledby="offer-title">
                 <div>
-                    <p class="thank-you-page__eyebrow">Por Trás do Dinheiro · R$47</p>
+                    <p class="thank-you-page__eyebrow">Por Trás do Dinheiro · R$49</p>
                     <h2 id="offer-title">Não é mais sobre o que você faz. É sobre o que isso pode estar tentando resolver.</h2>
                     <p>
                         Em cinco encontros, você parte do seu Radar para construir uma hipótese sobre a função do comportamento — sem procurar uma explicação pronta, uma causa definitiva ou um rótulo para você.
@@ -58,7 +58,7 @@ declare(strict_types=1);
                         <li>O que estou buscando através disso?</li>
                         <li>Que função esse comportamento pode estar cumprindo?</li>
                     </ul>
-                    <a class="button button--primary" href="#vsl">Quero entender o próximo passo</a>
+                    <a class="button button--primary" href="/por-tras-do-dinheiro">Quero conhecer o Por Trás do Dinheiro</a>
                     <p class="radar-thank-you__note">Ao final, você terá o seu Mapa da Função: uma hipótese construída a partir da sua própria experiência.</p>
                 </div>
                 <figure class="radar-thank-you__product-mockup">
