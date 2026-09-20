@@ -6,7 +6,7 @@ declare(strict_types=1);
 /** @var int $price */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20260920-1">
 
 <main id="top" class="por-tras-page">
     <section class="por-tras-hero">

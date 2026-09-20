@@ -44,7 +44,7 @@
   max-width: 13ch;
   margin: 1.5rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(3rem, 5.4vw, 5.4rem);
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
   font-weight: 400;
   letter-spacing: -.052em;
   line-height: .94;
@@ -216,7 +216,7 @@
   max-width: 13ch;
   margin: 1.25rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.55rem, 4.7vw, 4.7rem);
+  font-size: clamp(2.1rem, 3.4vw, 3.5rem);
   font-weight: 400;
   letter-spacing: -.05em;
   line-height: .96;
@@ -272,7 +272,7 @@
   max-width: 18ch;
   margin: 3.5rem 0 .8rem;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.65rem, 2.4vw, 2.35rem);
   font-weight: 400;
   letter-spacing: -.04em;
   line-height: 1;
@@ -288,7 +288,7 @@
   place-items: center;
   color: var(--pt-bronze);
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .effect-grid__active {
@@ -310,7 +310,7 @@
   max-width: 12ch;
   margin: 1.25rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.6rem, 4.8vw, 4.8rem);
+  font-size: clamp(2.1rem, 3.5vw, 3.6rem);
   font-weight: 400;
   letter-spacing: -.05em;
   line-height: .96;
@@ -405,7 +405,7 @@
   align-self: end;
   margin: 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 400;
   letter-spacing: -.04em;
   line-height: 1;
@@ -481,9 +481,9 @@
 }
 
 .journey-bundle__steps h3 {
-  margin: 2rem 0 .5rem;
+  margin: 1.25rem 0 .4rem;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: 2rem;
+  font-size: clamp(1.35rem, 1.8vw, 1.6rem);
   font-weight: 400;
   letter-spacing: -.035em;
 }
@@ -520,7 +520,7 @@
   max-width: 12ch;
   margin: 1.25rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.55rem, 4.7vw, 4.7rem);
+  font-size: clamp(2.1rem, 3.4vw, 3.5rem);
   font-weight: 400;
   letter-spacing: -.05em;
   line-height: .96;
@@ -650,7 +650,7 @@
 .offer-card h3 {
   margin: .9rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   font-weight: 400;
   letter-spacing: -.05em;
 }
@@ -806,7 +806,7 @@
   max-width: 14ch;
   margin: 1.3rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.9rem, 5vw, 5rem);
+  font-size: clamp(2.35rem, 3.9vw, 4rem);
   font-weight: 400;
   letter-spacing: -.05em;
   line-height: .95;
@@ -864,7 +864,7 @@
   max-width: 17ch;
   margin: 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.25rem, 4vw, 3.8rem);
+  font-size: clamp(1.95rem, 3.2vw, 3.15rem);
   font-weight: 400;
   letter-spacing: -.045em;
   line-height: .98;
@@ -934,7 +934,7 @@
   max-width: 13ch;
   margin: 1.25rem 0 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: clamp(2.55rem, 4.7vw, 4.7rem);
+  font-size: clamp(2.1rem, 3.4vw, 3.5rem);
   font-weight: 400;
   letter-spacing: -.05em;
   line-height: .96;
@@ -1004,7 +1004,7 @@
 .por-tras-thanks__movements h3 {
   margin: 0;
   font-family: "Arizona Flare", Georgia, serif;
-  font-size: 2rem;
+  font-size: 1.65rem;
   font-weight: 400;
   letter-spacing: -.04em;
 }
