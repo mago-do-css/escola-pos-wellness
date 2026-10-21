@@ -6,18 +6,18 @@ declare(strict_types=1);
 /** @var int $price */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20260920-1">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261020-2">
 
 <main id="top" class="por-tras-page">
     <section class="por-tras-hero">
         <?php require dirname(__DIR__) . '/partials/por-tras-navbar.php'; ?>
         <div class="page-container por-tras-hero__grid">
             <div class="por-tras-hero__copy">
-                <p class="section-kicker section-kicker--light">Por Trás do Dinheiro · 5 encontros</p>
-                <h1>Você já consegue ver o que faz. Agora pode investigar o que isso produz em você.</h1>
-                <p class="por-tras-hero__lead">Uma experiência guiada para construir uma hipótese sobre a função que determinados comportamentos financeiros podem assumir na sua vida.</p>
+                <p class="section-kicker section-kicker--light">Radar do Dinheiro · Uma jornada, dois módulos</p>
+                <h1>Entenda o caminho que você repete com o dinheiro — e investigue o que ele produz em você.</h1>
+                <p class="por-tras-hero__lead">Primeiro, observe uma situação real durante sete dias. Depois, aprofunde a investigação em cinco encontros para construir uma hipótese sobre a função desse comportamento. Tudo dentro do Radar do Dinheiro.</p>
                 <div class="por-tras-hero__actions">
-                    <a class="button button--primary" href="#oferta">Quero construir meu Mapa da Função</a>
+                    <a class="button button--primary" href="#oferta">Quero começar meu Radar completo</a>
                     <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
                 </div>
             </div>
@@ -34,10 +34,43 @@ declare(strict_types=1);
         </div>
     </section>
 
+
+    <section id="modulo-um" class="por-tras-section por-tras-section--sand">
+        <div class="page-container por-tras-split por-tras-split--center">
+            <div>
+                <p class="section-kicker">Módulo 1 · Seu primeiro Radar</p>
+                <h2>Você conhece o comportamento. Agora pode enxergar a sequência.</h2>
+                <p class="por-tras-prose">“Eu gasto demais.” “Eu adio minhas contas.” “Eu quase sempre digo sim.” O comportamento é o final mais visível. Durante sete dias, você observa o que acontece antes, durante e logo depois de uma situação real.</p>
+                <a class="button button--ink" href="#oferta">Quero construir essa sequência</a>
+            </div>
+            <figure class="radar-editorial-media">
+                <img src="/assets/images/radar/radar-preenchido.webp" alt="Caderno com o Radar do Dinheiro preenchido para observar a sequência de uma situação financeira" loading="lazy">
+            </figure>
+        </div>
+        <div class="page-container">
+            <ol class="question-ledger">
+                <?php
+                $days = [
+                    ['Comportamento', 'Troque o rótulo por uma ação concreta.'],
+                    ['Contexto', 'Observe o que aconteceu antes.'],
+                    ['Pensamento', 'Capture a frase rápida próxima da ação.'],
+                    ['Afeto', 'Perceba o sentimento e o corpo.'],
+                    ['Impulso', 'Diferencie vontade de urgência.'],
+                    ['Efeito imediato', 'Veja o que mudou nos primeiros minutos.'],
+                    ['Consequência', 'Reúna as peças e leia o seu Radar.'],
+                ];
+                foreach ($days as $day => [$title, $description]): ?>
+                    <li><span>Dia <?= $day + 1 ?></span><h3><?= htmlspecialchars($title, ENT_QUOTES, 'UTF-8') ?></h3><p><?= htmlspecialchars($description, ENT_QUOTES, 'UTF-8') ?></p></li>
+                <?php endforeach; ?>
+            </ol>
+            <p class="por-tras-prose">Ao final do módulo 1, você tem uma sequência observável. Ela se torna o ponto de partida do módulo 2: investigar o que esse comportamento pode ajudar a sustentar, evitar ou proteger.</p>
+        </div>
+    </section>
+
     <section id="a-virada" class="por-tras-section por-tras-section--paper">
         <div class="page-container por-tras-split">
             <div>
-                <p class="section-kicker">A pergunta muda</p>
+                <p class="section-kicker">Da observação à função</p>
                 <h2>A consequência conta o que veio depois. A função começa a aparecer no que mudou imediatamente.</h2>
             </div>
             <div class="por-tras-prose">
@@ -82,7 +115,7 @@ declare(strict_types=1);
 
     <section id="cinco-perguntas" class="por-tras-section por-tras-section--sand">
         <div class="page-container">
-            <p class="section-kicker">Cinco encontros</p>
+            <p class="section-kicker">Módulo 2 · Por Trás do Dinheiro</p>
             <div class="por-tras-heading-row">
                 <h2>Cinco perguntas para construir uma hipótese sem inventar uma explicação.</h2>
                 <p>Cada encontro acrescenta uma camada ao seu Mapa da Função. Se a resposta ainda não estiver clara, “não sei” continua sendo uma resposta honesta.</p>
@@ -112,8 +145,8 @@ declare(strict_types=1);
         <div class="page-container por-tras-split por-tras-split--center">
             <div>
                 <p class="section-kicker section-kicker--light">O que você constrói</p>
-                <h2>O produto final não são cinco vídeos. É o seu Mapa da Função.</h2>
-                <p class="por-tras-light-copy">Ao final, você organiza o que observou em uma frase de trabalho capaz de orientar a próxima investigação.</p>
+                <h2>Um Radar preenchido. Uma hipótese de função. Mais clareza para continuar.</h2>
+                <p class="por-tras-light-copy">Você começa reunindo contexto, pensamento, afeto, impulso, comportamento, efeito imediato e consequência. Com essa sequência em mãos, organiza uma hipótese no seu Mapa da Função.</p>
                 <blockquote>“Esse comportamento pode estar funcionando como uma maneira de…”</blockquote>
                 <p class="por-tras-disclaimer">Isso é uma hipótese. Não uma verdade definitiva sobre você.</p>
             </div>
@@ -129,13 +162,13 @@ declare(strict_types=1);
         <div class="page-container journey-bundle">
             <div class="journey-bundle__intro">
                 <p class="section-kicker">Você pode começar por aqui</p>
-                <h2>Não fez as etapas anteriores? A jornada necessária está incluída.</h2>
-                <p>O Por Trás do Dinheiro parte de um Radar preenchido. Por isso, quem entra diretamente recebe o caminho completo para chegar preparado aos cinco encontros.</p>
+                <h2>Um único produto. Uma investigação que ganha profundidade.</h2>
+                <p>O antigo Radar de sete dias passa a ser o primeiro módulo. Por Trás do Dinheiro é o segundo módulo da mesma jornada. O Mapa do Dinheiro está incluído como preparação para escolher uma situação concreta.</p>
             </div>
             <div class="journey-bundle__steps">
-                <article><span>Etapa 1</span><h3>Mapa do Dinheiro</h3><p>O que eu repito?</p></article>
-                <article><span>Etapa 2</span><h3>Radar do Dinheiro</h3><p>Como isso acontece?</p></article>
-                <article class="is-current"><span>Etapa 3</span><h3>Por Trás do Dinheiro</h3><p>Para que isso pode estar servindo?</p></article>
+                <article><span>Preparação incluída</span><h3>Mapa do Dinheiro</h3><p>O que eu repito?</p></article>
+                <article><span>Módulo 1 · 7 dias</span><h3>Seu primeiro Radar</h3><p>Como isso acontece?</p></article>
+                <article class="is-current"><span>Módulo 2 · 5 encontros</span><h3>Por Trás do Dinheiro</h3><p>Para que isso pode estar servindo?</p></article>
             </div>
         </div>
     </section>
@@ -169,7 +202,7 @@ declare(strict_types=1);
                     <li>Você reconhece um comportamento financeiro recorrente.</li>
                     <li>Já percebe parte da sequência, mas não entende o que muda naquele momento.</li>
                     <li>Prefere investigar com honestidade a receber uma explicação rápida.</li>
-                    <li>Consegue reservar tempo para cinco encontros curtos e seus registros.</li>
+                    <li>Consegue acompanhar uma situação por sete dias e aprofundar seus registros em cinco encontros.</li>
                 </ul>
             </div>
             <div class="audience-grid__not">
@@ -193,7 +226,7 @@ declare(strict_types=1);
             <div class="por-tras-faq">
                 <?php
                 $faqs = [
-                    ['Preciso ter feito o Mapa e o Radar?', 'Não. A compra inclui as etapas necessárias. Faça primeiro o Mapa, depois os sete dias do Radar e só então comece os cinco encontros do Por Trás do Dinheiro.'],
+                    ['Preciso comprar dois produtos?', 'Não. O Radar do Dinheiro reúne os dois módulos em um único acesso. Comece pelo Mapa incluído, siga os sete dias do módulo 1 e avance para os cinco encontros do módulo 2.'],
                     ['Vou descobrir a causa do meu comportamento?', 'Não é essa a promessa. Você construirá uma hipótese de função baseada no que observou, sem transformar essa hipótese em verdade definitiva.'],
                     ['Isso substitui terapia ou orientação financeira?', 'Não. É uma experiência educativa e estruturada de observação. Não substitui psicoterapia, acompanhamento clínico, orientação financeira ou atendimento profissional.'],
                     ['E se eu não souber responder alguma pergunta?', 'Registre “ainda não sei”. A proposta valoriza uma observação honesta; inventar uma explicação seria o oposto do trabalho.'],
@@ -214,21 +247,21 @@ declare(strict_types=1);
     <section id="oferta" class="por-tras-section por-tras-section--offer">
         <div class="page-container offer-grid">
             <div>
-                <p class="section-kicker">Por Trás do Dinheiro</p>
-                <h2>Construa uma hipótese sobre para que o comportamento pode estar servindo.</h2>
-                <p>Você recebe o Mapa do Dinheiro, o Radar do Dinheiro e os cinco encontros para construir o seu Mapa da Função.</p>
+                <p class="section-kicker">Radar do Dinheiro completo</p>
+                <h2>Comece pela sequência. Avance para a função.</h2>
+                <p>Uma compra reúne a preparação, os sete dias de observação e os cinco encontros de aprofundamento. Você constrói seu Radar e seu Mapa da Função no mesmo percurso.</p>
             </div>
             <article class="offer-card">
                 <p class="offer-card__eyebrow">Acesso digital completo</p>
                 <h3>Por Trás do Dinheiro</h3>
                 <ul>
                     <li>Mapa do Dinheiro</li>
-                    <li>Radar do Dinheiro — 7 dias</li>
-                    <li>5 encontros do Por Trás do Dinheiro</li>
+                    <li>Módulo 1 — observação guiada de 7 dias e Radar preenchido</li>
+                    <li>Módulo 2 — Por Trás do Dinheiro, em 5 encontros</li>
                     <li>Exercícios e Mapa da Função</li>
                 </ul>
                 <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
-                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Mapa da Função</a>
+                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar meu Radar completo</a>
                 <p class="offer-card__note">Checkout seguro pela Kiwify. Sem assinatura e sem urgência artificial.</p>
             </article>
         </div>

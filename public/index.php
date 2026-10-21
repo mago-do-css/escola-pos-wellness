@@ -34,6 +34,7 @@ $router->get('/obrigado-mapa-do-dinheiro', [MapaObrigadoController::class, 'inde
 $router->get('/radar-do-dinheiro', [RadarController::class, 'index']);
 $router->get('/obrigado-radar-do-dinheiro', [RadarObrigadoController::class, 'index']);
 $router->get('/por-tras-do-dinheiro', [PorTrasController::class, 'index']);
+$router->get('/por-tras-do-dinheiro-backup', [PorTrasController::class, 'backup']);
 $router->get('/obrigado-por-tras-do-dinheiro', [PorTrasObrigadoController::class, 'index']);
 
 $router->dispatch(

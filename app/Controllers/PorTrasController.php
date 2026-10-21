@@ -10,10 +10,19 @@ final class PorTrasController
 {
     public function index(): void
     {
-        $pageTitle = 'Por Trás do Dinheiro | Escola Pós-Wellness';
+        $this->render('index.php', 'Radar do Dinheiro | Escola Pós-Wellness');
+    }
+
+    public function backup(): void
+    {
+        $this->render('backup.php', 'Por Trás do Dinheiro | Escola Pós-Wellness');
+    }
+
+    private function render(string $file, string $pageTitle): void
+    {
         $checkoutUrl = PorTrasLanding::checkoutHref();
         $price = PorTrasLanding::PRICE;
-        $view = dirname(__DIR__) . '/Views/por-tras/index.php';
+        $view = dirname(__DIR__) . '/Views/por-tras/' . $file;
 
         ob_start();
         require $view;
