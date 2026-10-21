@@ -21,10 +21,8 @@ declare(strict_types=1);
                     <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
                 </div>
             </div>
-            <figure class="creative-placeholder creative-placeholder--hero" aria-label="Espaço preparado para imagem principal do produto">
-                <span>Imagem principal sugerida</span>
-                <strong>Foto realista de um livro sendo aberto em uma mesa de café, com luz suave da manhã e anotações discretas ao lado.</strong>
-                <small>Direção: editorial, humana e silenciosa. Tons areia, café e bronze. O livro deve parecer usado, não publicitário.</small>
+            <figure class="por-tras-image por-tras-image--hero">
+                <img src="/assets/images/por-tras/hero-livro-cafe.png" alt="Pessoa virando a página de um caderno de observação em uma mesa de café">
             </figure>
         </div>
         <div class="page-container por-tras-hero__trail" aria-label="Jornada de investigação">
@@ -150,10 +148,8 @@ declare(strict_types=1);
                 <blockquote>“Esse comportamento pode estar funcionando como uma maneira de…”</blockquote>
                 <p class="por-tras-disclaimer">Isso é uma hipótese. Não uma verdade definitiva sobre você.</p>
             </div>
-            <figure class="creative-placeholder creative-placeholder--product" aria-label="Espaço preparado para mockup do Mapa da Função">
-                <span>Mockup sugerido</span>
-                <strong>Caderno premium aberto na página “Meu Mapa da Função”, acompanhado de cinco cartões — um para cada pergunta.</strong>
-                <small>Direção: fotografia zenital, papel texturizado, capa marrom, detalhes em cobre e escrita manual realista.</small>
+            <figure class="por-tras-image por-tras-image--product">
+                <img src="/assets/images/por-tras/mapa-da-funcao.png" alt="Mapa da Função em um caderno aberto, com cartões de apoio">
             </figure>
         </div>
     </section>
@@ -175,10 +171,8 @@ declare(strict_types=1);
 
     <section class="por-tras-section por-tras-section--image-break">
         <div class="page-container image-break-grid">
-            <figure class="creative-placeholder creative-placeholder--lifestyle" aria-label="Espaço preparado para fotografia humana do produto">
-                <span>Imagem de atmosfera sugerida</span>
-                <strong>Pessoa lendo e preenchendo o material perto de uma janela no fim da tarde, com uma xícara já pela metade e marcas reais de uso no papel.</strong>
-                <small>Direção: plano lateral, sem olhar para a câmera, sensação de pausa e investigação íntima. Evitar pose de banco de imagens.</small>
+            <figure class="por-tras-image por-tras-image--lifestyle">
+                <img src="/assets/images/por-tras/pratica-de-observacao.png" alt="Pessoa preenchendo seu caderno de observação perto de uma janela">
             </figure>
             <div>
                 <p class="section-kicker">Uma investigação, não um teste</p>

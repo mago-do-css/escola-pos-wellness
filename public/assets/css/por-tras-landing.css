@@ -181,6 +181,25 @@
   min-height: clamp(30rem, 50vw, 43rem);
 }
 
+.por-tras-image {
+  aspect-ratio: 3 / 4;
+  min-height: 28rem;
+  overflow: hidden;
+  background: #483425;
+}
+
+.por-tras-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+
+.por-tras-image--hero {
+  min-height: clamp(30rem, 50vw, 43rem);
+}
+
 .por-tras-section {
   padding-block: clamp(5rem, 8vw, 8rem);
 }
@@ -455,6 +474,11 @@
 .creative-placeholder--product,
 .creative-placeholder--lifestyle,
 .creative-placeholder--integrated {
+  min-height: 35rem;
+}
+
+.por-tras-image--product,
+.por-tras-image--lifestyle {
   min-height: 35rem;
 }
 
@@ -1115,6 +1139,13 @@
   .creative-placeholder--thanks,
   .creative-placeholder--upsell,
   .creative-placeholder--integrated {
+    min-height: 28rem;
+  }
+
+  .por-tras-image,
+  .por-tras-image--hero,
+  .por-tras-image--product,
+  .por-tras-image--lifestyle {
     min-height: 28rem;
   }
 
