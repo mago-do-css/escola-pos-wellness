@@ -16,6 +16,14 @@
   background: var(--pt-paper);
 }
 
+.por-tras-page [data-header],
+.por-tras-page [data-header].is-scrolled,
+#por-tras-mobile-navigation,
+#por-tras-mobile-navigation[aria-hidden="false"] {
+  background: #241c15 !important;
+  backdrop-filter: none;
+}
+
 .por-tras-page h1,
 .por-tras-page h2,
 .por-tras-page h3,
