@@ -6,7 +6,7 @@ declare(strict_types=1);
 /** @var int $upsellPrice */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20260920-1">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261023-1">
 
 <main class="por-tras-thanks">
     <div class="page-container por-tras-thanks__topbar">
@@ -30,10 +30,8 @@ declare(strict_types=1);
                 </ol>
             </div>
         </div>
-        <figure class="creative-placeholder creative-placeholder--thanks" aria-label="Espaço preparado para imagem de confirmação e continuidade">
-            <span>Imagem sugerida</span>
-            <strong>Mãos colocando o Mapa da Função dentro de uma pasta de estudo, enquanto outro caderno permanece fechado ao lado.</strong>
-            <small>Direção: composição zenital, gesto de conclusão e continuidade. O segundo caderno pode antecipar discretamente o Dinheiro é Fruto.</small>
+        <figure class="por-tras-image por-tras-image--thanks">
+            <img src="/assets/images/por-tras/obrigado-continuacao.png" alt="Mãos organizando um mapa de estudo entre cadernos" loading="eager">
         </figure>
     </section>
 
@@ -42,11 +40,11 @@ declare(strict_types=1);
             <p class="section-kicker section-kicker--light">Antes de abrir o material</p>
             <h2>Assista: onde uma hipótese de função pode levar a investigação.</h2>
         </div>
-        <div class="vsl-stage" role="img" aria-label="Espaço preparado para a VSL do produto Dinheiro é Fruto">
+        <div class="vsl-stage vsl-stage--thumbnail" role="img" aria-label="Thumbnail da VSL do produto Dinheiro é Fruto">
+            <img src="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.png" alt="VSL do produto Dinheiro é Fruto" loading="eager">
             <span class="vsl-stage__play" aria-hidden="true">▶</span>
             <p>VSL — Dinheiro é Fruto</p>
-            <strong>Área pronta para receber o vídeo de apresentação do produto de R$<?= $upsellPrice ?>.</strong>
-            <small>Thumbnail sugerida: Sávio e Mari diante de uma mesa com os quatro mapas abertos, sem pose, em conversa real.</small>
+            <strong>Onde a investigação encontra a sua história.</strong>
         </div>
     </section>
 
@@ -59,10 +57,8 @@ declare(strict_types=1);
                 <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero conhecer o Dinheiro é Fruto</a>
                 <p class="por-tras-upsell__note">Pagamento único de R$<?= $upsellPrice ?>. A oferta será conectada ao checkout da Kiwify.</p>
             </div>
-            <figure class="creative-placeholder creative-placeholder--upsell" aria-label="Espaço preparado para mockup do Dinheiro é Fruto">
-                <span>Mockup sugerido</span>
-                <strong>Quatro cadernos sobrepostos representando Fruto, História, Repetição e Escolha, ligados por uma linha cobre contínua.</strong>
-                <small>Direção: fundo escuro, luz recortada, acabamento editorial premium e um “Mapa Integrado” parcialmente aberto.</small>
+            <figure class="por-tras-image por-tras-image--upsell">
+                <img src="/assets/images/por-tras/mockup-dinheiro-e-fruto.png" alt="Cadernos do Dinheiro é Fruto organizados como um mapa integrado" loading="lazy">
             </figure>
         </div>
     </section>
@@ -82,10 +78,8 @@ declare(strict_types=1);
 
     <section class="por-tras-thanks__integrated">
         <div class="page-container por-tras-split por-tras-split--center">
-            <figure class="creative-placeholder creative-placeholder--integrated" aria-label="Espaço preparado para fotografia do Mapa Integrado">
-                <span>Imagem de entrega sugerida</span>
-                <strong>Foto realista de uma mesa ao fim de uma sessão de estudo: páginas marcadas, lápis apoiado e o “Meu Mapa Integrado do Dinheiro” no centro.</strong>
-                <small>Direção: luz do fim da tarde, pequenas imperfeições, sensação de percurso concluído — não de material recém-impresso.</small>
+            <figure class="por-tras-image por-tras-image--integrated">
+                <img src="/assets/images/por-tras/mapa-integrado.png" alt="Caderno aberto sobre uma mesa ao final de uma sessão de estudo" loading="lazy">
             </figure>
             <div>
                 <p class="section-kicker">O que você constrói</p>
