@@ -951,6 +951,22 @@
   object-fit: cover;
 }
 
+.vsl-stage--video {
+  background: #17100c;
+}
+
+.vsl-stage--video::after {
+  display: none;
+}
+
+.vsl-stage__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #17100c;
+  object-fit: contain;
+}
+
 .vsl-stage > :not(img) {
   position: relative;
   z-index: 1;

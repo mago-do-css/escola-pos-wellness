@@ -6,7 +6,7 @@ declare(strict_types=1);
 /** @var int $upsellPrice */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261023-1">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261023-2">
 
 <main class="por-tras-thanks">
     <div class="page-container por-tras-thanks__topbar">
@@ -40,11 +40,11 @@ declare(strict_types=1);
             <p class="section-kicker section-kicker--light">Antes de abrir o material</p>
             <h2>Assista: onde uma hipótese de função pode levar a investigação.</h2>
         </div>
-        <div class="vsl-stage vsl-stage--thumbnail" role="img" aria-label="Thumbnail da VSL do produto Dinheiro é Fruto">
-            <img src="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.png" alt="VSL do produto Dinheiro é Fruto" loading="eager">
-            <span class="vsl-stage__play" aria-hidden="true">▶</span>
-            <p>VSL — Dinheiro é Fruto</p>
-            <strong>Onde a investigação encontra a sua história.</strong>
+        <div class="vsl-stage vsl-stage--video">
+            <video class="vsl-stage__video" controls preload="metadata" poster="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.png">
+                <source src="/assets/videos/dinheiro-e-fruto-vsl.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo. Baixe o arquivo para assistir.
+            </video>
         </div>
     </section>
 
