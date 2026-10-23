@@ -7,7 +7,6 @@ declare(strict_types=1);
 /** @var string $vslVideoUrl */
 /** @var string $vslPosterUrl */
 /** @var string $nextProductUrl */
-/** @var int $nextProductPrice */
 ?>
 <main
     class="thank-you-page download-upsell"
@@ -61,16 +60,16 @@ declare(strict_types=1);
 
             <section class="download-upsell__offer" aria-labelledby="offer-title">
                 <div>
-                    <p class="thank-you-page__eyebrow">Segundo passo · R$<?= $nextProductPrice ?></p>
-                    <h2 id="offer-title">O Mapa mostra o que se repete. O Radar ajuda você a acompanhar a sequência que vem antes e depois disso.</h2>
-                    <p>Você já tem uma situação para observar. No Radar do Dinheiro, registra o contexto, o pensamento, o afeto, o impulso, a ação e o efeito imediato. São pistas para construir uma hipótese honesta, no seu ritmo.</p>
+                    <p class="thank-you-page__eyebrow">Continue a investigação</p>
+                    <h2 id="offer-title">O Mapa encontrou a cena. Agora falta enxergar o que acontece nos minutos antes e depois dela.</h2>
+                    <p>O Mapa tira a repetição do automático. O Radar do Dinheiro continua de onde ele parou: ajuda você a registrar o contexto, o pensamento, o afeto, o impulso, a ação e o efeito imediato que entram na mesma sequência.</p>
                     <ul>
                         <li>Transforme uma impressão em uma sequência observável.</li>
                         <li>Veja o que acontece nos minutos antes da ação.</li>
                         <li>Continue a investigação sem buscar um rótulo ou resposta pronta.</li>
                     </ul>
-                    <a class="button button--primary" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer o Radar do Dinheiro por R$<?= $nextProductPrice ?></a>
-                    <p class="download-upsell__note">O Mapa continua sendo seu primeiro passo. O Radar é a continuação para quando você quiser observar mais de perto.</p>
+                    <a class="button button--primary" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>">Ver como continuar a investigação</a>
+                    <p class="download-upsell__note">Na próxima página, você conhece o percurso que transforma essa primeira observação em um Radar preenchido.</p>
                 </div>
                 <figure class="download-upsell__product">
                     <img src="/assets/images/mapa/mapa-integrado.png" alt="Materiais do Radar do Dinheiro organizados sobre uma mesa">
