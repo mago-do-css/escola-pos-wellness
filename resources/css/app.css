@@ -472,6 +472,116 @@
     line-height: 1.45;
   }
 
+  .download-upsell__content {
+    max-width: 74rem;
+  }
+
+  .download-upsell__hero,
+  .download-upsell__offer {
+    display: grid;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .download-upsell__image,
+  .download-upsell__product {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(236, 232, 221, .28);
+    background: #4b3018;
+  }
+
+  .download-upsell__image {
+    box-shadow: 1.5rem 1.5rem 0 rgba(10, 7, 4, .18);
+  }
+
+  .download-upsell__image img,
+  .download-upsell__product img {
+    display: block;
+    width: 100%;
+    min-height: 18rem;
+    object-fit: cover;
+  }
+
+  .download-upsell__fallback {
+    margin-top: 1.5rem;
+  }
+
+  .download-upsell__fallback p {
+    max-width: 28rem;
+    margin: 0 0 1rem;
+    color: rgba(236, 232, 221, .78);
+    font-size: .9rem;
+    line-height: 1.45;
+  }
+
+  .download-upsell__vsl {
+    margin-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .download-upsell__offer {
+    margin-top: clamp(4rem, 9vw, 8rem);
+    padding: clamp(2rem, 5vw, 4.5rem);
+    background: rgba(236, 232, 221, .08);
+  }
+
+  .download-upsell__offer h2 {
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.55rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .98;
+  }
+
+  .download-upsell__offer > div > p:not(.thank-you-page__eyebrow):not(.download-upsell__note) {
+    max-width: 39rem;
+    margin: 1.5rem 0 0;
+    color: rgba(236, 232, 221, .8);
+    font-size: 1.03rem;
+    line-height: 1.55;
+  }
+
+  .download-upsell__offer ul {
+    display: grid;
+    gap: .8rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .download-upsell__offer li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: rgba(236, 232, 221, .9);
+    font-size: .96rem;
+    line-height: 1.45;
+  }
+
+  .download-upsell__offer li::before {
+    position: absolute;
+    top: .58rem;
+    left: 0;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: #d6b280;
+    content: "";
+  }
+
+  .download-upsell__offer .button {
+    margin-top: 2rem;
+  }
+
+  .download-upsell__note {
+    max-width: 34rem;
+    margin: 1rem 0 0;
+    color: rgba(236, 232, 221, .62);
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+
   @media (min-width: 900px) {
     .mapa-thank-you__hero {
       grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .7fr);
@@ -483,6 +593,22 @@
 
     .mapa-thank-you__image img {
       min-height: 29rem;
+    }
+
+    .download-upsell__hero {
+      grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .7fr);
+    }
+
+    .download-upsell__offer {
+      grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .65fr);
+    }
+
+    .download-upsell__image img {
+      min-height: 29rem;
+    }
+
+    .download-upsell__product img {
+      min-height: 23rem;
     }
   }
 

@@ -13,6 +13,10 @@ final class MapaDownloadController
         $pageTitle = 'Baixar Mapa do Dinheiro | Pós-Wellness';
         $downloadUrl = MapaDownload::FILE_URL;
         $downloadFilename = MapaDownload::FILE_NAME;
+        $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
+        $vslPosterUrl = MapaDownload::UPSELL_POSTER_URL;
+        $nextProductUrl = MapaDownload::NEXT_PRODUCT_URL;
+        $nextProductPrice = MapaDownload::NEXT_PRODUCT_PRICE;
         $view = dirname(__DIR__) . '/Views/mapa-download/index.php';
 
         ob_start();

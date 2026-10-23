@@ -12,7 +12,7 @@ final class PorTrasLanding
     /** Informe a URL do checkout do upsell Dinheiro é Fruto. */
     public const UPSELL_CHECKOUT_URL = '';
 
-    public const PRICE = 49;
+    public const PRICE = 47;
     public const UPSELL_PRICE = 297;
 
     public static function checkoutHref(): string
