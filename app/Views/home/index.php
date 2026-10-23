@@ -25,12 +25,18 @@ declare(strict_types=1);
                 </div>
             </div>
 
-            <aside class="hero__note" aria-label="Sobre o Mapa do Dinheiro">
-                <span class="hero__note-index" aria-hidden="true">01</span>
-                <p>
-                    Leva poucos minutos. No final, você sai com um comportamento concreto para observar na sua relação com dinheiro.
-                </p>
-            </aside>
+            <div class="hero__support">
+                <figure class="visual-slot visual-slot--hero visual-slot--image">
+                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.png" alt="Mapa do Dinheiro aberto sobre uma mesa de madeira" loading="eager">
+                </figure>
+
+                <aside class="hero__note" aria-label="Sobre o Mapa do Dinheiro">
+                    <span class="hero__note-index" aria-hidden="true">01</span>
+                    <p>
+                        Leva poucos minutos. No final, você sai com um comportamento concreto para observar na sua relação com dinheiro.
+                    </p>
+                </aside>
+            </div>
         </div>
 
         <div class="page-container hero__footer" aria-hidden="true">
@@ -70,6 +76,10 @@ declare(strict_types=1);
                     <p>No final, você tem um comportamento concreto para começar a observar.</p>
                 </li>
             </ol>
+
+            <figure class="visual-slot visual-slot--method visual-slot--image">
+                <img src="/assets/images/mapa/situacoes-cotidianas.png" alt="Cenário cotidiano com caderno, recibos, carteira e sacola de compras" loading="lazy">
+            </figure>
         </div>
     </section>
 
@@ -132,6 +142,10 @@ declare(strict_types=1);
                 <p class="capture__note">
                     Gratuito · leva poucos minutos · sem diagnóstico ou julgamento.
                 </p>
+
+                <figure class="visual-slot visual-slot--capture visual-slot--image">
+                    <img src="/assets/images/mapa/preenchendo-mapa.png" alt="Pessoa preenchendo um mapa de observação em uma mesa clara" loading="lazy">
+                </figure>
             </div>
 
             <form class="capture__form" data-capture-form data-thank-you-url="/obrigado-mapa-do-dinheiro" novalidate>
@@ -150,9 +164,14 @@ declare(strict_types=1);
                     <input id="lead-email" name="email" type="email" autocomplete="email" required>
                 </div>
 
+                <div class="capture__field">
+                    <label for="lead-whatsapp">WhatsApp <span>(opcional)</span></label>
+                    <input id="lead-whatsapp" name="whatsapp" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="(00) 00000-0000" data-whatsapp-input>
+                </div>
+
                 <label class="capture__consent">
                     <input name="consent" type="checkbox" required>
-                    <span>Quero receber o Mapa do Dinheiro e as comunicações relacionadas a esta experiência.</span>
+                    <span>Quero receber o Mapa do Dinheiro e as comunicações relacionadas a esta experiência por e-mail e, se informado, WhatsApp.</span>
                 </label>
 
                 <button class="button capture__submit" type="submit">
