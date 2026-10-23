@@ -32,6 +32,23 @@ window.addEventListener('scroll', () => {
 
 const captureForm = document.querySelector('[data-capture-form]');
 const captureFeedback = document.querySelector('[data-capture-feedback]');
+const whatsappInput = document.querySelector('[data-whatsapp-input]');
+
+whatsappInput?.addEventListener('input', () => {
+  const digits = whatsappInput.value.replace(/\D/g, '').slice(0, 11);
+
+  if (digits.length <= 2) {
+    whatsappInput.value = digits ? `(${digits}` : '';
+    return;
+  }
+
+  if (digits.length <= 7) {
+    whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    return;
+  }
+
+  whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+});
 
 captureForm?.addEventListener('submit', (event) => {
   event.preventDefault();

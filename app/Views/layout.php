@@ -17,7 +17,7 @@ declare(strict_types=1);
     <link rel="apple-touch-icon" href="/assets/images/favicon/favicon-180x180.png">
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/app.js" defer></script>
+    <script src="/assets/js/app.js?v=20261023-1" defer></script>
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
