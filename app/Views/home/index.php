@@ -165,8 +165,8 @@ declare(strict_types=1);
                 </div>
 
                 <div class="capture__field">
-                    <label for="lead-whatsapp">WhatsApp <span>(opcional)</span></label>
-                    <input id="lead-whatsapp" name="whatsapp" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="(00) 00000-0000" data-whatsapp-input>
+                    <label for="lead-whatsapp">WhatsApp</label>
+                    <input id="lead-whatsapp" name="whatsapp" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="(00) 00000-0000" pattern="\\(\\d{2}\\) \\d{4,5}-\\d{4}" title="Informe um WhatsApp com DDD." required data-whatsapp-input>
                 </div>
 
                 <label class="capture__consent">

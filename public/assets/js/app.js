@@ -42,8 +42,13 @@ whatsappInput?.addEventListener('input', () => {
     return;
   }
 
-  if (digits.length <= 7) {
+  if (digits.length <= 6) {
     whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    return;
+  }
+
+  if (digits.length <= 10) {
+    whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
     return;
   }
 

@@ -357,6 +357,135 @@
     margin-top: 2rem;
   }
 
+  .mapa-thank-you__content {
+    max-width: 74rem;
+  }
+
+  .mapa-thank-you__hero {
+    display: grid;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .mapa-thank-you__intro {
+    min-width: 0;
+  }
+
+  .mapa-thank-you__image {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(236, 232, 221, .3);
+    background: #4b3018;
+    box-shadow: 1.5rem 1.5rem 0 rgba(10, 7, 4, .18);
+  }
+
+  .mapa-thank-you__image img {
+    display: block;
+    width: 100%;
+    min-height: 19rem;
+    object-fit: cover;
+  }
+
+  .mapa-thank-you__vsl {
+    margin-top: clamp(4rem, 8vw, 7rem);
+  }
+
+  .vsl__video--mapa video {
+    object-fit: contain;
+  }
+
+  .mapa-next-step {
+    margin-top: clamp(4rem, 9vw, 8rem);
+    padding: clamp(2rem, 5vw, 4.5rem);
+    color: var(--ink);
+    background: #d8c5aa;
+  }
+
+  .mapa-next-step__content {
+    max-width: 46rem;
+  }
+
+  .mapa-next-step .thank-you-page__eyebrow {
+    color: #765221;
+  }
+
+  .mapa-next-step h2 {
+    max-width: 38rem;
+    margin: 1rem 0 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .98;
+  }
+
+  .mapa-next-step__content > p:not(.thank-you-page__eyebrow):not(.mapa-next-step__note) {
+    max-width: 40rem;
+    margin: 1.5rem 0 0;
+    color: rgba(37, 31, 24, .8);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .mapa-next-step__list {
+    display: grid;
+    gap: .8rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mapa-next-step__list li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+
+  .mapa-next-step__list li::before {
+    position: absolute;
+    top: .58rem;
+    left: 0;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: #875c21;
+    content: "";
+  }
+
+  .mapa-next-step__cta {
+    margin-top: 2rem;
+    color: var(--cream);
+    background: var(--ink);
+  }
+
+  .mapa-next-step__cta:hover {
+    color: var(--ink);
+    background: #f3eadc;
+  }
+
+  .mapa-next-step__note {
+    margin: 1rem 0 0;
+    color: rgba(37, 31, 24, .66);
+    font-size: .82rem;
+    line-height: 1.45;
+  }
+
+  @media (min-width: 900px) {
+    .mapa-thank-you__hero {
+      grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .7fr);
+    }
+
+    .mapa-thank-you__image {
+      margin-top: 1.5rem;
+    }
+
+    .mapa-thank-you__image img {
+      min-height: 29rem;
+    }
+  }
+
   .radar-thank-you__hero,
   .radar-thank-you__offer {
     display: grid;
@@ -541,8 +670,9 @@
     top: 0;
     right: 0;
     left: 0;
-    background: rgba(37, 31, 24, .9);
-    backdrop-filter: blur(16px);
+    background-color: #251f18;
+    box-shadow: 0 .5rem 1.75rem rgba(16, 11, 6, .22);
+    backdrop-filter: none;
   }
 
   .site-header__inner {
@@ -634,8 +764,8 @@
     inset: 0;
     visibility: hidden;
     padding-top: 7rem;
-    background: rgba(37, 31, 24, .98);
-    backdrop-filter: blur(16px);
+    background-color: #251f18;
+    backdrop-filter: none;
     opacity: 0;
     transition: opacity .2s ease, visibility .2s ease;
   }
@@ -2468,6 +2598,46 @@
 
     .thank-you-page__content {
       margin-top: clamp(3.5rem, 7vw, 6rem);
+    }
+  }
+
+  /* Em desktops compactos, a leitura fica mais confortável sem ampliar a altura das seções. */
+  @media (min-width: 1024px) and (max-width: 1500px) {
+    .hero__title {
+      font-size: clamp(3rem, 5.25vw, 4.85rem);
+    }
+
+    .patterns__title,
+    .method__title,
+    .outcome__title,
+    .limits__title,
+    .fruit__title,
+    .faq__title {
+      font-size: clamp(2.35rem, 3.85vw, 3.9rem);
+    }
+
+    .capture__title {
+      font-size: clamp(2.45rem, 4vw, 4rem);
+    }
+  }
+
+  /* Em monitores grandes, o material visual passa a sustentar melhor a composição. */
+  @media (min-width: 1501px) {
+    .hero__content {
+      grid-template-columns: minmax(0, 1fr) clamp(23rem, 18vw, 30rem);
+      gap: clamp(3rem, 5vw, 5.5rem);
+    }
+
+    .visual-slot--hero {
+      min-height: clamp(27rem, 31vw, 38rem);
+    }
+
+    .hero__support {
+      gap: 1.6rem;
+    }
+
+    .hero__note {
+      max-width: 23rem;
     }
   }
 
