@@ -584,6 +584,17 @@
     margin-top: 1rem;
   }
 
+  @media (max-width: 899px) {
+    .download-upsell__image { display: none; }
+    .download-upsell__content { margin-top: 2rem; }
+    .download-upsell h1 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.03; }
+    .download-upsell .thank-you-page__lead { margin-top: 1rem; font-size: .95rem; }
+    .download-upsell__fallback .button { width: 100%; }
+    .download-upsell__bridge { margin-top: 2rem; padding: 0; border: 0; background: transparent; }
+    .download-upsell__bridge .vsl__heading { margin-bottom: 1rem; }
+    .download-upsell__bridge .vsl__heading h2 { font-size: clamp(1.5rem, 5.5vw, 2.25rem); line-height: 1.1; }
+  }
+
   .download-upsell__summary {
     max-width: 48rem;
     margin: 1.5rem auto 0;

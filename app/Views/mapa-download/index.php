@@ -34,7 +34,7 @@ declare(strict_types=1);
                         <span class="download-progress__number" data-download-countdown>3</span>
                     </div>
 
-                    <div class="download-upsell__fallback" data-download-fallback hidden>
+                    <div class="download-upsell__fallback" data-download-fallback>
                         <p data-download-fallback-message>Se o download não começar em alguns segundos, use o botão abaixo.</p>
                         <a class="button button--primary" href="<?= htmlspecialchars($downloadUrl, ENT_QUOTES, 'UTF-8') ?>" download="<?= htmlspecialchars($downloadFilename, ENT_QUOTES, 'UTF-8') ?>" data-download-link>Baixar o Mapa agora</a>
                     </div>
