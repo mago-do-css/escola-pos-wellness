@@ -128,7 +128,7 @@ declare(strict_types=1);
                         <li>Sair de “eu faço isso de novo” para “como eu chego até isso?”.</li>
                     </ul>
                     <figure class="radar-editorial-media radar-editorial-media--practice observation-section__media">
-                        <img src="/assets/images/radar/pratica-de-observacao.png" alt="Pessoa registrando uma observação em seu caderno" loading="lazy">
+                        <img src="/assets/images/radar/pratica-de-observacao.webp" alt="Pessoa registrando uma observação em seu caderno" loading="lazy">
                     </figure>
                 </div>
             </div>

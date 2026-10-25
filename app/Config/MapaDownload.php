@@ -16,6 +16,6 @@ final class MapaDownload
 
     /** Material apresentado após a captura, como continuidade opcional do Mapa. */
     public const UPSELL_VIDEO_URL = '/assets/videos/mapa-do-dinheiro-vsl-3.mp4';
-    public const UPSELL_POSTER_URL = '/assets/images/vsl-upsell-29-47-thumbnail.png';
+    public const UPSELL_POSTER_URL = '/assets/images/vsl-upsell-29-47-thumbnail.webp';
     public const NEXT_PRODUCT_URL = '/por-tras-do-dinheiro';
 }

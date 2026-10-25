@@ -24,7 +24,7 @@ declare(strict_types=1);
                 </div>
             </div>
             <figure class="por-tras-image por-tras-image--hero">
-                <img src="/assets/images/por-tras/hero-livro-cafe.png" alt="Pessoa virando a página de um caderno de observação em uma mesa de café">
+                <img src="/assets/images/por-tras/hero-livro-cafe.webp" alt="Pessoa virando a página de um caderno de observação em uma mesa de café">
             </figure>
         </div>
         <div class="page-container por-tras-hero__trail" aria-label="Jornada de investigação">
@@ -166,7 +166,7 @@ declare(strict_types=1);
                 <p class="por-tras-disclaimer">Isso é uma hipótese. Não uma verdade definitiva sobre você.</p>
             </div>
             <figure class="por-tras-image por-tras-image--product">
-                <img src="/assets/images/por-tras/mapa-da-funcao.png" alt="Mapa da Função em um caderno aberto, com cartões de apoio">
+                <img src="/assets/images/por-tras/mapa-da-funcao.webp" alt="Mapa da Função em um caderno aberto, com cartões de apoio">
             </figure>
         </div>
     </section>
@@ -189,7 +189,7 @@ declare(strict_types=1);
     <section class="por-tras-section por-tras-section--image-break">
         <div class="page-container image-break-grid">
             <figure class="por-tras-image por-tras-image--lifestyle">
-                <img src="/assets/images/por-tras/pratica-de-observacao.png" alt="Pessoa preenchendo seu caderno de observação perto de uma janela">
+                <img src="/assets/images/por-tras/pratica-de-observacao.webp" alt="Pessoa preenchendo seu caderno de observação perto de uma janela">
             </figure>
             <div>
                 <p class="section-kicker">Uma investigação, não um teste</p>

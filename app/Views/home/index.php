@@ -27,7 +27,7 @@ declare(strict_types=1);
 
             <div class="hero__support">
                 <figure class="visual-slot visual-slot--hero visual-slot--image">
-                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.png" alt="Mapa do Dinheiro aberto sobre uma mesa de madeira" loading="eager">
+                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.webp" alt="Mapa do Dinheiro aberto sobre uma mesa de madeira" loading="eager">
                 </figure>
 
                 <aside class="hero__note" aria-label="Sobre o Mapa do Dinheiro">
@@ -78,7 +78,7 @@ declare(strict_types=1);
             </ol>
 
             <figure class="visual-slot visual-slot--method visual-slot--image">
-                <img src="/assets/images/mapa/situacoes-cotidianas.png" alt="Cenário cotidiano com caderno, recibos, carteira e sacola de compras" loading="lazy">
+                <img src="/assets/images/mapa/situacoes-cotidianas.webp" alt="Cenário cotidiano com caderno, recibos, carteira e sacola de compras" loading="lazy">
             </figure>
         </div>
     </section>
@@ -144,7 +144,7 @@ declare(strict_types=1);
                 </p>
 
                 <figure class="visual-slot visual-slot--capture visual-slot--image">
-                    <img src="/assets/images/mapa/preenchendo-mapa.png" alt="Pessoa preenchendo um mapa de observação em uma mesa clara" loading="lazy">
+                    <img src="/assets/images/mapa/preenchendo-mapa.webp" alt="Pessoa preenchendo um mapa de observação em uma mesa clara" loading="lazy">
                 </figure>
             </div>
 

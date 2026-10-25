@@ -41,7 +41,7 @@ declare(strict_types=1);
                 </div>
 
                 <figure class="download-upsell__image">
-                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.png" alt="Caderno aberto para observar uma situação financeira de forma guiada">
+                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.webp" alt="Caderno aberto para observar uma situação financeira de forma guiada">
                 </figure>
             </div>
 

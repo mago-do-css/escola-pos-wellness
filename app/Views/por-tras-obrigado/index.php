@@ -31,7 +31,7 @@ declare(strict_types=1);
             </div>
         </div>
         <figure class="por-tras-image por-tras-image--thanks">
-            <img src="/assets/images/por-tras/obrigado-continuacao.png" alt="Mãos organizando um mapa de estudo entre cadernos" loading="eager">
+            <img src="/assets/images/por-tras/obrigado-continuacao.webp" alt="Mãos organizando um mapa de estudo entre cadernos" loading="eager">
         </figure>
     </section>
 
@@ -41,7 +41,7 @@ declare(strict_types=1);
             <h2>Assista: onde uma hipótese de função pode levar a investigação.</h2>
         </div>
         <div class="vsl-stage vsl-stage--video">
-            <video class="vsl-stage__video" controls preload="metadata" poster="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.png">
+            <video class="vsl-stage__video" controls preload="metadata" poster="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.webp">
                 <source src="/assets/videos/dinheiro-e-fruto-vsl.mp4" type="video/mp4">
                 Seu navegador não suporta a reprodução deste vídeo. Baixe o arquivo para assistir.
             </video>
@@ -58,7 +58,7 @@ declare(strict_types=1);
                 <p class="por-tras-upsell__note">Próximo passo da jornada: Dinheiro é Fruto, por R$<?= $upsellPrice ?>.</p>
             </div>
             <figure class="por-tras-image por-tras-image--upsell">
-                <img src="/assets/images/por-tras/mockup-dinheiro-e-fruto.png" alt="Cadernos do Dinheiro é Fruto organizados como um mapa integrado" loading="lazy">
+                <img src="/assets/images/por-tras/mockup-dinheiro-e-fruto.webp" alt="Cadernos do Dinheiro é Fruto organizados como um mapa integrado" loading="lazy">
             </figure>
         </div>
     </section>
@@ -79,7 +79,7 @@ declare(strict_types=1);
     <section class="por-tras-thanks__integrated">
         <div class="page-container por-tras-split por-tras-split--center">
             <figure class="por-tras-image por-tras-image--integrated">
-                <img src="/assets/images/por-tras/mapa-integrado.png" alt="Caderno aberto sobre uma mesa ao final de uma sessão de estudo" loading="lazy">
+                <img src="/assets/images/por-tras/mapa-integrado.webp" alt="Caderno aberto sobre uma mesa ao final de uma sessão de estudo" loading="lazy">
             </figure>
             <div>
                 <p class="section-kicker">O que você constrói</p>
