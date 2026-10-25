@@ -487,6 +487,48 @@
     max-width: 74rem;
   }
 
+  .mapa-thanks-light { min-height: 100svh; color: #251f18; background: #f1e9dc; }
+  .mapa-thanks-light__inner { padding-block: 2rem 5rem; }
+  .mapa-thanks-light__brand { display: inline-block; width: 10.5rem; }
+  .mapa-thanks-light__brand img { width: 100%; filter: brightness(0); opacity: .85; }
+  .mapa-thanks-light__eyebrow { margin: 0; color: #80542e; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+  .mapa-thanks-light__download { display: grid; gap: 1.5rem; align-items: center; margin-top: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #cdbda6; }
+  .mapa-thanks-light__download h1 { max-width: 40rem; margin: .75rem 0; font-family: "Arizona Flare", Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.65rem); line-height: 1.05; letter-spacing: -.04em; }
+  .mapa-thanks-light__download p:not(.mapa-thanks-light__eyebrow) { margin: .5rem 0; color: #625448; font-size: .9rem; line-height: 1.5; }
+  .mapa-thanks-light__download-action .mapa-thanks-light__download-button { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; margin-top: .75rem; min-height: 3.5rem; padding: 1rem 1.5rem; color: #fff8ed; background: #67452c; border: 1px solid #67452c; font-size: .95rem; text-decoration: none; box-shadow: 0 .35rem .8rem rgba(60, 38, 16, .14); }
+  .mapa-thanks-light__download-action .mapa-thanks-light__download-button:hover { background: #412c1c; }
+  .mapa-thanks-light__download-button:focus-visible { outline: 2px solid #67452c; outline-offset: 4px; }
+  .mapa-thanks-light__upsell { max-width: 64rem; margin: clamp(2.5rem, 5vw, 4rem) auto 0; }
+  .mapa-thanks-light__upsell header { max-width: 48rem; margin: 0 auto 1.75rem; text-align: center; }
+  .mapa-thanks-light__upsell h2 { margin: 1rem 0; font-family: "Arizona Flare", Georgia, serif; font-size: clamp(2rem, 3.5vw, 3.3rem); line-height: 1.05; letter-spacing: -.045em; }
+  .mapa-thanks-light__upsell header > p:last-child { color: #625448; font-size: 1rem; line-height: 1.5; }
+  .mapa-thanks-light__video { overflow: hidden; aspect-ratio: 16 / 9; background: #251f18; border: 1px solid #b9a48b; box-shadow: 0 1rem 2.5rem rgba(60, 38, 16, .1); }
+  .mapa-thanks-light__video video { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .mapa-thanks-light__action { max-width: 46rem; margin: 1.5rem auto 0; text-align: center; }
+  .mapa-thanks-light__action > p:first-child { margin: 0 0 1.25rem; font-size: 1rem; line-height: 1.5; }
+  .mapa-thanks-light__action .mapa-thanks-light__cta { display: inline-flex; justify-content: center; gap: 1rem; width: 100%; max-width: 32rem; min-height: 4rem; padding: 1.15rem 1.5rem; background: #251f18; color: #f1e9dc; font-size: 1rem; }
+  .mapa-thanks-light__action .mapa-thanks-light__cta:hover { background: #67452c; }
+  .mapa-thanks-light__cta:focus-visible { outline: 2px solid #67452c; outline-offset: 5px; }
+  .mapa-thanks-light__action .mapa-thanks-light__cta { animation: mapa-next-step-pulse 3s ease-out infinite; }
+  .mapa-thanks-light__action .mapa-thanks-light__cta:hover,
+  .mapa-thanks-light__action .mapa-thanks-light__cta:focus-visible { animation: none; }
+  @keyframes mapa-next-step-pulse {
+    0%, 70%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(103, 69, 44, 0); }
+    20% { transform: scale(1.025); box-shadow: 0 0 0 9px rgba(103, 69, 44, .32); }
+    45% { transform: scale(1); box-shadow: 0 0 0 18px rgba(103, 69, 44, 0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mapa-thanks-light__action .mapa-thanks-light__cta { animation: none; }
+  }
+  .mapa-thanks-light__reassurance { margin: .85rem auto 0; max-width: 32rem; color: #625448; font-size: .82rem; line-height: 1.5; }
+  .mapa-thanks-light__action ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.75rem 0 0; padding: 1.25rem 0 0; border-top: 1px solid #cdbda6; list-style: none; }
+  .mapa-thanks-light__action li { display: grid; justify-items: center; gap: .6rem; font-size: .8rem; line-height: 1.4; }
+  .mapa-thanks-light__action li span { display: grid; place-items: center; width: 2rem; height: 2rem; border: 1px solid #b9a48b; border-radius: 50%; color: #80542e; font-size: .7rem; }
+  @media (min-width: 900px) {
+    .mapa-thanks-light__download { grid-template-columns: minmax(0, 1fr) auto; }
+    .mapa-thanks-light__download-action { text-align: right; }
+  }
+
   .download-upsell__hero,
   .download-upsell__offer {
     display: grid;
@@ -625,9 +667,9 @@
   }
 
   @keyframes download-cta-pulse {
-    0%, 65%, 100% { box-shadow: 0 0 0 0 rgba(228, 191, 131, 0); }
-    20% { box-shadow: 0 0 0 7px rgba(228, 191, 131, .2); }
-    45% { box-shadow: 0 0 0 13px rgba(228, 191, 131, 0); }
+    0%, 70%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(228, 191, 131, 0); }
+    20% { transform: scale(1.025); box-shadow: 0 0 0 9px rgba(228, 191, 131, .38); }
+    45% { transform: scale(1); box-shadow: 0 0 0 18px rgba(228, 191, 131, 0); }
   }
 
   @media (prefers-reduced-motion: reduce) {
