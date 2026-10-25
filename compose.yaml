@@ -4,6 +4,8 @@ services:
       context: .
     container_name: pos-wellness-site
     restart: unless-stopped
+    volumes:
+      - /opt/poswellness/videos:/var/www/html/public/assets/videos
     networks:
       - proxy
 
