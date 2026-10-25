@@ -24,7 +24,7 @@ declare(strict_types=1);
             <a href="#sete-dias">Como funciona</a>
             <a href="#radar-preenchido">O que você constrói</a>
             <a href="#faq">FAQ</a>
-            <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Começar meu Radar</a>
+            <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Começar Por Trás do Dinheiro</a>
         </nav>
     </div>
 </header>

@@ -10,7 +10,7 @@ final class PorTrasController
 {
     public function index(): void
     {
-        $this->render('index.php', 'Radar do Dinheiro | Escola Pós-Wellness');
+        $this->render('index.php', 'Por Trás do Dinheiro | Escola Pós-Wellness');
     }
 
     public function backup(): void
@@ -22,6 +22,8 @@ final class PorTrasController
     {
         $checkoutUrl = PorTrasLanding::checkoutHref();
         $price = PorTrasLanding::PRICE;
+        $vslVideoUrl = PorTrasLanding::VSL_VIDEO_URL;
+        $vslPosterUrl = PorTrasLanding::VSL_POSTER_URL;
         $view = dirname(__DIR__) . '/Views/por-tras/' . $file;
 
         ob_start();

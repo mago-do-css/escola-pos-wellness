@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 /** @var string $checkoutUrl */
 /** @var int $price */
+/** @var string $vslVideoUrl */
+/** @var string $vslPosterUrl */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
 <link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261020-2">
@@ -13,11 +15,11 @@ declare(strict_types=1);
         <?php require dirname(__DIR__) . '/partials/por-tras-navbar.php'; ?>
         <div class="page-container por-tras-hero__grid">
             <div class="por-tras-hero__copy">
-                <p class="section-kicker section-kicker--light">Radar do Dinheiro · Uma jornada, dois módulos</p>
+                <p class="section-kicker section-kicker--light">Por Trás do Dinheiro · Uma jornada, dois módulos</p>
                 <h1>Entenda o caminho que você repete com o dinheiro — e investigue o que ele produz em você.</h1>
-                <p class="por-tras-hero__lead">Primeiro, observe uma situação real durante sete dias. Depois, aprofunde a investigação em cinco encontros para construir uma hipótese sobre a função desse comportamento. Tudo dentro do Radar do Dinheiro.</p>
+                <p class="por-tras-hero__lead">Primeiro, observe uma situação real durante sete dias. Depois, aprofunde a investigação em cinco encontros para construir uma hipótese sobre a função desse comportamento. Tudo dentro do Por Trás do Dinheiro.</p>
                 <div class="por-tras-hero__actions">
-                    <a class="button button--primary" href="#oferta">Quero começar meu Radar completo</a>
+                    <a class="button button--primary" href="#oferta">Quero começar Por Trás do Dinheiro</a>
                     <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
                 </div>
             </div>
@@ -32,6 +34,21 @@ declare(strict_types=1);
         </div>
     </section>
 
+    <section class="por-tras-section por-tras-section--vsl" aria-labelledby="por-tras-vsl-title">
+        <div class="page-container">
+            <div class="por-tras-vsl__heading">
+                <p class="section-kicker">Antes de começar</p>
+                <h2 id="por-tras-vsl-title">Assista e entenda como a observação pode ganhar profundidade.</h2>
+                <p>O Mapa ajuda a escolher uma cena. O primeiro módulo organiza a sequência. No vídeo, você conhece a jornada completa de Por Trás do Dinheiro.</p>
+            </div>
+            <div class="vsl__video por-tras-vsl__video">
+                <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                    <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
+                    Seu navegador não oferece suporte à reprodução deste vídeo.
+                </video>
+            </div>
+        </div>
+    </section>
 
     <section id="modulo-um" class="por-tras-section por-tras-section--sand">
         <div class="page-container por-tras-split por-tras-split--center">
@@ -159,7 +176,7 @@ declare(strict_types=1);
             <div class="journey-bundle__intro">
                 <p class="section-kicker">Você pode começar por aqui</p>
                 <h2>Um único produto. Uma investigação que ganha profundidade.</h2>
-                <p>O antigo Radar de sete dias passa a ser o primeiro módulo. Por Trás do Dinheiro é o segundo módulo da mesma jornada. O Mapa do Dinheiro está incluído como preparação para escolher uma situação concreta.</p>
+                <p>O Radar de sete dias é o primeiro módulo. Por Trás do Dinheiro reúne os dois módulos na mesma jornada. O Mapa do Dinheiro está incluído como preparação para escolher uma situação concreta.</p>
             </div>
             <div class="journey-bundle__steps">
                 <article><span>Preparação incluída</span><h3>Mapa do Dinheiro</h3><p>O que eu repito?</p></article>
@@ -220,7 +237,7 @@ declare(strict_types=1);
             <div class="por-tras-faq">
                 <?php
                 $faqs = [
-                    ['Preciso comprar dois produtos?', 'Não. O Radar do Dinheiro reúne os dois módulos em um único acesso. Comece pelo Mapa incluído, siga os sete dias do módulo 1 e avance para os cinco encontros do módulo 2.'],
+                    ['Preciso comprar dois produtos?', 'Não. Por Trás do Dinheiro reúne os dois módulos em um único acesso. Comece pelo Mapa incluído, siga os sete dias do módulo 1 e avance para os cinco encontros do módulo 2.'],
                     ['Vou descobrir a causa do meu comportamento?', 'Não é essa a promessa. Você construirá uma hipótese de função baseada no que observou, sem transformar essa hipótese em verdade definitiva.'],
                     ['Isso substitui terapia ou orientação financeira?', 'Não. É uma experiência educativa e estruturada de observação. Não substitui psicoterapia, acompanhamento clínico, orientação financeira ou atendimento profissional.'],
                     ['E se eu não souber responder alguma pergunta?', 'Registre “ainda não sei”. A proposta valoriza uma observação honesta; inventar uma explicação seria o oposto do trabalho.'],
@@ -241,7 +258,7 @@ declare(strict_types=1);
     <section id="oferta" class="por-tras-section por-tras-section--offer">
         <div class="page-container offer-grid">
             <div>
-                <p class="section-kicker">Radar do Dinheiro completo</p>
+                <p class="section-kicker">Por Trás do Dinheiro completo</p>
                 <h2>Comece pela sequência. Avance para a função.</h2>
                 <p>Uma compra reúne a preparação, os sete dias de observação e os cinco encontros de aprofundamento. Você constrói seu Radar e seu Mapa da Função no mesmo percurso.</p>
             </div>
@@ -255,7 +272,7 @@ declare(strict_types=1);
                     <li>Exercícios e Mapa da Função</li>
                 </ul>
                 <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
-                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar meu Radar completo</a>
+                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar Por Trás do Dinheiro</a>
                 <p class="offer-card__note">Checkout seguro pela Kiwify. Sem assinatura e sem urgência artificial.</p>
             </article>
         </div>

@@ -14,6 +14,8 @@ final class PorTrasLanding
 
     public const PRICE = 47;
     public const UPSELL_PRICE = 297;
+    public const VSL_VIDEO_URL = '/assets/videos/vsl-por-tras-do-dinheiro.mp4';
+    public const VSL_POSTER_URL = '/assets/images/por-tras/thumbnail-vsl-por-tras-v2.png';
 
     public static function checkoutHref(): string
     {

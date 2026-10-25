@@ -387,6 +387,17 @@
     object-fit: cover;
   }
 
+  .mapa-thank-you__video {
+    margin: 0;
+    border-color: rgba(236, 232, 221, .3);
+    box-shadow: 1.5rem 1.5rem 0 rgba(10, 7, 4, .18);
+  }
+
+  .mapa-thank-you__video video {
+    min-height: 19rem;
+    object-fit: cover;
+  }
+
   .mapa-thank-you__vsl {
     margin-top: clamp(4rem, 8vw, 7rem);
   }
@@ -515,12 +526,151 @@
     line-height: 1.45;
   }
 
-  .download-upsell__vsl {
+  .download-upsell__bridge {
     margin-top: clamp(4rem, 8vw, 7rem);
+    padding: clamp(1.25rem, 3.5vw, 3rem);
+    border: 1px solid rgba(214, 178, 128, .25);
+    background: rgba(236, 232, 221, .06);
+  }
+
+  .download-upsell__bridge .vsl__heading {
+    display: block;
+  }
+
+  .download-upsell__bridge .vsl__heading h2 {
+    max-width: 48rem;
+    margin-top: 1rem;
+  }
+
+  .download-upsell__summary {
+    max-width: 48rem;
+    margin: 1.5rem auto 0;
+    text-align: center;
+  }
+
+  .download-upsell__summary > p:first-child {
+    color: rgba(236, 232, 221, .85);
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .download-upsell__summary > p:first-child strong {
+    color: var(--cream);
+  }
+
+  .download-upsell__summary .download-upsell__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.75rem 0 0;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid rgba(236, 232, 221, .15);
+    list-style: none;
+    color: rgba(236, 232, 221, .75);
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+
+  .download-upsell__benefits li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .65rem;
+    font-size: .82rem;
+  }
+
+  .download-upsell__benefits svg {
+    width: 1.65rem;
+    height: 1.65rem;
+    color: #e4bf83;
+  }
+
+  @media (max-width: 480px) {
+    .download-upsell__summary .download-upsell__benefits { gap: .65rem; }
+    .download-upsell__benefits li { font-size: .75rem; }
+  }
+
+  .download-upsell__summary .download-upsell__cta {
+    display: inline-flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 34rem;
+    min-height: 4rem;
+    padding: 1.15rem 1.5rem;
+    font-size: 1rem;
+    background: #e4bf83;
+    color: #251f18;
+    animation: download-cta-pulse 3.5s ease-out infinite;
+  }
+
+  .download-upsell__summary .download-upsell__cta:hover,
+  .download-upsell__summary .download-upsell__cta:focus-visible {
+    animation: none;
+    background: #f3dfba;
+    outline: 2px solid #e4bf83;
+    outline-offset: 5px;
+  }
+
+  .download-upsell__reinforcement {
+    margin: 1.25rem auto .5rem;
+    color: var(--cream);
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+
+  .download-upsell__summary .download-upsell__note {
+    margin: .5rem auto 0;
+  }
+
+  @keyframes download-cta-pulse {
+    0%, 65%, 100% { box-shadow: 0 0 0 0 rgba(228, 191, 131, 0); }
+    20% { box-shadow: 0 0 0 7px rgba(228, 191, 131, .2); }
+    45% { box-shadow: 0 0 0 13px rgba(228, 191, 131, 0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .download-upsell__summary .download-upsell__cta { animation: none; }
+  }
+
+  .download-upsell__vsl {
+    margin: 0;
+  }
+
+  .download-upsell__video-caption {
+    margin: 1rem 0 0;
+    color: rgba(236, 232, 221, .68);
+    font-size: .86rem;
+    line-height: 1.45;
+  }
+
+  .download-upsell__continuation {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    margin-top: 1.5rem;
+    color: #d6b280;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .download-upsell__continuation i {
+    display: block;
+    width: 3.5rem;
+    height: 1px;
+    background: rgba(214, 178, 128, .7);
+  }
+
+  .download-upsell__continuation strong {
+    color: var(--cream);
+    font: inherit;
   }
 
   .download-upsell__offer {
-    margin-top: clamp(4rem, 9vw, 8rem);
+    margin-top: 1.25rem;
     padding: clamp(2rem, 5vw, 4.5rem);
     background: rgba(236, 232, 221, .08);
   }
@@ -574,6 +724,41 @@
     margin-top: 2rem;
   }
 
+  .por-tras-section--vsl {
+    color: var(--ink);
+    background: #efe6d8;
+  }
+
+  .por-tras-vsl__heading {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 48rem;
+    margin-bottom: 2rem;
+  }
+
+  .por-tras-vsl__heading h2 {
+    max-width: 36rem;
+    margin: 0;
+    font-family: "Arizona Flare", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3.7rem);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: .98;
+  }
+
+  .por-tras-vsl__heading > p:not(.section-kicker) {
+    max-width: 42rem;
+    margin: 0;
+    color: rgba(37, 31, 24, .74);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .por-tras-vsl__video {
+    border-color: rgba(37, 31, 24, .25);
+    box-shadow: 1.5rem 1.5rem 0 rgba(96, 63, 29, .14);
+  }
+
   .download-upsell__note {
     max-width: 34rem;
     margin: 1rem 0 0;
@@ -592,6 +777,10 @@
     }
 
     .mapa-thank-you__image img {
+      min-height: 29rem;
+    }
+
+    .mapa-thank-you__video video {
       min-height: 29rem;
     }
 

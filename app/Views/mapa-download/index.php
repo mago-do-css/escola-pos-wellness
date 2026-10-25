@@ -45,35 +45,29 @@ declare(strict_types=1);
                 </figure>
             </div>
 
-            <section class="vsl download-upsell__vsl" aria-labelledby="vsl-title">
-                <div class="vsl__heading">
-                    <p>Depois do Mapa</p>
-                    <h2 id="vsl-title">Assista ao vídeo antes de decidir se quer aprofundar a observação.</h2>
+            <section class="download-upsell__bridge" aria-labelledby="vsl-title">
+                <div class="vsl download-upsell__vsl">
+                    <div class="vsl__heading">
+                        <p>O próximo passo começa aqui</p>
+                        <h2 id="vsl-title">O Mapa mostra uma cena. Assista e veja como investigar o que acontece antes e depois dela.</h2>
+                    </div>
+                    <div class="vsl__video">
+                        <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                            <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
+                            Seu navegador não oferece suporte à reprodução deste vídeo.
+                        </video>
+                    </div>
                 </div>
-                <div class="vsl__video">
-                    <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
-                        <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
-                        Seu navegador não oferece suporte à reprodução deste vídeo.
-                    </video>
-                </div>
-            </section>
-
-            <section class="download-upsell__offer" aria-labelledby="offer-title">
-                <div>
-                    <p class="thank-you-page__eyebrow">Continue a investigação</p>
-                    <h2 id="offer-title">O Mapa encontrou a cena. Agora falta enxergar o que acontece nos minutos antes e depois dela.</h2>
-                    <p>O Mapa tira a repetição do automático. O Radar do Dinheiro continua de onde ele parou: ajuda você a registrar o contexto, o pensamento, o afeto, o impulso, a ação e o efeito imediato que entram na mesma sequência.</p>
-                    <ul>
-                        <li>Transforme uma impressão em uma sequência observável.</li>
-                        <li>Veja o que acontece nos minutos antes da ação.</li>
-                        <li>Continue a investigação sem buscar um rótulo ou resposta pronta.</li>
+                <div class="download-upsell__summary">
+                    <p class="download-upsell__invitation">Continue a partir do seu Mapa com <strong>Por Trás do Dinheiro.</strong></p>
+                    <a class="button button--primary download-upsell__cta" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer meu próximo passo <span aria-hidden="true">→</span></a>
+                    <p class="download-upsell__note">Veja os dois módulos de Por Trás do Dinheiro e como começar.</p>
+                    <ul class="download-upsell__benefits" aria-label="O que vem a seguir">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3"/></svg><span>Observe a sequência</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6m-3-3v6"/></svg><span>Investigue o que se repete</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 5c4-2 6-1 9 1 3-2 5-3 9-1v15c-4-2-6-1-9 1-3-2-5-3-9-1V5Zm9 1v15"/></svg><span>Siga uma jornada guiada</span></li>
                     </ul>
-                    <a class="button button--primary" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>">Ver como continuar a investigação</a>
-                    <p class="download-upsell__note">Na próxima página, você conhece o percurso que transforma essa primeira observação em um Radar preenchido.</p>
                 </div>
-                <figure class="download-upsell__product">
-                    <img src="/assets/images/mapa/mapa-integrado.png" alt="Materiais do Radar do Dinheiro organizados sobre uma mesa">
-                </figure>
             </section>
         </section>
     </div>

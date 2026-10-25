@@ -45,36 +45,26 @@ declare(strict_types=1);
                     </a>
                 </div>
 
-                <figure class="mapa-thank-you__image">
-                    <img src="/assets/images/mapa/hero-mapa-do-dinheiro.png" alt="Caderno aberto para observar uma situação financeira com mais atenção">
-                </figure>
-            </div>
-
-            <section class="vsl mapa-thank-you__vsl" aria-labelledby="vsl-title">
-                <div class="vsl__heading">
-                    <p>Antes de começar</p>
-                    <h2 id="vsl-title">Uma pergunta boa muda a forma de preencher o Mapa.</h2>
-                </div>
-                <div class="vsl__video vsl__video--mapa">
+                <div class="vsl__video mapa-thank-you__video">
                     <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
                         <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                         Seu navegador não oferece suporte à reprodução deste vídeo.
                     </video>
                 </div>
-            </section>
+            </div>
 
             <section class="mapa-next-step" aria-labelledby="mapa-next-step-title">
                 <div class="mapa-next-step__content">
-                    <p class="thank-you-page__eyebrow">Depois do Mapa</p>
-                    <h2 id="mapa-next-step-title">Você encontrou uma repetição. O próximo passo é olhar para a sequência que a mantém.</h2>
-                    <p>O Mapa aponta uma situação concreta. No Radar do Dinheiro, você acompanha o que acontece antes, durante e logo depois dela: contexto, pensamento, afeto, impulso, comportamento, efeito imediato e consequência.</p>
+                    <p class="thank-you-page__eyebrow">Continue depois do Mapa</p>
+                    <h2 id="mapa-next-step-title">Uma repetição começa em uma cena. Por Trás do Dinheiro ajuda você a investigar o que essa cena ainda não mostra.</h2>
+                    <p>O Mapa coloca uma pergunta concreta nas suas mãos. Por Trás do Dinheiro continua a jornada com registros de contexto, pensamento, afeto, impulso, ação e efeito imediato. Assim, a sua observação ganha sequência antes de virar explicação.</p>
                     <ul class="mapa-next-step__list">
-                        <li>Transforme um rótulo amplo em uma situação observável.</li>
+                        <li>Leve a situação escolhida no Mapa para uma sequência observável.</li>
                         <li>Reúna pistas antes de tentar explicar o que aconteceu.</li>
-                        <li>Avance para uma hipótese de função sem se reduzir a um diagnóstico.</li>
+                        <li>Construa uma hipótese sem buscar um rótulo ou resposta pronta.</li>
                     </ul>
-                    <a class="button mapa-next-step__cta" href="/por-tras-do-dinheiro">Conhecer o Radar do Dinheiro completo</a>
-                    <p class="mapa-next-step__note">O Mapa continua sendo seu ponto de partida. A próxima página mostra como a investigação segue.</p>
+                    <a class="button mapa-next-step__cta" href="/por-tras-do-dinheiro">Conhecer Por Trás do Dinheiro</a>
+                    <p class="mapa-next-step__note">O Mapa continua sendo seu ponto de partida. Na próxima página, você vê como seguir a investigação.</p>
                 </div>
             </section>
         </section>

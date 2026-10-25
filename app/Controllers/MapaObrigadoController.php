@@ -13,7 +13,7 @@ final class MapaObrigadoController
         $pageTitle = 'Obrigado | Mapa do Dinheiro | Pós-Wellness';
         $downloadUrl = MapaDownload::FILE_URL;
         $downloadFilename = MapaDownload::FILE_NAME;
-        $vslVideoUrl = '/assets/videos/mapa-do-dinheiro-vsl.mp4';
+        $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
         $vslPosterUrl = '/assets/images/mapa/hero-mapa-do-dinheiro.png';
         $view = dirname(__DIR__) . '/Views/mapa-obrigado/index.php';
 

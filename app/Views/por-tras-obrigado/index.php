@@ -54,8 +54,8 @@ declare(strict_types=1);
                 <p class="section-kicker section-kicker--light">Dinheiro é Fruto · R$<?= $upsellPrice ?></p>
                 <h2>Você construiu uma hipótese. Agora pode investigar onde essa lógica encontra a sua história — e onde começa a existir escolha.</h2>
                 <p>O Por Trás do Dinheiro ajuda você a formular uma hipótese sobre a função do comportamento. O Dinheiro é Fruto conecta comportamento, sequência, função, história e os primeiros sinais que podem abrir um intervalo antes da resposta automática.</p>
-                <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero conhecer o Dinheiro é Fruto</a>
-                <p class="por-tras-upsell__note">Pagamento único de R$<?= $upsellPrice ?>. A oferta será conectada ao checkout da Kiwify.</p>
+                <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Assistir à apresentação do Dinheiro é Fruto</a>
+                <p class="por-tras-upsell__note">Próximo passo da jornada: Dinheiro é Fruto, por R$<?= $upsellPrice ?>.</p>
             </div>
             <figure class="por-tras-image por-tras-image--upsell">
                 <img src="/assets/images/por-tras/mockup-dinheiro-e-fruto.png" alt="Cadernos do Dinheiro é Fruto organizados como um mapa integrado" loading="lazy">

@@ -24,7 +24,7 @@ declare(strict_types=1);
             <a href="#cinco-perguntas">Como funciona</a>
             <a href="#mapa-da-funcao">O que você constrói</a>
             <a href="#faq">FAQ</a>
-            <a class="button button--primary" href="#oferta">Começar a investigação</a>
+            <a class="button button--primary" href="#oferta">Começar Por Trás do Dinheiro</a>
         </nav>
     </div>
 </header>

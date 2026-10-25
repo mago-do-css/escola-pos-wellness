@@ -17,7 +17,7 @@ declare(strict_types=1);
                 <h1>Você já consegue ver o que faz. Agora pode investigar o que isso produz em você.</h1>
                 <p class="por-tras-hero__lead">Uma experiência guiada para construir uma hipótese sobre a função que determinados comportamentos financeiros podem assumir na sua vida.</p>
                 <div class="por-tras-hero__actions">
-                    <a class="button button--primary" href="#oferta">Quero construir meu Mapa da Função</a>
+                    <a class="button button--primary" href="#oferta">Quero começar Por Trás do Dinheiro</a>
                     <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
                 </div>
             </div>
@@ -228,7 +228,7 @@ declare(strict_types=1);
                     <li>Exercícios e Mapa da Função</li>
                 </ul>
                 <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
-                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero construir meu Mapa da Função</a>
+                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar Por Trás do Dinheiro</a>
                 <p class="offer-card__note">Checkout seguro pela Kiwify. Sem assinatura e sem urgência artificial.</p>
             </article>
         </div>

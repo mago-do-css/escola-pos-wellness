@@ -8,8 +8,9 @@ final class RadarLanding
 {
     public const VSL_VIDEO_URL = '/assets/videos/vsl-radar-29.mp4';
     public const VSL_POSTER_URL = '/assets/images/thumbnail-page-radar-do-dinheiro.png';
-    public const CHECKOUT_URL = 'https://pay.kiwify.com.br/l9rlpRq';
-    public const REFERENCE_PRICE = 58;
+    /** O antigo Radar agora é o primeiro módulo do Por Trás do Dinheiro. */
+    public const CHECKOUT_URL = 'https://pay.kiwify.com.br/Kl1kULi';
+    public const REFERENCE_PRICE = 0;
 
     public static function checkoutHref(): string
     {
