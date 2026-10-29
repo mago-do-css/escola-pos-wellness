@@ -13,7 +13,7 @@ declare(strict_types=1);
             <a href="#radar-preenchido">O que você constrói</a>
             <a href="#faq">FAQ</a>
         </nav>
-        <a class="site-header__cta" href="#oferta">Começar meu Radar</a>
+        <a class="site-header__cta" href="#oferta">Conhecer Por Trás do Dinheiro</a>
         <button class="site-header__toggle" type="button" aria-label="Abrir menu" aria-controls="radar-mobile-navigation" aria-expanded="false" data-menu-toggle>
             <span></span><span></span>
         </button>
@@ -24,7 +24,7 @@ declare(strict_types=1);
             <a href="#sete-dias">Como funciona</a>
             <a href="#radar-preenchido">O que você constrói</a>
             <a href="#faq">FAQ</a>
-            <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Começar Por Trás do Dinheiro</a>
+            <a class="button button--primary" href="#oferta">Conhecer Por Trás do Dinheiro</a>
         </nav>
     </div>
 </header>

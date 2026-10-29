@@ -13,11 +13,11 @@ declare(strict_types=1);
         <?php require dirname(__DIR__) . '/partials/por-tras-navbar.php'; ?>
         <div class="page-container por-tras-hero__grid">
             <div class="por-tras-hero__copy">
-                <p class="section-kicker section-kicker--light">Por Trás do Dinheiro · 5 encontros</p>
-                <h1>Você já consegue ver o que faz. Agora pode investigar o que isso produz em você.</h1>
+                <p class="section-kicker section-kicker--light">Por Trás do Dinheiro · jornada completa</p>
+                <h1>Comece pelo Radar. Depois, investigue o que esse comportamento pode estar produzindo em você.</h1>
                 <p class="por-tras-hero__lead">Uma experiência guiada para construir uma hipótese sobre a função que determinados comportamentos financeiros podem assumir na sua vida.</p>
                 <div class="por-tras-hero__actions">
-                    <a class="button button--primary" href="#oferta">Quero começar Por Trás do Dinheiro</a>
+                    <a class="button button--primary" href="#oferta">Conhecer Por Trás do Dinheiro</a>
                     <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
                 </div>
             </div>
@@ -129,8 +129,8 @@ declare(strict_types=1);
         <div class="page-container journey-bundle">
             <div class="journey-bundle__intro">
                 <p class="section-kicker">Você pode começar por aqui</p>
-                <h2>Não fez as etapas anteriores? A jornada necessária está incluída.</h2>
-                <p>O Por Trás do Dinheiro parte de um Radar preenchido. Por isso, quem entra diretamente recebe o caminho completo para chegar preparado aos cinco encontros.</p>
+                <h2>A jornada começa pelo Mapa e pelo Radar. Tudo está incluído.</h2>
+                <p>Por Trás do Dinheiro reúne o caminho completo: comece pelo Mapa, siga para o Radar e avance aos cinco encontros de aprofundamento.</p>
             </div>
             <div class="journey-bundle__steps">
                 <article><span>Etapa 1</span><h3>Mapa do Dinheiro</h3><p>O que eu repito?</p></article>

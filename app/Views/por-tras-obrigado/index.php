@@ -19,7 +19,7 @@ declare(strict_types=1);
     <section class="page-container por-tras-thanks__hero">
         <div>
             <p class="section-kicker section-kicker--light">Seu próximo passo já está disponível</p>
-            <h1>Seu Mapa da Função começa aqui. E uma nova pergunta pode começar agora.</h1>
+            <h1>Seu acesso a Por Trás do Dinheiro começa aqui.</h1>
             <p>O acesso ao Por Trás do Dinheiro será enviado pela Kiwify para o e-mail usado na compra. Você também pode entrar na sua conta da Kiwify e abrir a área de membros.</p>
             <div class="access-note">
                 <span>Como acessar</span>
@@ -38,7 +38,7 @@ declare(strict_types=1);
     <section id="vsl" class="page-container por-tras-upsell-vsl">
         <div class="por-tras-upsell-vsl__heading">
             <p class="section-kicker section-kicker--light">Antes de abrir o material</p>
-            <h2>Assista: onde uma hipótese de função pode levar a investigação.</h2>
+            <h2>Assista e conheça o próximo passo depois de Por Trás do Dinheiro.</h2>
         </div>
         <div class="vsl-stage vsl-stage--video">
             <video class="vsl-stage__video" controls preload="metadata" poster="/assets/images/por-tras/thumbnail-dinheiro-e-fruto.webp">
@@ -54,7 +54,7 @@ declare(strict_types=1);
                 <p class="section-kicker section-kicker--light">Dinheiro é Fruto · R$<?= $upsellPrice ?></p>
                 <h2>Você construiu uma hipótese. Agora pode investigar onde essa lógica encontra a sua história — e onde começa a existir escolha.</h2>
                 <p>O Por Trás do Dinheiro ajuda você a formular uma hipótese sobre a função do comportamento. O Dinheiro é Fruto conecta comportamento, sequência, função, história e os primeiros sinais que podem abrir um intervalo antes da resposta automática.</p>
-                <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Assistir à apresentação do Dinheiro é Fruto</a>
+                <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer Dinheiro é Fruto</a>
                 <p class="por-tras-upsell__note">Próximo passo da jornada: Dinheiro é Fruto, por R$<?= $upsellPrice ?>.</p>
             </div>
             <figure class="por-tras-image por-tras-image--upsell">

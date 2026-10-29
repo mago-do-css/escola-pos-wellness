@@ -10,7 +10,7 @@ final class RadarController
 {
     public function index(): void
     {
-        $pageTitle = 'Radar do Dinheiro | Escola Pós-Wellness';
+        $pageTitle = 'Por Trás do Dinheiro | Módulo 1: Radar | Escola Pós-Wellness';
         $checkoutUrl = '#oferta';
         $planCheckoutUrl = RadarLanding::checkoutHref();
         $vslVideoUrl = RadarLanding::VSL_VIDEO_URL;

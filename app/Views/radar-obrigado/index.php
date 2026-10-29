@@ -49,7 +49,7 @@ declare(strict_types=1);
                     <p class="thank-you-page__eyebrow">Por Trás do Dinheiro · Jornada completa</p>
                     <h2 id="offer-title">Não é mais sobre o que você faz. É sobre o que isso pode estar tentando resolver.</h2>
                     <p>
-                        Em cinco encontros, você parte do seu Radar para construir uma hipótese sobre a função do comportamento — sem procurar uma explicação pronta, uma causa definitiva ou um rótulo para você.
+                        Por Trás do Dinheiro reúne o Radar e cinco encontros de aprofundamento para você construir uma hipótese sobre a função do comportamento, sem procurar uma explicação pronta, uma causa definitiva ou um rótulo para você.
                     </p>
                     <ul>
                         <li>O que isso me dá?</li>
@@ -58,7 +58,7 @@ declare(strict_types=1);
                         <li>O que estou buscando através disso?</li>
                         <li>Que função esse comportamento pode estar cumprindo?</li>
                     </ul>
-                    <a class="button button--primary" href="/por-tras-do-dinheiro">Conhecer a jornada completa por R$47</a>
+                    <a class="button button--primary" href="/por-tras-do-dinheiro">Conhecer Por Trás do Dinheiro por R$47</a>
                     <p class="radar-thank-you__note">Ao final, você terá o seu Mapa da Função: uma hipótese construída a partir da sua própria experiência.</p>
                 </div>
                 <figure class="radar-thank-you__product-mockup">
