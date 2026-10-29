@@ -2,6 +2,7 @@
 declare(strict_types=1);
 ?>
 <main class="mapa-thanks-light">
+    <iframe name="mapa-download-target" title="" aria-hidden="true" tabindex="-1" style="display: none"></iframe>
     <div class="page-container mapa-thanks-light__inner">
         <a class="mapa-thanks-light__brand" href="/" aria-label="Pós-Wellness: página inicial"><img src="/assets/images/logo-pos-wellness-offwhite.svg" alt="Pós-Wellness"></a>
         <section class="mapa-thanks-light__download" aria-labelledby="download-title">
@@ -11,7 +12,7 @@ declare(strict_types=1);
                 <p>Obrigado por começar. Baixe seu Mapa pelo botão ao lado.</p>
             </div>
             <div class="mapa-thanks-light__download-action">
-                <a class="button mapa-thanks-light__download-button" href="<?= htmlspecialchars($downloadUrl, ENT_QUOTES, 'UTF-8') ?>" download="<?= htmlspecialchars($downloadFilename, ENT_QUOTES, 'UTF-8') ?>">Baixar meu Mapa em PDF <span aria-hidden="true">↓</span></a>
+                <a class="button mapa-thanks-light__download-button" href="<?= htmlspecialchars($downloadUrl, ENT_QUOTES, 'UTF-8') ?>" target="mapa-download-target">Baixar meu Mapa em PDF <span aria-hidden="true">↓</span></a>
             </div>
         </section>
         <section class="mapa-thanks-light__upsell" aria-labelledby="upsell-title">

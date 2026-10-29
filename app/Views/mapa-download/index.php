@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 /** @var string $downloadUrl */
-/** @var string $downloadFilename */
 /** @var string $vslVideoUrl */
 /** @var string $vslPosterUrl */
 /** @var string $nextProductUrl */
 ?>
 <main class="thank-you-page download-upsell">
+    <iframe name="mapa-download-target" title="" aria-hidden="true" tabindex="-1" style="display: none"></iframe>
     <div class="thank-you-page__shade" aria-hidden="true"></div>
 
     <div class="page-container thank-you-page__inner">
@@ -25,7 +25,7 @@ declare(strict_types=1);
 
                     <div class="download-upsell__fallback">
                         <p>Seu download não começa sozinho. Use o botão para baixar o Mapa.</p>
-                        <a class="button button--primary" href="<?= htmlspecialchars($downloadUrl, ENT_QUOTES, 'UTF-8') ?>" download="<?= htmlspecialchars($downloadFilename, ENT_QUOTES, 'UTF-8') ?>">Baixar o Mapa agora</a>
+                        <a class="button button--primary" href="<?= htmlspecialchars($downloadUrl, ENT_QUOTES, 'UTF-8') ?>" target="mapa-download-target">Baixar o Mapa agora</a>
                     </div>
                 </div>
 

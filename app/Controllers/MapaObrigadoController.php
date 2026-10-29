@@ -11,8 +11,7 @@ final class MapaObrigadoController
     public function index(): void
     {
         $pageTitle = 'Obrigado | Mapa do Dinheiro | Pós-Wellness';
-        $downloadUrl = MapaDownload::FILE_URL;
-        $downloadFilename = MapaDownload::FILE_NAME;
+        $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
         $vslVideoUrl = MapaDownload::THANK_YOU_UPSELL_VIDEO_URL;
         $vslPosterUrl = MapaDownload::THANK_YOU_UPSELL_POSTER_URL;
         $view = dirname(__DIR__) . '/Views/mapa-obrigado/index.php';

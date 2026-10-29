@@ -14,6 +14,9 @@ final class MapaDownload
 
     public const FILE_NAME = 'mapa-do-dinheiro.pdf';
 
+    /** Rota que entrega o PDF como anexo, em vez de abrir o visualizador do navegador. */
+    public const DOWNLOAD_ENDPOINT = '/baixar-mapa-do-dinheiro/arquivo';
+
     /** Material apresentado após a captura, como continuidade opcional do Mapa. */
     public const UPSELL_VIDEO_URL = '/assets/videos/mapa-do-dinheiro-vsl-3.mp4';
     public const UPSELL_POSTER_URL = '/assets/images/vsl-upsell-29-47-thumbnail.webp';
