@@ -30,6 +30,7 @@ $router = new Router();
 
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/baixar-mapa-do-dinheiro', [MapaDownloadController::class, 'index']);
+$router->get('/baixar-mapa-do-dinheiro-backup', [MapaDownloadController::class, 'backup']);
 $router->get('/baixar-mapa-do-dinheiro/arquivo', [MapaDownloadController::class, 'download']);
 $router->get('/obrigado-mapa-do-dinheiro', [MapaObrigadoController::class, 'index']);
 $router->get('/radar-do-dinheiro', [RadarController::class, 'index']);

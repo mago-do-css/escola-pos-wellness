@@ -24,6 +24,22 @@ final class MapaDownloadController
         require dirname(__DIR__) . '/Views/layout.php';
     }
 
+    public function backup(): void
+    {
+        $pageTitle = 'Backup | Baixar Mapa do Dinheiro | Pós-Wellness';
+        $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
+        $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
+        $vslPosterUrl = MapaDownload::UPSELL_POSTER_URL;
+        $nextProductUrl = MapaDownload::NEXT_PRODUCT_URL;
+        $view = dirname(__DIR__) . '/Views/mapa-download/backup.php';
+
+        ob_start();
+        require $view;
+        $content = (string) ob_get_clean();
+
+        require dirname(__DIR__) . '/Views/layout.php';
+    }
+
     public function download(): void
     {
         $filePath = dirname(__DIR__, 2) . '/public' . MapaDownload::FILE_URL;

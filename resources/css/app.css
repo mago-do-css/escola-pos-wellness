@@ -3086,7 +3086,83 @@
     }
   }
 
+  .download-release {
+    min-height: 100svh;
+    overflow: hidden;
+    color: #f3ecdf;
+    background:
+      radial-gradient(circle at 92% 8%, rgba(172, 102, 44, .28), transparent 30rem),
+      linear-gradient(145deg, #1b1713 0%, #292018 52%, #17130f 100%);
+  }
+
+  .download-release__target { position: fixed; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+  .download-release__inner { max-width: 76rem; padding-block: 1.5rem 5rem; }
+  .download-release__brand { display: inline-block; width: 10.5rem; }
+  .download-release__brand img { display: block; width: 100%; }
+  .download-release__hero { margin-top: clamp(1.35rem, 2.5vw, 2.5rem); }
+  .download-release__heading { display: grid; gap: 1.5rem; align-items: end; }
+  .download-release__eyebrow { margin: 0 0 .75rem; color: #dfad69; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  .download-release__heading h1 { max-width: 50rem; margin: 0; font-family: "Arizona Flare", Georgia, serif; font-size: clamp(1.95rem, 3.35vw, 3.55rem); font-weight: 400; letter-spacing: -.045em; line-height: 1; }
+  .download-release__next-step { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: center; min-height: 5rem; padding: 1rem 1.25rem; color: #241b13; background: #e4bd83; border: 1px solid #f2d9b2; text-decoration: none; box-shadow: 0 0 0 0 rgba(228, 189, 131, .4); animation: download-release-pulse 2.7s ease-out infinite; }
+  .download-release__next-step span { grid-column: 1 / -1; font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  .download-release__next-step b { grid-row: 2; grid-column: 2; font-size: 1.35rem; }
+  .download-release__next-step:hover, .download-release__next-step:focus-visible { background: #f5dfbd; animation: none; outline: 2px solid #f5dfbd; outline-offset: 4px; }
+  .download-release__video-intro { max-width: 60rem; margin: 1.6rem auto .8rem; color: rgba(243, 236, 223, .72); font-size: .92rem; line-height: 1.5; }
+  .download-release__video { position: relative; overflow: hidden; max-width: 60rem; margin: 0 auto; aspect-ratio: 16 / 9; border: 1px solid rgba(243, 236, 223, .28); background: #080706; box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .24); }
+  .download-release__video video { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .download-release__play-hint { max-width: 60rem; margin: .7rem auto 0; color: rgba(243, 236, 223, .74); font-size: .82rem; text-align: center; }
+  .download-release__play { position: absolute; z-index: 2; top: 50%; left: 50%; display: grid; width: 4.1rem; height: 4.1rem; padding: 0; place-items: center; color: #f8e8cd; background: rgba(95, 54, 29, .96); border: 1px solid #f1d6a9; border-radius: 50%; transform: translate(-50%, -50%); cursor: pointer; box-shadow: 0 .8rem 2rem rgba(0, 0, 0, .32); }
+  .download-release__play span { display: block; margin-left: .12rem; font-size: 1.05rem; line-height: 1; }
+  .download-release__play[hidden] { display: none !important; }
+  .download-release__play:hover, .download-release__play:focus-visible { background: #f5dfbd; outline: 2px solid #f5dfbd; outline-offset: 4px; }
+  .download-release__play:hover span, .download-release__play:focus-visible span { color: #5f361d; }
+  .download-release__progress { max-width: 60rem; margin: 1.15rem auto 0; }
+  .download-release__progress-copy { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .download-release__progress-copy strong { color: #f7e8cf; font-family: "Arizona Flare", Georgia, serif; font-size: clamp(1.35rem, 2.2vw, 2rem); font-weight: 500; line-height: 1.05; }
+  .download-release__progress-copy span { color: #efc47f; font-size: 1rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .download-release__track { overflow: hidden; height: .58rem; margin-top: .65rem; border: 1px solid rgba(243, 236, 223, .22); background: rgba(243, 236, 223, .09); }
+  .download-release__track > span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, #a96936, #efc47f); box-shadow: 0 0 1rem rgba(239, 196, 127, .55); }
+  .download-release__material { display: grid; gap: clamp(2rem, 6vw, 5rem); align-items: center; margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(1.25rem, 4vw, 3.5rem); border: 1px solid rgba(228, 189, 131, .23); background: rgba(243, 236, 223, .055); }
+  .download-release__cover { position: relative; max-width: 20rem; margin: 0 auto; overflow: hidden; }
+  .download-release__cover img { display: block; width: 100%; filter: grayscale(1); opacity: .45; transform: scale(.99); transition: filter 1.1s ease, opacity 1.1s ease, transform 1.1s ease; }
+  .download-release__cover span { position: absolute; right: .75rem; bottom: .75rem; padding: .55rem .75rem; color: #eee6d8; background: rgba(24, 18, 13, .88); border: 1px solid rgba(238, 230, 216, .25); font-size: .66rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+  .download-release__material.is-ready .download-release__cover img { filter: grayscale(0); opacity: 1; transform: scale(1); }
+  .download-release__material-copy h2 { max-width: 34rem; margin: 0; font-family: "Arizona Flare", Georgia, serif; font-size: clamp(2rem, 3.4vw, 3.35rem); font-weight: 400; letter-spacing: -.04em; line-height: 1; }
+  .download-release__material-copy > p:not(.download-release__eyebrow):not(.download-release__feedback) { max-width: 35rem; margin: 1rem 0 0; color: rgba(243, 236, 223, .72); line-height: 1.55; }
+  .download-release__download { display: inline-flex; justify-content: space-between; gap: 2rem; width: 100%; max-width: 29rem; min-height: 4rem; margin-top: 1.75rem; padding: 1.15rem 1.35rem; border: 1px solid rgba(243, 236, 223, .16); color: rgba(243, 236, 223, .45); background: #45403b; cursor: not-allowed; transition: color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .download-release__download:not(:disabled) { color: #251b12; background: #e4bd83; border-color: #f1d6a9; cursor: pointer; animation: download-release-pulse 2.7s ease-out infinite; }
+  .download-release__download:not(:disabled):hover, .download-release__download:not(:disabled):focus-visible { background: #f5dfbd; animation: none; transform: translateY(-2px); outline: 2px solid #f5dfbd; outline-offset: 4px; }
+  .download-release__download.is-requested { color: #f3ecdf !important; background: #385640 !important; animation: none !important; }
+  .download-release__download--progress { max-width: 25rem; margin-top: 1.1rem; }
+  .download-release__feedback { min-height: 1.4rem; margin: .8rem 0 0; color: #dfad69; font-size: .82rem; line-height: 1.45; }
+  .download-release__browser-help { max-width: 34rem; margin-top: 1rem; padding: 1rem; color: #2a2119; background: #f0e4d2; border-left: .25rem solid #b46d35; font-size: .82rem; line-height: 1.5; }
+  .download-release__browser-help p { margin: .35rem 0 0; }
+
+  @keyframes download-release-pulse {
+    0%, 68%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(228, 189, 131, 0); }
+    18% { transform: scale(1.02); box-shadow: 0 0 0 9px rgba(228, 189, 131, .3); }
+    42% { transform: scale(1); box-shadow: 0 0 0 18px rgba(228, 189, 131, 0); }
+  }
+
+  @media (min-width: 900px) {
+    .download-release__heading { grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem); }
+    .download-release__material { grid-template-columns: minmax(17rem, .72fr) minmax(0, 1.28fr); }
+  }
+
+  @media (max-width: 899px) {
+    .download-release__inner { padding-block: 1.25rem 3.5rem; }
+    .download-release__hero { margin-top: 1.5rem; }
+    .download-release__heading h1 { font-size: clamp(1.85rem, 7.6vw, 2.85rem); }
+    .download-release__next-step { order: 2; width: 100%; }
+    .download-release__video-intro { margin-top: 1.25rem; }
+    .download-release__material { padding: 1.25rem; }
+    .download-release__cover { max-width: 13rem; }
+    .download-release__material-copy h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
+    .download-release__next-step,
+    .download-release__download:not(:disabled) { animation: none; }
     *,
     *::before,
     *::after {
