@@ -65,3 +65,16 @@ Nunca inclua o token no código, no arquivo `compose.yaml` ou no Git. Ele deve e
 7. Ao terminar, limpe `META_TEST_EVENT_CODE`, defina `META_CAPI_DEBUG=false` e faça outro redeploy. O código de teste não deve permanecer ativo em produção.
 
 O Pixel Helper valida apenas os eventos do navegador. Para validar a CAPI, use **Eventos de teste** e os logs do container.
+
+## Painel de leads
+
+O painel de leitura dos contatos fica em `/admin/leads`. Ele mostra total de leads, novos registros de hoje e dos últimos sete dias, busca e paginação. Dados técnicos, como IP e user-agent, não são exibidos.
+
+O acesso só é ativado quando estas duas variáveis estiverem configuradas no Portainer:
+
+| Variável | Uso |
+| --- | --- |
+| `ADMIN_USERNAME` | Usuário do painel |
+| `ADMIN_PASSWORD` | Senha forte e exclusiva do painel |
+
+Defina as duas variáveis na Stack ou no container e recrie o container. Em seguida, abra `https://seu-dominio/admin/leads`; o navegador solicitará as credenciais. Sem as duas variáveis, a rota responde como página não encontrada. Nunca versione esses valores no Git.

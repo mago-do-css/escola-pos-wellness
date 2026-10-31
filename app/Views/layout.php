@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 /** @var string $pageTitle */
 /** @var string $content */
+/** @var bool|null $noIndex */
 
 use App\Config\MetaTracking;
 use App\Services\MetaConversionsApi;
@@ -21,6 +22,7 @@ if ($metaEventId !== '' && MetaTracking::isEnabled()) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Reconheça os comportamentos que se repetem na sua relação com o dinheiro.">
+    <?php if (($noIndex ?? false) === true): ?><meta name="robots" content="noindex, nofollow, noarchive"><?php endif; ?>
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
     <link rel="icon" href="/assets/images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon.ico" sizes="any">

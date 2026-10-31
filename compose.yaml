@@ -11,6 +11,8 @@ services:
       META_TEST_EVENT_CODE: ${META_TEST_EVENT_CODE:-}
       META_GRAPH_API_VERSION: ${META_GRAPH_API_VERSION:-v24.0}
       META_CAPI_DEBUG: ${META_CAPI_DEBUG:-false}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
     volumes:
       - /opt/poswellness/videos:/var/www/html/public/assets/videos
       - leads_data:/var/www/html/storage
