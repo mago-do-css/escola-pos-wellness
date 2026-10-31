@@ -40,10 +40,14 @@ final class MetaConversionsApi
                 'custom_data' => (object) $customData,
             ]],
         ];
+        $testEventCode = MetaTracking::testEventCode();
+        if ($testEventCode !== '') {
+            $payload['test_event_code'] = $testEventCode;
+        }
 
         $url = sprintf(
             'https://graph.facebook.com/%s/%s/events?access_token=%s',
-            MetaTracking::GRAPH_API_VERSION,
+            MetaTracking::graphApiVersion(),
             rawurlencode(MetaTracking::pixelId()),
             rawurlencode(MetaTracking::accessToken())
         );
@@ -61,12 +65,29 @@ final class MetaConversionsApi
             $response = @file_get_contents($url, false, $context);
             $statusLine = $http_response_header[0] ?? '';
 
-            if ($response === false || !preg_match('/\\s2\\d\\d\\s/', $statusLine)) {
-                error_log('Meta CAPI event was not accepted: ' . $eventName);
+            $statusCode = preg_match('/\s(\d{3})\s/', $statusLine, $matches) ? (int) $matches[1] : 0;
+            $responseData = is_string($response) ? json_decode($response, true) : null;
+
+            if ($response === false || $statusCode < 200 || $statusCode >= 300) {
+                self::log('rejected event=' . $eventName . ' status=' . $statusCode);
+                return;
+            }
+
+            if (MetaTracking::isDebugEnabled()) {
+                $eventsReceived = is_array($responseData) ? (string) ($responseData['events_received'] ?? 'unknown') : 'unknown';
+                $traceId = is_array($responseData) ? (string) ($responseData['fbtrace_id'] ?? '') : '';
+                self::log(sprintf(
+                    'Meta CAPI accepted event=%s event_id=%s status=%d events_received=%s fbtrace_id=%s',
+                    $eventName,
+                    $eventId,
+                    $statusCode,
+                    $eventsReceived,
+                    $traceId
+                ));
             }
         } catch (\Throwable) {
             // Tracking must never interrupt the visitor's journey.
-            error_log('Meta CAPI event could not be sent: ' . $eventName);
+            self::log('could not send event=' . $eventName);
         }
     }
 
@@ -114,9 +135,22 @@ final class MetaConversionsApi
 
     private static function clientIp(): string
     {
-        $forwarded = trim(explode(',', (string) ($_SERVER['HTTP_X_FORWARDED_FOR'] ?? ''))[0]);
+        $cloudflareIp = trim((string) ($_SERVER['HTTP_CF_CONNECTING_IP'] ?? ''));
+        if (filter_var($cloudflareIp, FILTER_VALIDATE_IP)) {
+            return $cloudflareIp;
+        }
 
-        return $forwarded !== '' ? $forwarded : (string) ($_SERVER['REMOTE_ADDR'] ?? '');
+        $forwarded = trim(explode(',', (string) ($_SERVER['HTTP_X_FORWARDED_FOR'] ?? ''))[0]);
+        if (filter_var($forwarded, FILTER_VALIDATE_IP)) {
+            return $forwarded;
+        }
+
+        $realIp = trim((string) ($_SERVER['HTTP_X_REAL_IP'] ?? ''));
+        if (filter_var($realIp, FILTER_VALIDATE_IP)) {
+            return $realIp;
+        }
+
+        return (string) ($_SERVER['REMOTE_ADDR'] ?? '');
     }
 
     private static function currentUrl(): string
@@ -127,5 +161,10 @@ final class MetaConversionsApi
         $uri = (string) ($_SERVER['REQUEST_URI'] ?? '/');
 
         return $scheme . '://' . $host . $uri;
+    }
+
+    private static function log(string $message): void
+    {
+        file_put_contents('php://stderr', '[Meta CAPI] ' . $message . PHP_EOL);
     }
 }

@@ -8,6 +8,9 @@ services:
       META_PIXEL_ID: ${META_PIXEL_ID:-}
       META_CAPI_ACCESS_TOKEN: ${META_CAPI_ACCESS_TOKEN:-}
       META_CAPI_ENABLED: ${META_CAPI_ENABLED:-false}
+      META_TEST_EVENT_CODE: ${META_TEST_EVENT_CODE:-}
+      META_GRAPH_API_VERSION: ${META_GRAPH_API_VERSION:-v24.0}
+      META_CAPI_DEBUG: ${META_CAPI_DEBUG:-false}
     volumes:
       - /opt/poswellness/videos:/var/www/html/public/assets/videos
       - leads_data:/var/www/html/storage
