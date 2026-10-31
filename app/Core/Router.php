@@ -15,6 +15,12 @@ final class Router
         $this->routes['GET:' . $path] = $handler;
     }
 
+    /** @param array{0: class-string, 1: string} $handler */
+    public function post(string $path, array $handler): void
+    {
+        $this->routes['POST:' . $path] = $handler;
+    }
+
     public function dispatch(string $method, string $path): void
     {
         $normalizedPath = '/' . ltrim(rtrim($path, '/'), '/');

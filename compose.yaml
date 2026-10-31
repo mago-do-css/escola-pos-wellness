@@ -4,8 +4,13 @@ services:
       context: .
     container_name: pos-wellness-site
     restart: unless-stopped
+    environment:
+      META_PIXEL_ID: ${META_PIXEL_ID:-}
+      META_CAPI_ACCESS_TOKEN: ${META_CAPI_ACCESS_TOKEN:-}
+      META_CAPI_ENABLED: ${META_CAPI_ENABLED:-false}
     volumes:
       - /opt/poswellness/videos:/var/www/html/public/assets/videos
+      - leads_data:/var/www/html/storage
     networks:
       - proxy
 
@@ -13,3 +18,6 @@ networks:
   proxy:
     external: true
     name: "Rede Proxy"
+
+volumes:
+  leads_data:

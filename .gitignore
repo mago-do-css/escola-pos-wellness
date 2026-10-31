@@ -1,4 +1,9 @@
 /node_modules/
+.env
+.env.*
+!.env.example
+/storage/*
+!/storage/.gitkeep
 /.idea/
 /.vscode/
 .DS_Store

@@ -34,6 +34,28 @@ const captureForm = document.querySelector('[data-capture-form]');
 const captureFeedback = document.querySelector('[data-capture-feedback]');
 const whatsappInput = document.querySelector('[data-whatsapp-input]');
 
+const captureLead = async (form) => {
+  const endpoint = form.dataset.captureEndpoint;
+  if (!endpoint) throw new Error('Endpoint de captura indisponível.');
+
+  const eventId = `lead_${window.crypto?.randomUUID?.() || `${Date.now()}_${Math.random().toString(16).slice(2)}`}`;
+  const formData = new FormData(form);
+  formData.set('event_id', eventId);
+
+  const response = await window.fetch(endpoint, {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    body: new URLSearchParams(formData),
+  });
+  const result = await response.json();
+  if (!response.ok || result.status !== 'ok') throw new Error(result.message || 'Não foi possível concluir o envio.');
+
+  if (result.is_new_lead && window.metaTracking?.pixelId) {
+    window.fbq?.('track', 'Lead', { content_name: 'Mapa do Dinheiro' }, { eventID: eventId });
+  }
+};
+
 whatsappInput?.addEventListener('input', () => {
   const digits = whatsappInput.value.replace(/\D/g, '').slice(0, 11);
 
@@ -55,7 +77,7 @@ whatsappInput?.addEventListener('input', () => {
   whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 });
 
-captureForm?.addEventListener('submit', (event) => {
+captureForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   if (!captureForm.checkValidity()) {
@@ -66,6 +88,12 @@ captureForm?.addEventListener('submit', (event) => {
   }
 
   captureForm.classList.remove('is-invalid');
-  captureFeedback.textContent = 'Tudo certo. Preparando seu acesso…';
-  window.location.assign(captureForm.dataset.thankYouUrl || '/obrigado-mapa-do-dinheiro');
+  captureFeedback.textContent = 'Salvando seus dados…';
+  try {
+    await captureLead(captureForm);
+    captureFeedback.textContent = 'Tudo certo. Preparando seu acesso…';
+    window.location.assign(captureForm.dataset.thankYouUrl || '/obrigado-mapa-do-dinheiro');
+  } catch (error) {
+    captureFeedback.textContent = error instanceof Error ? error.message : 'Não foi possível concluir o envio. Tente novamente.';
+  }
 });

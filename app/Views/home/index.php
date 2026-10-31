@@ -148,7 +148,13 @@ declare(strict_types=1);
                 </figure>
             </div>
 
-            <form class="capture__form" data-capture-form data-thank-you-url="/obrigado-mapa-do-dinheiro" novalidate>
+            <form class="capture__form" data-capture-form data-capture-endpoint="/leads/capture" data-thank-you-url="/obrigado-mapa-do-dinheiro" novalidate>
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($leadFormToken, ENT_QUOTES, 'UTF-8') ?>">
+                <input type="hidden" name="form_started_at" value="<?= (int) $leadFormStartedAt ?>">
+                <div class="capture__honeypot" aria-hidden="true">
+                    <label for="company-website">Não preencha este campo</label>
+                    <input id="company-website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="capture__form-heading">
                     <span aria-hidden="true">01</span>
                     <p>Receba gratuitamente</p>
@@ -170,7 +176,7 @@ declare(strict_types=1);
                 </div>
 
                 <label class="capture__consent">
-                    <input name="consent" type="checkbox" required>
+                    <input name="consent" type="checkbox" value="1" required>
                     <span>Quero receber o Mapa do Dinheiro e as comunicações relacionadas a esta experiência por e-mail e WhatsApp.</span>
                 </label>
 

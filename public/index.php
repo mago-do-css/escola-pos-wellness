@@ -24,6 +24,7 @@ use App\Controllers\MapaObrigadoController;
 use App\Controllers\RadarObrigadoController;
 use App\Controllers\PorTrasController;
 use App\Controllers\PorTrasObrigadoController;
+use App\Controllers\LeadCaptureController;
 use App\Core\Router;
 
 $router = new Router();
@@ -38,6 +39,7 @@ $router->get('/obrigado-radar-do-dinheiro', [RadarObrigadoController::class, 'in
 $router->get('/por-tras-do-dinheiro', [PorTrasController::class, 'index']);
 $router->get('/por-tras-do-dinheiro-backup', [PorTrasController::class, 'backup']);
 $router->get('/obrigado-por-tras-do-dinheiro', [PorTrasObrigadoController::class, 'index']);
+$router->post('/leads/capture', [LeadCaptureController::class, 'store']);
 
 $router->dispatch(
     $_SERVER['REQUEST_METHOD'],

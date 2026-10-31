@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 /** @var string $pageTitle */
 /** @var string $content */
+
+use App\Config\MetaTracking;
+use App\Services\MetaConversionsApi;
+
+$metaPixelId = MetaTracking::pixelId();
+$metaEventId = $metaPixelId !== '' ? 'pv_' . bin2hex(random_bytes(12)) : '';
+
+if ($metaEventId !== '' && MetaTracking::isEnabled()) {
+    MetaConversionsApi::trackPageView($metaEventId);
+}
 ?>
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
@@ -17,8 +27,10 @@ declare(strict_types=1);
     <link rel="apple-touch-icon" href="/assets/images/favicon/favicon-180x180.png">
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/app.js?v=20261023-2" defer></script>
-    <!-- Meta Pixel Code -->
+    <script src="/assets/js/app.js?v=20261031-4" defer></script>
+    <?php if ($metaPixelId !== ''): ?>
+    <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+    <!-- Meta Pixel + Conversions API deduplication -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,13 +40,14 @@ declare(strict_types=1);
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '856427817463701');
-    fbq('track', 'PageView');
+    fbq('init', <?= json_encode($metaPixelId) ?>);
+    fbq('track', 'PageView', {}, {eventID: <?= json_encode($metaEventId) ?>});
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=856427817463701&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=<?= rawurlencode($metaPixelId) ?>&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- End Meta Pixel + Conversions API deduplication -->
+    <?php endif; ?>
 </head>
 <body class="bg-cream text-ink antialiased">
     <?= $content ?>
