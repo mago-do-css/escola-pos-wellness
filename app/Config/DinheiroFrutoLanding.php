@@ -8,11 +8,11 @@ final class DinheiroFrutoLanding
 {
     public const CHECKOUT_URL = 'https://pay.kiwify.com.br/Br2rGnS';
 
-    /** Informe a URL do vídeo da VSL quando ela estiver finalizada. */
-    public const VSL_VIDEO_URL = '';
+    public const PRICE = '297';
 
-    /** Informe a URL da thumbnail da VSL quando ela estiver finalizada. */
-    public const VSL_POSTER_URL = '';
+    public const VSL_VIDEO_URL = '/assets/videos/dinheiro-fruto/vsl-dinheiro-e-fruto.mp4';
+
+    public const VSL_POSTER_URL = '/assets/images/dinheiro-fruto/vsl-dinheiro-e-fruto-poster.jpg';
 
     public static function checkoutHref(): string
     {

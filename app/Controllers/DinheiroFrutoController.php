@@ -13,6 +13,7 @@ final class DinheiroFrutoController
         $whatsappMessage = 'Olá, me interessei pelo Dinheiro é Fruto e gostaria de mais informações sobre o caderno de observação guiada.';
         $checkoutUrl = DinheiroFrutoLanding::checkoutHref();
         $hasCheckout = DinheiroFrutoLanding::hasCheckout();
+        $price = DinheiroFrutoLanding::PRICE;
         $vslVideoUrl = DinheiroFrutoLanding::VSL_VIDEO_URL;
         $vslPosterUrl = DinheiroFrutoLanding::VSL_POSTER_URL;
 

@@ -302,5 +302,6 @@ declare(strict_types=1);
             <a href="#faq">FAQ</a>
             <a href="#top">Voltar ao início ↑</a>
         </nav>
+        <?php require dirname(__DIR__) . '/partials/footer-social-links.php'; ?>
     </div>
 </footer>

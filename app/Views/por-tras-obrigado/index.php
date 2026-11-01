@@ -101,5 +101,6 @@ declare(strict_types=1);
             <a href="#vsl">Assistir à VSL</a>
             <a href="/por-tras-do-dinheiro">Ver o Por Trás do Dinheiro</a>
         </nav>
+        <?php require dirname(__DIR__) . '/partials/footer-social-links.php'; ?>
     </div>
 </footer>

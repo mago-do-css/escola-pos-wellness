@@ -4,32 +4,29 @@ declare(strict_types=1);
 
 /** @var string $checkoutUrl */
 /** @var bool $hasCheckout */
+/** @var string $price */
 /** @var string $vslVideoUrl */
 /** @var string $vslPosterUrl */
 ?>
 <link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261020-2">
-<link rel="stylesheet" href="/assets/css/dinheiro-fruto-landing.css?v=20261031-1">
+<link rel="stylesheet" href="/assets/css/dinheiro-fruto-landing.css?v=20261101-1">
 
 <main id="top" class="dinheiro-fruto-page">
     <section class="df-hero">
         <?php require dirname(__DIR__) . '/partials/dinheiro-fruto-navbar.php'; ?>
         <div class="page-container df-hero__grid">
             <div class="df-hero__copy">
-                <p class="section-kicker section-kicker--light">Dinheiro é Fruto · Caderno de observação guiada</p>
+                <p class="section-kicker section-kicker--light">Dinheiro é Fruto · Continuação do Por Trás do Dinheiro</p>
                 <h1>Antes de tentar mudar sua relação com o dinheiro, observe o que ela está tentando mostrar.</h1>
-                <p class="df-hero__lead">Um percurso para ligar o que você faz hoje, a história que reconhece, o que se repete e as escolhas que deseja construir com mais presença.</p>
+                <p class="df-hero__lead">Um percurso de 12 aulas para seguir a investigação iniciada no Por Trás do Dinheiro e transformar observação em escolhas mais presentes.</p>
                 <div class="df-hero__actions">
                     <a class="button button--primary" href="#oferta">Quero conhecer Dinheiro é Fruto</a>
-                    <p>Um material digital para percorrer no seu ritmo, sem testes, rótulos ou explicações prontas.</p>
+                    <p>12 aulas digitais para aprofundar uma situação real, no seu ritmo e sem respostas prontas.</p>
                 </div>
             </div>
 
-            <figure class="df-visual-slot df-visual-slot--hero">
-                <figcaption>
-                    <span>Imagem para criar no Magnific</span>
-                    <strong>O caderno aberto no começo de uma observação</strong>
-                    <small>Fotografia editorial vertical. Mesa de madeira clara, caderno sofisticado com o título “Dinheiro é Fruto”, caneta e luz de fim de tarde. Sem pessoas, sem texto adicional e com área negativa na parte superior para a página respirar.</small>
-                </figcaption>
+            <figure class="df-visual-slot df-visual-slot--hero df-visual-slot--image">
+                <img src="/assets/images/dinheiro-fruto/hero-caderno-observacao.jpg" alt="Caderno aberto sobre uma mesa de madeira ao lado de uma caneta e uma xícara" fetchpriority="high">
             </figure>
         </div>
         <div class="page-container df-hero__note">
@@ -40,9 +37,9 @@ declare(strict_types=1);
 
     <section id="vsl" class="df-section df-section--vsl" aria-labelledby="df-vsl-title">
         <div class="page-container df-vsl__heading">
-            <p class="section-kicker">Conheça o percurso</p>
-            <h2 id="df-vsl-title">Uma pausa entre o impulso e a resposta que você já conhece.</h2>
-            <p>Assista antes de começar. O vídeo apresenta o jeito de usar o caderno e por que observar uma situação vem antes de tentar resolvê-la.</p>
+            <p class="section-kicker">Conheça o próximo passo</p>
+            <h2 id="df-vsl-title">Do que você percebeu para o que deseja investigar com mais profundidade.</h2>
+            <p>Assista antes de começar. O vídeo apresenta como as 12 aulas continuam a jornada do Por Trás do Dinheiro e ajudam você a sustentar uma observação ao longo do tempo.</p>
         </div>
         <div class="page-container df-vsl">
             <?php if ($vslVideoUrl !== ''): ?>
@@ -53,8 +50,8 @@ declare(strict_types=1);
             <?php else: ?>
                 <div class="df-vsl__placeholder" role="img" aria-label="Espaço reservado para a VSL de Dinheiro é Fruto">
                     <span>VSL · espaço preparado</span>
-                    <strong>Insira aqui o vídeo que apresenta o caderno e convida a pessoa a começar por uma situação real.</strong>
-                    <p>Duração sugerida: 3 a 7 minutos. O vídeo deve mostrar os autores em um ambiente calmo, intercalado com cenas do caderno sendo preenchido. Evite promessas de cura, diagnóstico ou mudança garantida.</p>
+                    <strong>Insira aqui o vídeo que apresenta as 12 aulas e convida a pessoa a continuar a investigação.</strong>
+                    <p>Duração sugerida: 3 a 7 minutos. O vídeo deve mostrar os autores em um ambiente calmo, intercalado com cenas do material em uso. Evite promessas de cura, diagnóstico ou mudança garantida.</p>
                     <i aria-hidden="true">▶</i>
                 </div>
             <?php endif; ?>
@@ -110,21 +107,17 @@ declare(strict_types=1);
 
     <section id="caderno" class="df-section df-section--ink" aria-labelledby="df-caderno-title">
         <div class="page-container df-split df-split--media">
-            <figure class="df-visual-slot df-visual-slot--spread">
-                <figcaption>
-                    <span>Imagem para criar no Magnific</span>
-                    <strong>Detalhe de páginas internas em uso</strong>
-                    <small>Fotografia editorial horizontal de um caderno aberto sobre uma mesa, com campos de escrita delicados e anotações manuscritas discretas em português. Paleta areia, marrom e cobre. Mostrar textura do papel e uma caneta, sem rostos e sem marcas concorrentes.</small>
-                </figcaption>
+            <figure class="df-visual-slot df-visual-slot--spread df-visual-slot--image">
+                <img src="/assets/images/dinheiro-fruto/paginas-observacao.jpg" alt="Caderno aberto com anotações sobre uma mesa de madeira" loading="lazy">
             </figure>
             <div class="df-caderno-copy">
                 <p class="section-kicker section-kicker--light">O que existe dentro</p>
-                <h2 id="df-caderno-title">Um caderno que acompanha a observação sem tomar o seu lugar.</h2>
+                <h2 id="df-caderno-title">Doze aulas para dar continuidade àquilo que o Por Trás do Dinheiro abriu.</h2>
                 <ul class="df-check-list">
-                    <li>Orientações para diferenciar fatos, hipóteses e perguntas abertas.</li>
-                    <li>Páginas para registrar uma situação, a resposta e seus efeitos.</li>
-                    <li>Exemplos fictícios para mostrar como observar sem se diagnosticar.</li>
-                    <li>Um mapa final para reunir o que fez sentido e o que ainda precisa de tempo.</li>
+                    <li>12 aulas digitais organizadas para aprofundar a observação com ritmo e continuidade.</li>
+                    <li>Orientações para separar fatos, hipóteses e perguntas que ainda estão em aberto.</li>
+                    <li>Propostas de escrita para voltar a uma situação real sem se reduzir a um rótulo.</li>
+                    <li>Um material de apoio para reunir o que fez sentido e o que ainda precisa de tempo.</li>
                 </ul>
                 <a class="button button--primary" href="#oferta">Quero percorrer esse caderno</a>
             </div>
@@ -154,12 +147,8 @@ declare(strict_types=1);
                 <p>O caderno não promete acabar com uma repetição. Ele ajuda você a reconhecer o primeiro sinal e perguntar o que aquela situação precisa agora, antes de responder no automático.</p>
                 <blockquote>“Se eu não precisasse responder imediatamente, que outras respostas existiriam?”</blockquote>
             </div>
-            <figure class="df-visual-slot df-visual-slot--lifestyle">
-                <figcaption>
-                    <span>Imagem para criar no Magnific</span>
-                    <strong>Uma pausa possível no cotidiano</strong>
-                    <small>Fotografia realista, horizontal. Pessoa adulta vista de costas ou em perfil, sentada perto de uma janela, escrevendo em um caderno ao lado de uma xícara. Luz natural suave, expressão serena e ambiente brasileiro contemporâneo. A imagem deve transmitir presença, não euforia.</small>
-                </figcaption>
+            <figure class="df-visual-slot df-visual-slot--lifestyle df-visual-slot--image">
+                <img src="/assets/images/dinheiro-fruto/escrita-cotidiano.jpg" alt="Pessoa escrevendo em um caderno perto da janela em um ambiente iluminado" loading="lazy">
             </figure>
         </div>
     </section>
@@ -219,20 +208,28 @@ declare(strict_types=1);
     <section id="oferta" class="df-section df-section--offer" aria-labelledby="df-offer-title">
         <div class="page-container df-offer">
             <div>
-                <p class="section-kicker section-kicker--light">Dinheiro é Fruto</p>
-                <h2 id="df-offer-title">Comece por uma situação que merece ser observada com mais calma.</h2>
-                <p>Você não precisa chegar com respostas. Basta escolher uma cena real e permitir que o percurso organize as perguntas seguintes.</p>
+                <p class="section-kicker section-kicker--light">Plano Dinheiro é Fruto</p>
+                <h2 id="df-offer-title">Depois do Por Trás do Dinheiro, siga com uma investigação que ganha tempo e profundidade.</h2>
+                <p>Você não precisa começar do zero. As 12 aulas ajudam a retomar o que apareceu na jornada anterior e a continuar investigando a partir de uma situação real.</p>
             </div>
             <article class="df-offer__card">
-                <p>Material digital</p>
-                <h3>Caderno de observação guiada</h3>
+                <p>Plano completo</p>
+                <h3>Dinheiro é Fruto</h3>
+                <p class="df-offer__summary">Um percurso digital de 12 aulas para continuar a observação iniciada no Por Trás do Dinheiro.</p>
                 <ul>
-                    <li>Quatro movimentos de observação</li>
-                    <li>Exemplos e orientações de preenchimento</li>
-                    <li>Mapa final para reunir o que você percebeu</li>
+                    <li><strong>12 aulas digitais</strong> para seguir o percurso no seu ritmo.</li>
+                    <li><strong>Continuação do Por Trás do Dinheiro</strong> para aprofundar perguntas que já começaram a aparecer.</li>
+                    <li><strong>Propostas de observação e escrita</strong> para organizar fatos, hipóteses e próximas perguntas.</li>
+                    <li><strong>Material de apoio</strong> para reunir percepções ao longo da jornada.</li>
                 </ul>
+                <div class="df-offer__price">
+                    <span>Pagamento único</span>
+                    <div class="df-offer__amount"><b>R$</b><strong><?= htmlspecialchars($price, ENT_QUOTES, 'UTF-8') ?></strong></div>
+                    <small>Acesso digital ao plano completo.</small>
+                </div>
                 <?php if ($hasCheckout): ?>
-                    <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero acessar Dinheiro é Fruto</a>
+                    <a class="button button--primary df-offer__checkout" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero continuar com Dinheiro é Fruto</a>
+                    <p class="df-offer__note">Pagamento único pela Kiwify. Sem assinatura.</p>
                 <?php else: ?>
                     <a class="button button--primary" href="#top">Acesso em breve</a>
                     <p class="df-offer__note">O checkout será conectado aqui quando a URL estiver definida.</p>
@@ -254,5 +251,6 @@ declare(strict_types=1);
             <a href="#faq">Dúvidas</a>
             <a href="#top">Voltar ao início ↑</a>
         </nav>
+        <?php require dirname(__DIR__) . '/partials/footer-social-links.php'; ?>
     </div>
 </footer>
