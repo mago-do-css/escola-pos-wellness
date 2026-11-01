@@ -5,12 +5,17 @@ declare(strict_types=1);
 /** @var string $pageTitle */
 /** @var string $content */
 /** @var bool|null $noIndex */
+/** @var bool|null $showWhatsapp */
+/** @var string|null $whatsappMessage */
 
 use App\Config\MetaTracking;
+use App\Config\WhatsAppSupport;
 use App\Services\MetaConversionsApi;
 
 $metaPixelId = MetaTracking::pixelId();
 $metaEventId = $metaPixelId !== '' ? 'pv_' . bin2hex(random_bytes(12)) : '';
+$showWhatsapp = $showWhatsapp ?? true;
+$whatsappUrl = WhatsAppSupport::link($whatsappMessage ?? WhatsAppSupport::DEFAULT_MESSAGE);
 
 if ($metaEventId !== '' && MetaTracking::isEnabled()) {
     MetaConversionsApi::trackPageView($metaEventId);
@@ -53,5 +58,11 @@ if ($metaEventId !== '' && MetaTracking::isEnabled()) {
 </head>
 <body class="bg-cream text-ink antialiased">
     <?= $content ?>
+    <?php if ($showWhatsapp): ?>
+    <a class="whatsapp-float" href="<?= htmlspecialchars($whatsappUrl, ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Pós-Wellness pelo WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.08 0C5.57 0 .27 5.3.27 11.81c0 2.08.54 4.1 1.57 5.88L.17 23.8l6.25-1.64a11.77 11.77 0 0 0 5.65 1.44h.01c6.51 0 11.81-5.3 11.81-11.81 0-3.15-1.23-6.1-3.37-8.31Zm-8.44 18.13h-.01a9.76 9.76 0 0 1-4.97-1.36l-.36-.22-3.71.97.99-3.62-.24-.37a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8a9.72 9.72 0 0 1 6.93 2.87 9.73 9.73 0 0 1 2.87 6.93c0 5.4-4.4 9.8-9.8 9.8Zm5.38-7.34c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47a8.99 8.99 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.91-2.22-.24-.57-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.06 2.86 1.2 3.06.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+        <span>Fale com a gente</span>
+    </a>
+    <?php endif; ?>
 </body>
 </html>

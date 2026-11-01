@@ -29,6 +29,7 @@ final class AdminLeadsController
         $stats = $repository->dashboardStats();
         $pageTitle = 'Leads | Administração Pós-Wellness';
         $noIndex = true;
+        $showWhatsapp = false;
 
         ob_start();
         require dirname(__DIR__) . '/Views/admin/leads.php';

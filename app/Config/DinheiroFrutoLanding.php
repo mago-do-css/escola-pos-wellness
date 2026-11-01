@@ -6,8 +6,7 @@ namespace App\Config;
 
 final class DinheiroFrutoLanding
 {
-    /** Informe a URL do checkout do Dinheiro é Fruto quando estiver disponível. */
-    public const CHECKOUT_URL = '';
+    public const CHECKOUT_URL = 'https://pay.kiwify.com.br/Br2rGnS';
 
     /** Informe a URL do vídeo da VSL quando ela estiver finalizada. */
     public const VSL_VIDEO_URL = '';

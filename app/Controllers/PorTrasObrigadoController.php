@@ -11,6 +11,7 @@ final class PorTrasObrigadoController
     public function index(): void
     {
         $pageTitle = 'Obrigado | Por Trás do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, conheci o Por Trás do Dinheiro e gostaria de saber mais sobre o Dinheiro é Fruto.';
         $upsellCheckoutUrl = PorTrasLanding::upsellCheckoutHref();
         $upsellPrice = PorTrasLanding::UPSELL_PRICE;
         $view = dirname(__DIR__) . '/Views/por-tras-obrigado/index.php';

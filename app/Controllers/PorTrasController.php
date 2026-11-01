@@ -20,6 +20,7 @@ final class PorTrasController
 
     private function render(string $file, string $pageTitle): void
     {
+        $whatsappMessage = 'Olá, me interessei pelo Por Trás do Dinheiro e gostaria de mais informações sobre a jornada completa.';
         $checkoutUrl = PorTrasLanding::checkoutHref();
         $price = PorTrasLanding::PRICE;
         $vslVideoUrl = PorTrasLanding::VSL_VIDEO_URL;

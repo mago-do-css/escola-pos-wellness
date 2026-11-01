@@ -11,6 +11,7 @@ final class RadarController
     public function index(): void
     {
         $pageTitle = 'Por Trás do Dinheiro | Módulo 1: Radar | Escola Pós-Wellness';
+        $whatsappMessage = 'Olá, me interessei pelo Radar do Dinheiro e gostaria de saber mais sobre o percurso de observação guiada.';
         $checkoutUrl = '#oferta';
         $planCheckoutUrl = RadarLanding::checkoutHref();
         $vslVideoUrl = RadarLanding::VSL_VIDEO_URL;

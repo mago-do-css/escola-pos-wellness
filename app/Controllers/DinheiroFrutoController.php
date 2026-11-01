@@ -10,6 +10,7 @@ final class DinheiroFrutoController
 {
     public function index(): void
     {
+        $whatsappMessage = 'Olá, me interessei pelo Dinheiro é Fruto e gostaria de mais informações sobre o caderno de observação guiada.';
         $checkoutUrl = DinheiroFrutoLanding::checkoutHref();
         $hasCheckout = DinheiroFrutoLanding::hasCheckout();
         $vslVideoUrl = DinheiroFrutoLanding::VSL_VIDEO_URL;

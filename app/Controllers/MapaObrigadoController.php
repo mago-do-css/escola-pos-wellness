@@ -11,6 +11,7 @@ final class MapaObrigadoController
     public function index(): void
     {
         $pageTitle = 'Obrigado | Mapa do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, baixei o Mapa do Dinheiro e gostaria de conhecer o Por Trás do Dinheiro para continuar essa jornada.';
         $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
         $vslVideoUrl = MapaDownload::THANK_YOU_UPSELL_VIDEO_URL;
         $vslPosterUrl = MapaDownload::THANK_YOU_UPSELL_POSTER_URL;

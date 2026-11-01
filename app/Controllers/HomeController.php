@@ -15,6 +15,7 @@ final class HomeController
         $_SESSION['lead_csrf_token'] ??= bin2hex(random_bytes(32));
 
         $pageTitle = 'Mapa do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, me interessei pelo Mapa do Dinheiro gratuito e gostaria de mais informações sobre os produtos da Pós-Wellness.';
         $leadFormToken = $_SESSION['lead_csrf_token'];
         $leadFormStartedAt = time();
         $view = dirname(__DIR__) . '/Views/home/index.php';

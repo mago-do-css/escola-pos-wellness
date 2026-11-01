@@ -11,6 +11,7 @@ final class MapaDownloadController
     public function index(): void
     {
         $pageTitle = 'Baixar Mapa do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, acessei o Mapa do Dinheiro gratuito e gostaria de saber qual é o próximo passo para aprofundar essa observação.';
         $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
         $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
         $vslPosterUrl = MapaDownload::UPSELL_POSTER_URL;
@@ -27,6 +28,7 @@ final class MapaDownloadController
     public function backup(): void
     {
         $pageTitle = 'Backup | Baixar Mapa do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, acessei o Mapa do Dinheiro gratuito e gostaria de saber qual é o próximo passo para aprofundar essa observação.';
         $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
         $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
         $vslPosterUrl = MapaDownload::UPSELL_POSTER_URL;

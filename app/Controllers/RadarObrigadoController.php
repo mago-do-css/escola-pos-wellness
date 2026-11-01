@@ -11,6 +11,7 @@ final class RadarObrigadoController
     public function index(): void
     {
         $pageTitle = 'Obrigado | Radar do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, conheci o Radar do Dinheiro e gostaria de saber mais sobre o Por Trás do Dinheiro.';
         $vslVideoUrl = RadarObrigado::VSL_VIDEO_URL;
         $vslPosterUrl = RadarObrigado::VSL_POSTER_URL;
         $productMockupUrl = RadarObrigado::PRODUCT_MOCKUP_URL;
