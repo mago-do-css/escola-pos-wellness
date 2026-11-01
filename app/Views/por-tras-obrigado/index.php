@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-/** @var string $upsellCheckoutUrl */
-/** @var int $upsellPrice */
+/** @var string $upsellProductUrl */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
 <link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261023-2">
@@ -51,11 +50,11 @@ declare(strict_types=1);
     <section class="por-tras-upsell">
         <div class="page-container por-tras-upsell__grid">
             <div>
-                <p class="section-kicker section-kicker--light">Dinheiro é Fruto · R$<?= $upsellPrice ?></p>
+                <p class="section-kicker section-kicker--light">Continue a jornada com Dinheiro é Fruto</p>
                 <h2>Você construiu uma hipótese. Agora pode investigar onde essa lógica encontra a sua história — e onde começa a existir escolha.</h2>
                 <p>O Por Trás do Dinheiro ajuda você a formular uma hipótese sobre a função do comportamento. O Dinheiro é Fruto conecta comportamento, sequência, função, história e os primeiros sinais que podem abrir um intervalo antes da resposta automática.</p>
-                <a class="button button--primary" href="<?= htmlspecialchars($upsellCheckoutUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer Dinheiro é Fruto</a>
-                <p class="por-tras-upsell__note">Próximo passo da jornada: Dinheiro é Fruto, por R$<?= $upsellPrice ?>.</p>
+                <a class="button button--primary" href="<?= htmlspecialchars($upsellProductUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer Dinheiro é Fruto</a>
+                <p class="por-tras-upsell__note">Conheça o próximo passo da jornada e veja como aprofundar essa investigação.</p>
             </div>
             <figure class="por-tras-image por-tras-image--upsell">
                 <img src="/assets/images/por-tras/mockup-dinheiro-e-fruto.webp" alt="Cadernos do Dinheiro é Fruto organizados como um mapa integrado" loading="lazy">
