@@ -13,7 +13,7 @@ declare(strict_types=1);
             <a href="#mapa-da-funcao">O que você constrói</a>
             <a href="#faq">FAQ</a>
         </nav>
-        <a class="site-header__cta" href="#oferta">Começar a investigação</a>
+        <a class="site-header__cta" href="#oferta">Garantir agora</a>
         <button class="site-header__toggle" type="button" aria-label="Abrir menu" aria-controls="por-tras-mobile-navigation" aria-expanded="false" data-menu-toggle>
             <span></span><span></span>
         </button>
@@ -24,7 +24,7 @@ declare(strict_types=1);
             <a href="#cinco-perguntas">Como funciona</a>
             <a href="#mapa-da-funcao">O que você constrói</a>
             <a href="#faq">FAQ</a>
-            <a class="button button--primary" href="#oferta">Começar Por Trás do Dinheiro</a>
+            <a class="button button--primary" href="#oferta">Garantir agora</a>
         </nav>
     </div>
 </header>

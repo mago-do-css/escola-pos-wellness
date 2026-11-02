@@ -25,7 +25,7 @@ declare(strict_types=1);
             <section class="download-upsell__bridge" aria-labelledby="vsl-title">
                 <div class="vsl download-upsell__vsl">
                     <div class="vsl__heading"><p>Conheça Por Trás do Dinheiro</p><h2 id="vsl-title">O Mapa mostra uma cena. Assista e veja como investigar o que acontece antes e depois dela.</h2></div>
-                    <div class="vsl__video"><video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>"><source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div>
+                    <div class="vsl__video"><video data-video-play-overlay preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>"><source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div>
                 </div>
                 <div class="download-upsell__summary">
                     <p class="download-upsell__invitation">Continue a partir do seu Mapa com <strong>Por Trás do Dinheiro.</strong></p>

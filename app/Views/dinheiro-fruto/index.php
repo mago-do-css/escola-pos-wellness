@@ -21,7 +21,6 @@ declare(strict_types=1);
                 <p class="df-hero__lead">Um percurso de 12 aulas para seguir a investigação iniciada no Por Trás do Dinheiro e transformar observação em escolhas mais presentes.</p>
                 <div class="df-hero__actions">
                     <a class="button button--primary" href="#oferta">Quero conhecer Dinheiro é Fruto</a>
-                    <p>12 aulas digitais para aprofundar uma situação real, no seu ritmo e sem respostas prontas.</p>
                 </div>
             </div>
 
@@ -43,7 +42,7 @@ declare(strict_types=1);
         </div>
         <div class="page-container df-vsl">
             <?php if ($vslVideoUrl !== ''): ?>
-                <video class="df-vsl__video" controls playsinline preload="metadata"<?= $vslPosterUrl !== '' ? ' poster="' . htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') . '"' : '' ?>>
+                <video class="df-vsl__video" data-video-play-overlay playsinline preload="metadata"<?= $vslPosterUrl !== '' ? ' poster="' . htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') . '"' : '' ?>>
                     <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                     Seu navegador não oferece suporte à reprodução deste vídeo.
                 </video>

@@ -22,7 +22,7 @@ declare(strict_types=1);
                 <p>Assista ao vídeo e conheça a continuação do seu Mapa.</p>
             </header>
             <div class="mapa-thanks-light__video">
-                <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                <video data-video-play-overlay preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
                     <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                     Seu navegador não oferece suporte à reprodução deste vídeo.
                 </video>

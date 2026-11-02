@@ -37,7 +37,7 @@ declare(strict_types=1);
                 </div>
 
                 <div class="vsl__video">
-                    <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                    <video data-video-play-overlay preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
                         <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                         Seu navegador não oferece suporte para reproduzir este vídeo.
                     </video>

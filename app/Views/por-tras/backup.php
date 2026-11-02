@@ -18,7 +18,6 @@ declare(strict_types=1);
                 <p class="por-tras-hero__lead">Uma experiência guiada para construir uma hipótese sobre a função que determinados comportamentos financeiros podem assumir na sua vida.</p>
                 <div class="por-tras-hero__actions">
                     <a class="button button--primary" href="#oferta">Conhecer Por Trás do Dinheiro</a>
-                    <p>Inclui o e-book Mapa do Dinheiro, aulas guiadas e materiais de apoio para conduzir a investigação.</p>
                 </div>
             </div>
             <figure class="creative-placeholder creative-placeholder--hero" aria-label="Espaço preparado para imagem principal do produto">
@@ -197,7 +196,7 @@ declare(strict_types=1);
                     ['Vou descobrir a causa do meu comportamento?', 'Não é essa a promessa. Você construirá uma hipótese de função baseada no que observou, sem transformar essa hipótese em verdade definitiva.'],
                     ['Isso substitui terapia ou orientação financeira?', 'Não. É uma experiência educativa e estruturada de observação. Não substitui psicoterapia, acompanhamento clínico, orientação financeira ou atendimento profissional.'],
                     ['E se eu não souber responder alguma pergunta?', 'Registre “ainda não sei”. A proposta valoriza uma observação honesta; inventar uma explicação seria o oposto do trabalho.'],
-                    ['Como recebo o material?', 'Após a confirmação do pagamento, o acesso digital é enviado e também fica disponível na sua conta da Kiwify.'],
+                    ['Como acesso meu material?', 'Após a confirmação do pagamento, a Kiwify envia o acesso para o e-mail usado na compra. Você também pode entrar na sua conta da Kiwify e abrir a área de membros. Se tiver qualquer dúvida ou dificuldade para acessar, fale com o nosso suporte. Nossa equipe estará pronta para atender você.'],
                     ['O acesso é por assinatura?', 'Não. O valor é um pagamento único para acessar a experiência digital.'],
                 ];
                 foreach ($faqs as $index => [$question, $answer]):

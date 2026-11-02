@@ -29,9 +29,10 @@ declare(strict_types=1);
                 </video>
                 <button class="download-release__play" type="button" data-video-play aria-label="Iniciar vídeo com som">
                     <span aria-hidden="true">▶</span>
+                    <?php if (!empty($playText)): ?><small class="free-play-label">Clique para assistir</small><?php endif; ?>
                 </button>
             </div>
-            <p class="download-release__play-hint">Aperte o play para assistir ao vídeo.</p>
+            <p class="download-release__play-hint"><?= !empty($playText) ? htmlspecialchars($playText, ENT_QUOTES, 'UTF-8') : 'Aperte o play para assistir ao vídeo.' ?></p>
 
             <div class="download-release__progress" aria-live="polite">
                 <div class="download-release__progress-copy"><strong data-release-status>Preparando seu Mapa do Dinheiro...</strong><span data-release-percent>0%</span></div>

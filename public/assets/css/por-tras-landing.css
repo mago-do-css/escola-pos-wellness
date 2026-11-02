@@ -718,6 +718,25 @@
   display: block;
 }
 
+.offer-card__price .offer-card__original {
+  margin-top: 1rem;
+  font-size: .9rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.por-tras-vsl__cta {
+  animation: por-tras-upsell-pulse 2s ease-in-out infinite;
+  text-align: center;
+}
+
+.por-tras-vsl__cta:hover,
+.por-tras-vsl__cta:focus-visible { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .por-tras-vsl__cta { animation: none; }
+}
+
 .offer-card__price span {
   color: rgba(244, 238, 227, .55);
   font-size: .72rem;
@@ -970,6 +989,21 @@
 .vsl-stage > :not(img) {
   position: relative;
   z-index: 1;
+}
+
+.vsl-stage > .video-play-stage__button {
+  position: absolute;
+  z-index: 2;
+}
+
+.vsl-stage > .video-play-stage__button[hidden] {
+  display: none;
+}
+
+.vsl-stage > .video-play-stage__button small {
+  margin: 0;
+  color: inherit;
+  line-height: 1.2;
 }
 
 .vsl-stage__play {

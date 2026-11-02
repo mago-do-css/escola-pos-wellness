@@ -18,6 +18,11 @@ final class PorTrasController
         $this->render('backup.php', 'Por Trás do Dinheiro | Escola Pós-Wellness');
     }
 
+    public function simples(): void
+    {
+        $this->render('simples.php', 'Por Trás do Dinheiro | Escola Pós-Wellness');
+    }
+
     private function render(string $file, string $pageTitle): void
     {
         $whatsappMessage = 'Olá, me interessei pelo Por Trás do Dinheiro e gostaria de mais informações sobre a jornada completa.';

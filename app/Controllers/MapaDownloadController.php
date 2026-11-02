@@ -10,6 +10,7 @@ final class MapaDownloadController
 {
     public function index(): void
     {
+        $playText = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH) === '/obrigado-mapa-gratuito' ? 'Clique para assistir' : '';
         $pageTitle = 'Baixar Mapa do Dinheiro | Pós-Wellness';
         $whatsappMessage = 'Olá, acessei o Mapa do Dinheiro gratuito e gostaria de saber qual é o próximo passo para aprofundar essa observação.';
         $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
@@ -40,6 +41,11 @@ final class MapaDownloadController
         $content = (string) ob_get_clean();
 
         require dirname(__DIR__) . '/Views/layout.php';
+    }
+
+    public function gratuito(): void
+    {
+        $this->index();
     }
 
     public function download(): void

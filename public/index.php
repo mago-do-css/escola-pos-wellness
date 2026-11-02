@@ -32,6 +32,8 @@ use App\Core\Router;
 $router = new Router();
 
 $router->get('/', [HomeController::class, 'index']);
+$router->get('/mapa-do-dinheiro-gratuito', [HomeController::class, 'gratuito']);
+$router->get('/obrigado-mapa-gratuito', [MapaDownloadController::class, 'gratuito']);
 $router->get('/baixar-mapa-do-dinheiro', [MapaDownloadController::class, 'index']);
 $router->get('/baixar-mapa-do-dinheiro-backup', [MapaDownloadController::class, 'backup']);
 $router->get('/baixar-mapa-do-dinheiro/arquivo', [MapaDownloadController::class, 'download']);
@@ -39,6 +41,7 @@ $router->get('/obrigado-mapa-do-dinheiro', [MapaObrigadoController::class, 'inde
 $router->get('/radar-do-dinheiro', [RadarController::class, 'index']);
 $router->get('/obrigado-radar-do-dinheiro', [RadarObrigadoController::class, 'index']);
 $router->get('/por-tras-do-dinheiro', [PorTrasController::class, 'index']);
+$router->get('/por-tras-do-dinheiro-oferta', [PorTrasController::class, 'simples']);
 $router->get('/por-tras-do-dinheiro-backup', [PorTrasController::class, 'backup']);
 $router->get('/obrigado-por-tras-do-dinheiro', [PorTrasObrigadoController::class, 'index']);
 $router->get('/dinheiro-e-fruto', [DinheiroFrutoController::class, 'index']);

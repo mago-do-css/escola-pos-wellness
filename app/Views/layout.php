@@ -34,7 +34,8 @@ if ($metaEventId !== '' && MetaTracking::isEnabled()) {
     <link rel="apple-touch-icon" href="/assets/images/favicon/favicon-180x180.png">
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/app.js?v=20261031-4" defer></script>
+    <link rel="stylesheet" href="/assets/css/cta-pulse.css?v=1">
+    <script src="/assets/js/app.js?v=20261102-5" defer></script>
     <?php if ($metaPixelId !== ''): ?>
     <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
     <!-- Meta Pixel + Conversions API deduplication -->

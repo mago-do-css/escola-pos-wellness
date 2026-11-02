@@ -24,12 +24,11 @@ declare(strict_types=1);
 </h1>
                 <p class="mt-5 max-w-xl font-display text-2xl leading-tight text-gold">Não é para se controlar melhor. É para conseguir observar melhor.</p>
                 <a class="button button--primary mt-8" href="#oferta">Quero começar Por Trás do Dinheiro</a>
-                <p class="mt-3 max-w-md text-sm leading-relaxed text-cream/65">Inclui o e-book Mapa do Dinheiro, dois módulos de aulas e materiais de apoio para conduzir a investigação.</p>
             </div>
             <div class="border border-cream/25 bg-bronze/30 p-3 sm:p-5">
                 <p class="mb-3 font-display text-2xl tracking-[-.03em]">Antes de tentar mudar, veja o caminho.</p>
                 <?php if ($hasVsl): ?>
-                    <video class="aspect-video w-full bg-black" controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                    <video class="aspect-video w-full bg-black" data-video-play-overlay preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
                         <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                         Seu navegador não oferece suporte para reproduzir este vídeo.
                     </video>

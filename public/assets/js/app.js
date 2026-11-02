@@ -97,3 +97,36 @@ captureForm?.addEventListener('submit', async (event) => {
     captureFeedback.textContent = error instanceof Error ? error.message : 'Não foi possível concluir o envio. Tente novamente.';
   }
 });
+
+document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
+  const stage = video.parentElement;
+  if (!stage) return;
+
+  video.removeAttribute('controls');
+  video.controls = false;
+  stage.classList.add('video-play-stage');
+
+  const playButton = document.createElement('button');
+  playButton.type = 'button';
+  playButton.className = 'video-play-stage__button';
+  playButton.setAttribute('aria-label', 'Assistir vídeo com som');
+  playButton.innerHTML = '<span aria-hidden="true">▶</span><small>Aperte para assistir</small>';
+  stage.append(playButton);
+
+  const start = async () => {
+    video.defaultMuted = false;
+    video.muted = false;
+    video.volume = 1;
+    try {
+      await video.play();
+      playButton.hidden = true;
+    } catch (_) {
+      playButton.hidden = false;
+    }
+  };
+
+  playButton.addEventListener('click', start);
+  video.addEventListener('play', () => { playButton.hidden = true; });
+  video.addEventListener('ended', () => { playButton.hidden = false; });
+  video.addEventListener('click', () => { if (video.paused) start(); });
+});

@@ -8,7 +8,7 @@ declare(strict_types=1);
 /** @var string $vslPosterUrl */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261020-2">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261102-4">
 
 <main id="top" class="por-tras-page">
     <section class="por-tras-hero">
@@ -19,8 +19,7 @@ declare(strict_types=1);
                 <h1>Entenda o caminho que você repete com o dinheiro — e investigue o que ele produz em você.</h1>
                 <p class="por-tras-hero__lead">Primeiro, observe uma situação real durante sete dias. Depois, aprofunde a investigação em cinco encontros para construir uma hipótese sobre a função desse comportamento. Tudo dentro do Por Trás do Dinheiro.</p>
                 <div class="por-tras-hero__actions">
-                    <a class="button button--primary" href="#oferta">Quero começar Por Trás do Dinheiro</a>
-                    <p>Inclui o e-book Mapa do Dinheiro, dois módulos de aulas e materiais de apoio.</p>
+                    <a class="button button--primary" href="#oferta">Quero entender o que está por trás do meu dinheiro</a>
                 </div>
             </div>
             <figure class="por-tras-image por-tras-image--hero">
@@ -42,13 +41,13 @@ declare(strict_types=1);
                 <p>O Mapa ajuda a escolher uma cena. O primeiro módulo organiza a sequência. No vídeo, você conhece a jornada completa de Por Trás do Dinheiro.</p>
             </div>
             <div class="vsl__video por-tras-vsl__video">
-                <video controls preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
+                <video data-video-play-overlay preload="metadata" playsinline poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
                     <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                     Seu navegador não oferece suporte à reprodução deste vídeo.
                 </video>
             </div>
             <div class="por-tras-vsl__action">
-                <a class="button button--primary" href="#oferta">Ver o plano de Por Trás do Dinheiro</a>
+                <a class="button button--primary por-tras-vsl__cta" href="#oferta">Quero entender o que está por trás do meu dinheiro</a>
             </div>
         </div>
     </section>
@@ -188,7 +187,7 @@ declare(strict_types=1);
             </div>
         </div>
         <div class="page-container por-tras-section__cta">
-            <a class="button button--primary" href="#oferta">Ver o plano completo</a>
+            <a class="button button--primary" href="#oferta">Quero entender o que está por trás do meu dinheiro</a>
         </div>
     </section>
 
@@ -247,7 +246,7 @@ declare(strict_types=1);
                     ['Vou descobrir a causa do meu comportamento?', 'Não é essa a promessa. Você construirá uma hipótese de função baseada no que observou, sem transformar essa hipótese em verdade definitiva.'],
                     ['Isso substitui terapia ou orientação financeira?', 'Não. É uma experiência educativa e estruturada de observação. Não substitui psicoterapia, acompanhamento clínico, orientação financeira ou atendimento profissional.'],
                     ['E se eu não souber responder alguma pergunta?', 'Registre “ainda não sei”. A proposta valoriza uma observação honesta; inventar uma explicação seria o oposto do trabalho.'],
-                    ['Como recebo o material?', 'Após a confirmação do pagamento, o acesso digital é enviado e também fica disponível na sua conta da Kiwify.'],
+                    ['Como acesso meu material?', 'Após a confirmação do pagamento, a Kiwify envia o acesso para o e-mail usado na compra. Você também pode entrar na sua conta da Kiwify e abrir a área de membros. Se tiver qualquer dúvida ou dificuldade para acessar, fale com o nosso suporte. Nossa equipe estará pronta para atender você.'],
                     ['O acesso é por assinatura?', 'Não. O valor é um pagamento único para acessar a experiência digital.'],
                 ];
                 foreach ($faqs as $index => [$question, $answer]):
@@ -277,8 +276,8 @@ declare(strict_types=1);
                     <li><strong>Módulo 2: Por Trás do Dinheiro</strong> com 5 aulas de aprofundamento para investigar a função do comportamento.</li>
                     <li><strong>Exercícios, materiais de apoio e Mapa da Função</strong> para organizar o que você observou ao longo do percurso.</li>
                 </ul>
-                <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
-                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar Por Trás do Dinheiro</a>
+                <div class="offer-card__price"><span>Pagamento único</span><span class="offer-card__original">De <s>R$97</s> por</span><strong>R$<?= $price ?></strong></div>
+                <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Garantir agora com 50% off</a>
                 <p class="offer-card__note">Pagamento processado com segurança pela Kiwify.</p>
             </article>
         </div>
@@ -290,7 +289,7 @@ declare(strict_types=1);
             <h2>Talvez o comportamento não conte apenas o que você faz. Talvez também mostre o que você tenta sustentar, evitar ou proteger.</h2>
             <div>
                 <p>O próximo passo não é encontrar uma resposta rápida. É construir uma hipótese boa o bastante para continuar investigando.</p>
-                <a class="button button--primary" href="#oferta">Ver o plano completo</a>
+                <a class="button button--primary" href="#oferta">Quero entender o que está por trás do meu dinheiro</a>
             </div>
         </div>
     </section>
