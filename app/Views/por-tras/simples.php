@@ -1,6 +1,6 @@
 <?php declare(strict_types=1); ?>
 <link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261102-4">
-<link rel="stylesheet" href="/assets/css/por-tras-simples.css?v=2">
+<link rel="stylesheet" href="/assets/css/por-tras-simples.css?v=4">
 <main class="simple-sales">
     <header class="simple-sales__header"><div class="page-container"><a href="/" aria-label="Pós-Wellness"><img src="/assets/images/logo-pos-wellness-offwhite.svg" alt="Pós-Wellness"></a><a class="button button--primary" href="#oferta">Garantir agora</a></div></header>
     <section class="simple-sales__hero"><div class="page-container"><p class="section-kicker section-kicker--light">Por Trás do Dinheiro</p><h1>Entenda o que está por trás da sua relação com o dinheiro.</h1><p>Uma jornada guiada para observar uma situação real e investigar o que acontece antes, durante e depois dela.</p><div class="simple-sales__video"><video data-video-play-overlay playsinline preload="metadata" poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>"><source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div><a class="button button--primary" href="#oferta">Quero entender o que está por trás do meu dinheiro</a></div></section>
