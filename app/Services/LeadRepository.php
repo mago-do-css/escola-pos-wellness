@@ -44,7 +44,26 @@ final class LeadRepository
             )'
         );
         $this->database->exec('CREATE INDEX IF NOT EXISTS idx_leads_subscribed_at ON leads(subscribed_at)');
+        $this->database->exec("CREATE TABLE IF NOT EXISTS lead_pipeline (lead_id INTEGER PRIMARY KEY, status TEXT NOT NULL DEFAULT 'novo', updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (lead_id) REFERENCES leads(id))");
         $this->database->exec('CREATE INDEX IF NOT EXISTS idx_lead_attempts_ip_time ON lead_attempts(ip_hash, attempted_at)');
+    }
+
+    public function pipelineLeads(string $search, string $from, string $to): array
+    {
+        $sql = "SELECT l.id, l.name, l.email, l.whatsapp, l.subscribed_at, COALESCE(p.status, 'novo') AS status FROM leads l LEFT JOIN lead_pipeline p ON p.lead_id = l.id WHERE (l.name LIKE :search OR l.email LIKE :search OR l.whatsapp LIKE :search)";
+        $params = [':search' => '%' . $search . '%'];
+        if ($from !== '') { $sql .= " AND date(l.subscribed_at, '-3 hours') >= :from_date"; $params[':from_date'] = $from; }
+        if ($to !== '') { $sql .= " AND date(l.subscribed_at, '-3 hours') <= :to_date"; $params[':to_date'] = $to; }
+        $query = $this->database->prepare($sql . ' ORDER BY l.subscribed_at DESC, l.id DESC');
+        $query->execute($params);
+        return $query->fetchAll();
+    }
+
+    public function updatePipeline(int $id, string $status): bool
+    {
+        $query = $this->database->prepare('INSERT INTO lead_pipeline (lead_id, status, updated_at) SELECT id, :status, CURRENT_TIMESTAMP FROM leads WHERE id = :id ON CONFLICT(lead_id) DO UPDATE SET status = excluded.status, updated_at = CURRENT_TIMESTAMP');
+        $query->execute([':id' => $id, ':status' => $status]);
+        return $query->rowCount() > 0;
     }
 
     public function isRateLimited(string $ipHash): bool

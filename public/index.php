@@ -43,6 +43,7 @@ $router->get('/por-tras-do-dinheiro-backup', [PorTrasController::class, 'backup'
 $router->get('/obrigado-por-tras-do-dinheiro', [PorTrasObrigadoController::class, 'index']);
 $router->get('/dinheiro-e-fruto', [DinheiroFrutoController::class, 'index']);
 $router->get('/admin/leads', [AdminLeadsController::class, 'index']);
+$router->post('/admin/leads/status', [AdminLeadsController::class, 'update']);
 $router->post('/leads/capture', [LeadCaptureController::class, 'store']);
 
 $router->dispatch(
