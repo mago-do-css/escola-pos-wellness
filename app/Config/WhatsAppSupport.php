@@ -6,7 +6,7 @@ namespace App\Config;
 
 final class WhatsAppSupport
 {
-    private const PHONE_NUMBER = '5561981826441';
+    private const PHONE_NUMBER = '5561994025295';
 
     public const DEFAULT_MESSAGE = 'Olá, gostaria de mais informações sobre os produtos da Pós-Wellness.';
 

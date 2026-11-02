@@ -20,7 +20,7 @@ declare(strict_types=1);
                 <p class="por-tras-hero__lead">Primeiro, observe uma situação real durante sete dias. Depois, aprofunde a investigação em cinco encontros para construir uma hipótese sobre a função desse comportamento. Tudo dentro do Por Trás do Dinheiro.</p>
                 <div class="por-tras-hero__actions">
                     <a class="button button--primary" href="#oferta">Quero começar Por Trás do Dinheiro</a>
-                    <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
+                    <p>Inclui o e-book Mapa do Dinheiro, dois módulos de aulas e materiais de apoio.</p>
                 </div>
             </div>
             <figure class="por-tras-image por-tras-image--hero">
@@ -46,6 +46,9 @@ declare(strict_types=1);
                     <source src="<?= htmlspecialchars($vslVideoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">
                     Seu navegador não oferece suporte à reprodução deste vídeo.
                 </video>
+            </div>
+            <div class="por-tras-vsl__action">
+                <a class="button button--primary" href="#oferta">Ver o plano de Por Trás do Dinheiro</a>
             </div>
         </div>
     </section>
@@ -184,6 +187,9 @@ declare(strict_types=1);
                 <article class="is-current"><span>Módulo 2 · 5 encontros</span><h3>Por Trás do Dinheiro</h3><p>Para que isso pode estar servindo?</p></article>
             </div>
         </div>
+        <div class="page-container por-tras-section__cta">
+            <a class="button button--primary" href="#oferta">Ver o plano completo</a>
+        </div>
     </section>
 
     <section class="por-tras-section por-tras-section--image-break">
@@ -266,14 +272,14 @@ declare(strict_types=1);
                 <p class="offer-card__eyebrow">Acesso digital completo</p>
                 <h3>Por Trás do Dinheiro</h3>
                 <ul>
-                    <li>Mapa do Dinheiro</li>
-                    <li>Módulo 1 — observação guiada de 7 dias e Radar preenchido</li>
-                    <li>Módulo 2 — Por Trás do Dinheiro, em 5 encontros</li>
-                    <li>Exercícios e Mapa da Função</li>
+                    <li><strong>Mapa do Dinheiro: e-book completo</strong> para reconhecer uma situação e escolher o que você quer observar.</li>
+                    <li><strong>Módulo 1: Seu primeiro Radar</strong> com 7 aulas guiadas, perguntas de observação e materiais de apoio para construir seu Radar preenchido.</li>
+                    <li><strong>Módulo 2: Por Trás do Dinheiro</strong> com 5 aulas de aprofundamento para investigar a função do comportamento.</li>
+                    <li><strong>Exercícios, materiais de apoio e Mapa da Função</strong> para organizar o que você observou ao longo do percurso.</li>
                 </ul>
                 <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
                 <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar Por Trás do Dinheiro</a>
-                <p class="offer-card__note">Checkout seguro pela Kiwify. Sem assinatura e sem urgência artificial.</p>
+                <p class="offer-card__note">Pagamento processado com segurança pela Kiwify.</p>
             </article>
         </div>
     </section>
@@ -284,7 +290,7 @@ declare(strict_types=1);
             <h2>Talvez o comportamento não conte apenas o que você faz. Talvez também mostre o que você tenta sustentar, evitar ou proteger.</h2>
             <div>
                 <p>O próximo passo não é encontrar uma resposta rápida. É construir uma hipótese boa o bastante para continuar investigando.</p>
-                <a class="button button--primary" href="#oferta">Começar por R$<?= $price ?></a>
+                <a class="button button--primary" href="#oferta">Ver o plano completo</a>
             </div>
         </div>
     </section>

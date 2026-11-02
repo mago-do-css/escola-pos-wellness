@@ -130,6 +130,46 @@
 
 .df-vsl__video { object-fit: cover; background: #16100c; }
 
+.df-vsl__action {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.df-vsl__action .button {
+  width: min(100%, 28rem);
+  border-color: var(--df-gold);
+  color: var(--df-ink);
+  background: var(--df-gold);
+}
+
+.df-section__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.df-section__cta .button {
+  width: min(100%, 28rem);
+  border-color: var(--df-ink);
+  color: var(--df-cream);
+  background: var(--df-ink);
+}
+
+.df-section__cta .button:hover,
+.df-section__cta .button:focus-visible {
+  border-color: #5c3b28;
+  color: var(--df-cream);
+  background: #5c3b28;
+}
+
+.df-vsl__action .button:hover,
+.df-vsl__action .button:focus-visible {
+  border-color: #e2bd73;
+  color: var(--df-ink);
+  background: #e2bd73;
+}
+
 .df-vsl__placeholder {
   position: relative;
   display: grid;

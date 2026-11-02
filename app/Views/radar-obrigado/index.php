@@ -42,6 +42,7 @@ declare(strict_types=1);
                         Seu navegador não oferece suporte para reproduzir este vídeo.
                     </video>
                 </div>
+                <a class="button radar-thank-you__vsl-cta" href="/por-tras-do-dinheiro">Clique aqui para continuar com o Por Trás do Dinheiro <span aria-hidden="true">✦</span></a>
             </section>
 
             <section class="radar-thank-you__offer" aria-labelledby="offer-title">
@@ -58,7 +59,7 @@ declare(strict_types=1);
                         <li>O que estou buscando através disso?</li>
                         <li>Que função esse comportamento pode estar cumprindo?</li>
                     </ul>
-                    <a class="button button--primary" href="/por-tras-do-dinheiro">Conhecer Por Trás do Dinheiro por R$47</a>
+                    <a class="button button--primary" href="/por-tras-do-dinheiro">Clique aqui para continuar com o Por Trás do Dinheiro <span aria-hidden="true">✦</span></a>
                     <p class="radar-thank-you__note">Ao final, você terá o seu Mapa da Função: uma hipótese construída a partir da sua própria experiência.</p>
                 </div>
                 <figure class="radar-thank-you__product-mockup">

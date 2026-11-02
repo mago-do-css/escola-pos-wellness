@@ -18,7 +18,7 @@ declare(strict_types=1);
                     <p class="download-release__eyebrow" data-release-kicker>Seu download está sendo preparado. Aguarde...</p>
                     <h1 id="download-title">Enquanto seu Mapa é preparado, descubra o que está por trás da sua relação com o dinheiro.</h1>
                 </div>
-                <a class="download-release__next-step" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>"><span>Próximo passo</span>Conhecer Por Trás do Dinheiro <b aria-hidden="true">→</b></a>
+                <a class="download-release__next-step" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>"><span>Próximo passo</span>Clique aqui para continuar com o Por Trás do Dinheiro <b aria-hidden="true">✦</b></a>
             </header>
 
             <p class="download-release__video-intro">O Mapa ajuda você a reconhecer situações que se repetem. Neste vídeo, conheça o próximo passo para observar o que acontece antes, durante e depois delas.</p>
@@ -60,4 +60,4 @@ declare(strict_types=1);
         </section>
     </div>
 </main>
-<script src="/assets/js/mapa-download-release.js?v=20261031-3" defer></script>
+<script src="/assets/js/mapa-download-release.js?v=20261102-4" defer></script>

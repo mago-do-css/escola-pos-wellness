@@ -55,6 +55,9 @@ declare(strict_types=1);
                     <i aria-hidden="true">▶</i>
                 </div>
             <?php endif; ?>
+            <div class="df-vsl__action">
+                <a class="button button--primary" href="#oferta">Ver o plano Dinheiro é Fruto</a>
+            </div>
         </div>
     </section>
 
@@ -102,6 +105,9 @@ declare(strict_types=1);
                     <p>Qual pequeno sinal pode abrir uma pausa antes da reação?</p>
                 </li>
             </ol>
+        </div>
+        <div class="page-container df-section__cta">
+            <a class="button button--primary" href="#oferta">Ver o plano completo</a>
         </div>
     </section>
 
@@ -215,12 +221,14 @@ declare(strict_types=1);
             <article class="df-offer__card">
                 <p>Plano completo</p>
                 <h3>Dinheiro é Fruto</h3>
-                <p class="df-offer__summary">Um percurso digital de 12 aulas para continuar a observação iniciada no Por Trás do Dinheiro.</p>
+                <p class="df-offer__summary">Um percurso digital de 12 aulas para aprofundar a observação iniciada no Por Trás do Dinheiro, no seu ritmo.</p>
                 <ul>
-                    <li><strong>12 aulas digitais</strong> para seguir o percurso no seu ritmo.</li>
-                    <li><strong>Continuação do Por Trás do Dinheiro</strong> para aprofundar perguntas que já começaram a aparecer.</li>
-                    <li><strong>Propostas de observação e escrita</strong> para organizar fatos, hipóteses e próximas perguntas.</li>
-                    <li><strong>Material de apoio</strong> para reunir percepções ao longo da jornada.</li>
+                    <li><strong>Mapa do Dinheiro: e-book completo</strong> para retomar uma situação concreta e reconhecer o que se repete antes de avançar.</li>
+                    <li><strong>12 aulas digitais</strong> organizadas em quatro movimentos: O Fruto, A História, A Repetição e A Escolha.</li>
+                    <li><strong>Continuação do Por Trás do Dinheiro</strong> para levar a hipótese construída a uma investigação com mais tempo e profundidade.</li>
+                    <li><strong>Propostas de observação e escrita</strong> para separar fatos, hipóteses e perguntas que ainda estão em aberto.</li>
+                    <li><strong>Materiais de apoio do percurso</strong> para registrar, retomar e reunir suas percepções ao longo das aulas.</li>
+                    <li><strong>Acesso antecipado ao aplicativo Pós-Wellness</strong> com o material 100% completo, organizado para acompanhar o percurso.</li>
                 </ul>
                 <div class="df-offer__price">
                     <span>Pagamento único</span>
@@ -229,7 +237,7 @@ declare(strict_types=1);
                 </div>
                 <?php if ($hasCheckout): ?>
                     <a class="button button--primary df-offer__checkout" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero continuar com Dinheiro é Fruto</a>
-                    <p class="df-offer__note">Pagamento único pela Kiwify. Sem assinatura.</p>
+                    <p class="df-offer__note">Pagamento processado com segurança pela Kiwify.</p>
                 <?php else: ?>
                     <a class="button button--primary" href="#top">Acesso em breve</a>
                     <p class="df-offer__note">O checkout será conectado aqui quando a URL estiver definida.</p>

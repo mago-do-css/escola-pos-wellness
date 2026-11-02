@@ -18,7 +18,7 @@ declare(strict_types=1);
                 <p class="por-tras-hero__lead">Uma experiência guiada para construir uma hipótese sobre a função que determinados comportamentos financeiros podem assumir na sua vida.</p>
                 <div class="por-tras-hero__actions">
                     <a class="button button--primary" href="#oferta">Conhecer Por Trás do Dinheiro</a>
-                    <p>Pagamento único de R$<?= $price ?> · acesso digital pela Kiwify.</p>
+                    <p>Inclui o e-book Mapa do Dinheiro, aulas guiadas e materiais de apoio para conduzir a investigação.</p>
                 </div>
             </div>
             <figure class="creative-placeholder creative-placeholder--hero" aria-label="Espaço preparado para imagem principal do produto">
@@ -222,14 +222,14 @@ declare(strict_types=1);
                 <p class="offer-card__eyebrow">Acesso digital completo</p>
                 <h3>Por Trás do Dinheiro</h3>
                 <ul>
-                    <li>Mapa do Dinheiro</li>
-                    <li>Radar do Dinheiro — 7 dias</li>
-                    <li>5 encontros do Por Trás do Dinheiro</li>
-                    <li>Exercícios e Mapa da Função</li>
+                    <li><strong>Mapa do Dinheiro: e-book completo</strong> para escolher uma situação concreta antes de começar.</li>
+                    <li><strong>Radar do Dinheiro</strong> com 7 aulas guiadas e materiais de apoio para observar a sequência.</li>
+                    <li><strong>Por Trás do Dinheiro</strong> com 5 aulas de aprofundamento para investigar a função do comportamento.</li>
+                    <li><strong>Exercícios e Mapa da Função</strong> para organizar o que apareceu ao longo do percurso.</li>
                 </ul>
                 <div class="offer-card__price"><span>Pagamento único</span><strong>R$<?= $price ?></strong></div>
                 <a class="button button--primary" href="<?= htmlspecialchars($checkoutUrl, ENT_QUOTES, 'UTF-8') ?>">Quero começar Por Trás do Dinheiro</a>
-                <p class="offer-card__note">Checkout seguro pela Kiwify. Sem assinatura e sem urgência artificial.</p>
+                <p class="offer-card__note">Pagamento processado com segurança pela Kiwify.</p>
             </article>
         </div>
     </section>

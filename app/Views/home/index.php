@@ -20,7 +20,7 @@ declare(strict_types=1);
                 </p>
 
                 <div class="hero__actions">
-                    <a class="button button--primary" href="#receber-mapa">Quero receber grátis</a>
+                    <a class="button button--primary" href="#receber-mapa">Quero acessar o Mapa gratuito</a>
                     <a class="button button--text" href="#como-funciona">Como funciona</a>
                 </div>
             </div>
@@ -181,7 +181,7 @@ declare(strict_types=1);
                 </label>
 
                 <button class="button capture__submit" type="submit">
-                    Quero receber o Mapa do Dinheiro
+                    Finalizar e baixar material
                 </button>
 
                 <p class="capture__feedback" data-capture-feedback role="status" aria-live="polite"></p>
@@ -229,7 +229,7 @@ declare(strict_types=1);
             </a>
 
             <a class="button site-footer__cta" href="#receber-mapa">
-                Quero receber grátis
+                Quero acessar o Mapa gratuito
             </a>
         </div>
 

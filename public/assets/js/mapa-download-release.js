@@ -42,7 +42,7 @@
         material.classList.remove('is-locked');
         material.classList.add('is-ready');
         buttons.forEach(function (item) { item.disabled = false; });
-        buttonTexts.forEach(function (item) { item.textContent = 'Baixar meu Mapa em PDF'; });
+        buttonTexts.forEach(function (item) { item.textContent = 'Baixar o Mapa agora'; });
         coverLabel.textContent = 'Download disponível';
         status.textContent = 'Seu Mapa está pronto para baixar';
         if (kicker) kicker.textContent = 'Seu Mapa está pronto';
@@ -70,7 +70,7 @@
             if (target) target.src = downloadUrl + separator + 'download=' + Date.now();
             window.setTimeout(function () {
                 buttons.forEach(function (item) { item.classList.remove('is-requested'); });
-                buttonTexts.forEach(function (item) { item.textContent = 'Baixar novamente'; });
+                buttonTexts.forEach(function (item) { item.textContent = 'Baixar o Mapa novamente'; });
             }, 3500);
         });
     });

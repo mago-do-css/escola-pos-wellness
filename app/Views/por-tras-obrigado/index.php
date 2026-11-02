@@ -5,7 +5,7 @@ declare(strict_types=1);
 /** @var string $upsellProductUrl */
 ?>
 <link rel="stylesheet" href="/assets/css/radar-landing.css">
-<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261023-2">
+<link rel="stylesheet" href="/assets/css/por-tras-landing.css?v=20261101-2">
 
 <main class="por-tras-thanks">
     <div class="page-container por-tras-thanks__topbar">
@@ -45,6 +45,9 @@ declare(strict_types=1);
                 Seu navegador não suporta a reprodução deste vídeo. Baixe o arquivo para assistir.
             </video>
         </div>
+        <div class="por-tras-upsell-vsl__action">
+            <a class="button button--primary por-tras-upsell__cta por-tras-upsell__cta--video" href="<?= htmlspecialchars($upsellProductUrl, ENT_QUOTES, 'UTF-8') ?>">Clique aqui para continuar com o Dinheiro é Fruto <span aria-hidden="true">✦</span></a>
+        </div>
     </section>
 
     <section class="por-tras-upsell">
@@ -53,7 +56,9 @@ declare(strict_types=1);
                 <p class="section-kicker section-kicker--light">Continue a jornada com Dinheiro é Fruto</p>
                 <h2>Você construiu uma hipótese. Agora pode investigar onde essa lógica encontra a sua história — e onde começa a existir escolha.</h2>
                 <p>O Por Trás do Dinheiro ajuda você a formular uma hipótese sobre a função do comportamento. O Dinheiro é Fruto conecta comportamento, sequência, função, história e os primeiros sinais que podem abrir um intervalo antes da resposta automática.</p>
-                <a class="button button--primary" href="<?= htmlspecialchars($upsellProductUrl, ENT_QUOTES, 'UTF-8') ?>">Conhecer Dinheiro é Fruto</a>
+                <a class="button button--primary por-tras-upsell__cta" href="<?= htmlspecialchars($upsellProductUrl, ENT_QUOTES, 'UTF-8') ?>">
+                    Clique aqui para continuar com o Dinheiro é Fruto <span aria-hidden="true">✦</span>
+                </a>
                 <p class="por-tras-upsell__note">Conheça o próximo passo da jornada e veja como aprofundar essa investigação.</p>
             </div>
             <figure class="por-tras-image por-tras-image--upsell">
@@ -85,6 +90,7 @@ declare(strict_types=1);
                 <h2>Um Mapa Integrado do Dinheiro.</h2>
                 <p>Um documento que reúne comportamento, sequência, hipótese de função, histórias que apareceram, repetições, diferenças, sinais de entrada e aquilo que continua aberto.</p>
                 <p class="por-tras-emphasis">Não é uma promessa de mudar seu padrão. É uma forma mais precisa de reconhecer onde pode existir espaço de escolha.</p>
+                <a class="button button--primary por-tras-upsell__cta por-tras-upsell__cta--integrated" href="<?= htmlspecialchars($upsellProductUrl, ENT_QUOTES, 'UTF-8') ?>">Clique aqui para continuar com o Dinheiro é Fruto <span aria-hidden="true">✦</span></a>
             </div>
         </div>
     </section>

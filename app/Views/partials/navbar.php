@@ -15,7 +15,7 @@ declare(strict_types=1);
             <a href="#duvidas">Dúvidas</a>
         </nav>
 
-        <a class="site-header__cta" href="#receber-mapa">Acessar gratuitamente</a>
+        <a class="site-header__cta" href="#receber-mapa">Acessar agora</a>
 
         <button
             class="site-header__toggle"
@@ -36,7 +36,7 @@ declare(strict_types=1);
             <a href="#o-que-voce-recebe">O que você recebe</a>
             <a href="#limites">Limites</a>
             <a href="#duvidas">Dúvidas</a>
-            <a class="button button--primary" href="#receber-mapa">Acessar gratuitamente</a>
+            <a class="button button--primary" href="#receber-mapa">Acessar agora</a>
         </nav>
     </div>
 </header>

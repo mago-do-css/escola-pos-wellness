@@ -29,7 +29,7 @@ declare(strict_types=1);
             </div>
             <div class="mapa-thanks-light__action">
                 <p>Com <strong>Por Trás do Dinheiro</strong>, leve sua observação para uma investigação guiada.</p>
-                <a class="button mapa-thanks-light__cta" href="/por-tras-do-dinheiro">Conhecer Por Trás do Dinheiro <span aria-hidden="true">→</span></a>
+                <a class="button mapa-thanks-light__cta" href="/por-tras-do-dinheiro">Clique aqui para continuar com o Por Trás do Dinheiro <span aria-hidden="true">✦</span></a>
                 <p class="mapa-thanks-light__reassurance">Conheça os dois módulos e veja como seguir a partir da cena que escolheu.</p>
                 <ul aria-label="A continuação da jornada">
                     <li><span aria-hidden="true">01</span>Observe a sequência</li>
