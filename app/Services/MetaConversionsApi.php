@@ -14,16 +14,16 @@ final class MetaConversionsApi
     }
 
     /** @param array{name?: string, email?: string, whatsapp?: string} $lead */
-    public static function trackLead(string $eventId, array $lead): void
+    public static function trackLead(string $eventId, array $lead, ?string $sourcePath = null): void
     {
         self::send('Lead', $eventId, $lead, [
             'content_name' => 'Mapa do Dinheiro',
             'content_category' => 'Lead magnet',
-        ]);
+        ], $sourcePath);
     }
 
     /** @param array{name?: string, email?: string, whatsapp?: string} $lead @param array<string, string> $customData */
-    private static function send(string $eventName, string $eventId, array $lead = [], array $customData = []): void
+    private static function send(string $eventName, string $eventId, array $lead = [], array $customData = [], ?string $sourcePath = null): void
     {
         if (!MetaTracking::isEnabled()) {
             return;
@@ -34,7 +34,7 @@ final class MetaConversionsApi
                 'event_name' => $eventName,
                 'event_time' => time(),
                 'event_id' => $eventId,
-                'event_source_url' => self::currentUrl(),
+                'event_source_url' => $eventName === 'Lead' ? self::leadSourceUrl($sourcePath) : self::currentUrl(),
                 'action_source' => 'website',
                 'user_data' => self::userData($lead),
                 'custom_data' => (object) $customData,
@@ -161,6 +161,21 @@ final class MetaConversionsApi
         $uri = (string) ($_SERVER['REQUEST_URI'] ?? '/');
 
         return $scheme . '://' . $host . $uri;
+    }
+
+    private static function leadSourceUrl(?string $sourcePath): string
+    {
+        if ($sourcePath !== null) {
+            $parts = parse_url(self::currentUrl());
+            return $parts['scheme'] . '://' . $parts['host'] . (isset($parts['port']) ? ':' . $parts['port'] : '') . $sourcePath;
+        }
+        $referer = (string) ($_SERVER['HTTP_REFERER'] ?? '');
+        $parts = parse_url($referer);
+        $host = preg_replace('/:\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? ''));
+        if (is_array($parts) && isset($parts['host'], $parts['scheme']) && strcasecmp($parts['host'], $host) === 0 && in_array($parts['scheme'], ['http', 'https'], true)) {
+            return $parts['scheme'] . '://' . $parts['host'] . (isset($parts['port']) ? ':' . $parts['port'] : '') . ($parts['path'] ?? '/');
+        }
+        return self::currentUrl();
     }
 
     private static function log(string $message): void

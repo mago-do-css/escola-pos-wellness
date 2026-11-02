@@ -34,6 +34,7 @@ $router = new Router();
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/mapa-do-dinheiro-gratuito', [HomeController::class, 'gratuito']);
 $router->get('/obrigado-mapa-gratuito', [MapaDownloadController::class, 'gratuito']);
+$router->get('/obrigado-mapa-do-dinheiro-gratuito', [MapaDownloadController::class, 'gratuitoOferta']);
 $router->get('/baixar-mapa-do-dinheiro', [MapaDownloadController::class, 'index']);
 $router->get('/baixar-mapa-do-dinheiro-backup', [MapaDownloadController::class, 'backup']);
 $router->get('/baixar-mapa-do-dinheiro/arquivo', [MapaDownloadController::class, 'download']);

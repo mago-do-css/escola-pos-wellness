@@ -48,6 +48,25 @@ final class MapaDownloadController
         $this->index();
     }
 
+    /** Página de obrigado exclusiva para a variação de captura do Mapa gratuito. */
+    public function gratuitoOferta(): void
+    {
+        $pageTitle = 'Seu Mapa do Dinheiro | Pós-Wellness';
+        $whatsappMessage = 'Olá, acessei o Mapa do Dinheiro gratuito e gostaria de saber qual é o próximo passo para aprofundar essa observação.';
+        $downloadUrl = MapaDownload::DOWNLOAD_ENDPOINT;
+        $vslVideoUrl = MapaDownload::UPSELL_VIDEO_URL;
+        $vslPosterUrl = MapaDownload::UPSELL_POSTER_URL;
+        $nextProductUrl = '/por-tras-do-dinheiro-oferta';
+        $playText = 'Clique para assistir';
+        $view = dirname(__DIR__) . '/Views/mapa-download/index.php';
+
+        ob_start();
+        require $view;
+        $content = (string) ob_get_clean();
+
+        require dirname(__DIR__) . '/Views/layout.php';
+    }
+
     public function download(): void
     {
         $filePath = dirname(__DIR__, 2) . '/public' . MapaDownload::FILE_URL;

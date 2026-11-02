@@ -10,16 +10,19 @@ declare(strict_types=1);
 
 use App\Config\MetaTracking;
 use App\Config\WhatsAppSupport;
-use App\Services\MetaConversionsApi;
 
 $metaPixelId = MetaTracking::pixelId();
 $metaEventId = $metaPixelId !== '' ? 'pv_' . bin2hex(random_bytes(12)) : '';
 $showWhatsapp = $showWhatsapp ?? true;
 $whatsappUrl = WhatsAppSupport::link($whatsappMessage ?? WhatsAppSupport::DEFAULT_MESSAGE);
 
-if ($metaEventId !== '' && MetaTracking::isEnabled()) {
-    MetaConversionsApi::trackPageView($metaEventId);
-}
+$metaPath = parse_url((string) ($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH);
+$metaProduct = [
+    '/por-tras-do-dinheiro' => 'Por Trás do Dinheiro',
+    '/por-tras-do-dinheiro-oferta' => 'Por Trás do Dinheiro - oferta',
+    '/radar-do-dinheiro' => 'Radar do Dinheiro',
+    '/dinheiro-e-fruto' => 'Dinheiro é Fruto',
+][$metaPath] ?? null;
 ?>
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
@@ -35,7 +38,7 @@ if ($metaEventId !== '' && MetaTracking::isEnabled()) {
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/cta-pulse.css?v=1">
-    <script src="/assets/js/app.js?v=20261102-5" defer></script>
+    <script src="/assets/js/app.js?v=20261102-6" defer></script>
     <?php if ($metaPixelId !== ''): ?>
     <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
     <!-- Meta Pixel + Conversions API deduplication -->
@@ -50,6 +53,9 @@ if ($metaEventId !== '' && MetaTracking::isEnabled()) {
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', <?= json_encode($metaPixelId) ?>);
     fbq('track', 'PageView', {}, {eventID: <?= json_encode($metaEventId) ?>});
+    <?php if ($metaProduct !== null): ?>
+    fbq('track', 'ViewContent', {content_name: <?= json_encode($metaProduct, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>, content_category: 'produto'});
+    <?php endif; ?>
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=<?= rawurlencode($metaPixelId) ?>&ev=PageView&noscript=1"

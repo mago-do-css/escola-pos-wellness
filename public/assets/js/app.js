@@ -41,6 +41,7 @@ const captureLead = async (form) => {
   const eventId = `lead_${window.crypto?.randomUUID?.() || `${Date.now()}_${Math.random().toString(16).slice(2)}`}`;
   const formData = new FormData(form);
   formData.set('event_id', eventId);
+  formData.set('source_path', window.location.pathname);
 
   const response = await window.fetch(endpoint, {
     method: 'POST',
@@ -79,6 +80,7 @@ whatsappInput?.addEventListener('input', () => {
 
 captureForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  if (captureForm.dataset.submitting === 'true') return;
 
   if (!captureForm.checkValidity()) {
     captureForm.classList.add('is-invalid');
@@ -88,6 +90,9 @@ captureForm?.addEventListener('submit', async (event) => {
   }
 
   captureForm.classList.remove('is-invalid');
+  captureForm.dataset.submitting = 'true';
+  const submitButton = captureForm.querySelector('[type="submit"]');
+  if (submitButton) submitButton.disabled = true;
   captureFeedback.textContent = 'Salvando seus dados…';
   try {
     await captureLead(captureForm);
@@ -95,6 +100,8 @@ captureForm?.addEventListener('submit', async (event) => {
     window.location.assign(captureForm.dataset.thankYouUrl || '/obrigado-mapa-do-dinheiro');
   } catch (error) {
     captureFeedback.textContent = error instanceof Error ? error.message : 'Não foi possível concluir o envio. Tente novamente.';
+    captureForm.dataset.submitting = 'false';
+    if (submitButton) submitButton.disabled = false;
   }
 });
 
