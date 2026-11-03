@@ -45,18 +45,33 @@ final class LeadRepository
         );
         $this->database->exec('CREATE INDEX IF NOT EXISTS idx_leads_subscribed_at ON leads(subscribed_at)');
         $this->database->exec("CREATE TABLE IF NOT EXISTS lead_pipeline (lead_id INTEGER PRIMARY KEY, status TEXT NOT NULL DEFAULT 'novo', updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (lead_id) REFERENCES leads(id))");
+        $this->database->exec('CREATE TABLE IF NOT EXISTS inactive_leads (lead_id INTEGER PRIMARY KEY, inactivated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (lead_id) REFERENCES leads(id))');
         $this->database->exec('CREATE INDEX IF NOT EXISTS idx_lead_attempts_ip_time ON lead_attempts(ip_hash, attempted_at)');
     }
 
-    public function pipelineLeads(string $search, string $from, string $to): array
+    public function pipelineLeads(string $search, string $from, string $to, bool $showInactive = false): array
     {
-        $sql = "SELECT l.id, l.name, l.email, l.whatsapp, l.subscribed_at, COALESCE(p.status, 'novo') AS status FROM leads l LEFT JOIN lead_pipeline p ON p.lead_id = l.id WHERE (l.name LIKE :search OR l.email LIKE :search OR l.whatsapp LIKE :search)";
+        $sql = "SELECT l.id, l.name, l.email, l.whatsapp, l.subscribed_at, COALESCE(p.status, 'novo') AS status, (i.lead_id IS NOT NULL) AS inactive FROM leads l LEFT JOIN lead_pipeline p ON p.lead_id = l.id LEFT JOIN inactive_leads i ON i.lead_id = l.id WHERE (l.name LIKE :search OR l.email LIKE :search OR l.whatsapp LIKE :search)";
+        if (!$showInactive) { $sql .= ' AND i.lead_id IS NULL'; }
         $params = [':search' => '%' . $search . '%'];
         if ($from !== '') { $sql .= " AND date(l.subscribed_at, '-3 hours') >= :from_date"; $params[':from_date'] = $from; }
         if ($to !== '') { $sql .= " AND date(l.subscribed_at, '-3 hours') <= :to_date"; $params[':to_date'] = $to; }
         $query = $this->database->prepare($sql . ' ORDER BY l.subscribed_at DESC, l.id DESC');
         $query->execute($params);
         return $query->fetchAll();
+    }
+
+    public function createManual(string $name, string $email, string $whatsapp): bool
+    {
+        $query = $this->database->prepare("INSERT OR IGNORE INTO leads (name, email, whatsapp, consent, ip_hash, user_agent) VALUES (:name, :email, :whatsapp, 0, '', 'Cadastro manual')");
+        $query->execute([':name' => $name, ':email' => $email, ':whatsapp' => $whatsapp]);
+        return $query->rowCount() === 1;
+    }
+
+    public function setInactive(int $id, bool $inactive): void
+    {
+        $sql = $inactive ? 'INSERT OR IGNORE INTO inactive_leads (lead_id) SELECT id FROM leads WHERE id = :id' : 'DELETE FROM inactive_leads WHERE lead_id = :id';
+        $this->database->prepare($sql)->execute([':id' => $id]);
     }
 
     public function updatePipeline(int $id, string $status): bool
@@ -101,7 +116,7 @@ final class LeadRepository
                 COUNT(*) AS total,
                 SUM(CASE WHEN date(subscribed_at, '-3 hours') = date('now', '-3 hours') THEN 1 ELSE 0 END) AS today,
                 SUM(CASE WHEN datetime(subscribed_at) >= datetime('now', '-6 days') THEN 1 ELSE 0 END) AS last_7_days
-            FROM leads"
+            FROM leads WHERE NOT EXISTS (SELECT 1 FROM inactive_leads i WHERE i.lead_id = leads.id)"
         );
         $stats = $query->fetch();
 
