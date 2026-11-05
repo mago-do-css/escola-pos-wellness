@@ -42,6 +42,7 @@ const captureLead = async (form) => {
   const formData = new FormData(form);
   formData.set('event_id', eventId);
   formData.set('source_path', window.location.pathname);
+  formData.set('entry_path', window.metaJourney?.entry_path || '');
 
   const response = await window.fetch(endpoint, {
     method: 'POST',
@@ -53,7 +54,7 @@ const captureLead = async (form) => {
   if (!response.ok || result.status !== 'ok') throw new Error(result.message || 'Não foi possível concluir o envio.');
 
   if (result.is_new_lead && window.metaTracking?.pixelId) {
-    window.fbq?.('track', 'Lead', { content_name: 'Mapa do Dinheiro' }, { eventID: eventId });
+    window.fbq?.('track', 'Lead', { content_name: 'Mapa do Dinheiro', page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney?.entry_path || '', entry_type: window.metaJourney?.entry_type || 'desconhecida' }, { eventID: eventId });
   }
 };
 

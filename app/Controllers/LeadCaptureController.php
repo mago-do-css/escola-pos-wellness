@@ -69,7 +69,10 @@ final class LeadCaptureController
             $eventId = preg_replace('/[^A-Za-z0-9_-]/', '', (string) ($payload['event_id'] ?? '')) ?? '';
             if ($eventId !== '') {
                 $sourcePath = (string) ($payload['source_path'] ?? '');
-                MetaConversionsApi::trackLead($eventId, $lead, in_array($sourcePath, ['/', '/mapa-do-dinheiro-gratuito'], true) ? $sourcePath : null);
+                if ($sourcePath !== '') $sourcePath = '/' . ltrim(rtrim($sourcePath, '/'), '/');
+                $entryPath = (string) ($payload['entry_path'] ?? '');
+                $entryPaths = ['/', '/mapa-do-dinheiro-gratuito', '/por-tras-do-dinheiro', '/por-tras-do-dinheiro-oferta', '/radar-do-dinheiro', '/dinheiro-e-fruto'];
+                MetaConversionsApi::trackLead($eventId, $lead, in_array($sourcePath, ['/', '/mapa-do-dinheiro-gratuito'], true) ? $sourcePath : null, in_array($entryPath, $entryPaths, true) ? $entryPath : null);
             }
         }
 

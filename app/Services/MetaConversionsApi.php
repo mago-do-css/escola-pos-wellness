@@ -14,11 +14,13 @@ final class MetaConversionsApi
     }
 
     /** @param array{name?: string, email?: string, whatsapp?: string} $lead */
-    public static function trackLead(string $eventId, array $lead, ?string $sourcePath = null): void
+    public static function trackLead(string $eventId, array $lead, ?string $sourcePath = null, ?string $entryPath = null): void
     {
         self::send('Lead', $eventId, $lead, [
             'content_name' => 'Mapa do Dinheiro',
             'content_category' => 'Lead magnet',
+            'entry_path' => $entryPath ?? '',
+            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito'], true) ? 'formulario' : 'vendas'),
         ], $sourcePath);
     }
 
@@ -29,12 +31,17 @@ final class MetaConversionsApi
             return;
         }
 
+        $sourceUrl = $eventName === 'Lead' ? self::leadSourceUrl($sourcePath) : self::currentUrl();
+        if ($eventName === 'Lead') {
+            $customData['page_url'] = $sourceUrl;
+            $customData['page_path'] = (string) (parse_url($sourceUrl, PHP_URL_PATH) ?: '/');
+        }
         $payload = [
             'data' => [[
                 'event_name' => $eventName,
                 'event_time' => time(),
                 'event_id' => $eventId,
-                'event_source_url' => $eventName === 'Lead' ? self::leadSourceUrl($sourcePath) : self::currentUrl(),
+                'event_source_url' => $sourceUrl,
                 'action_source' => 'website',
                 'user_data' => self::userData($lead),
                 'custom_data' => (object) $customData,
@@ -77,9 +84,10 @@ final class MetaConversionsApi
                 $eventsReceived = is_array($responseData) ? (string) ($responseData['events_received'] ?? 'unknown') : 'unknown';
                 $traceId = is_array($responseData) ? (string) ($responseData['fbtrace_id'] ?? '') : '';
                 self::log(sprintf(
-                    'Meta CAPI accepted event=%s event_id=%s status=%d events_received=%s fbtrace_id=%s',
+                    'Meta CAPI accepted event=%s event_id=%s source_path=%s status=%d events_received=%s fbtrace_id=%s',
                     $eventName,
                     $eventId,
+                    (string) (parse_url($payload['data'][0]['event_source_url'], PHP_URL_PATH) ?: '/'),
                     $statusCode,
                     $eventsReceived,
                     $traceId
@@ -165,15 +173,15 @@ final class MetaConversionsApi
 
     private static function leadSourceUrl(?string $sourcePath): string
     {
-        if ($sourcePath !== null) {
-            $parts = parse_url(self::currentUrl());
-            return $parts['scheme'] . '://' . $parts['host'] . (isset($parts['port']) ? ':' . $parts['port'] : '') . $sourcePath;
-        }
         $referer = (string) ($_SERVER['HTTP_REFERER'] ?? '');
         $parts = parse_url($referer);
         $host = preg_replace('/:\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? ''));
-        if (is_array($parts) && isset($parts['host'], $parts['scheme']) && strcasecmp($parts['host'], $host) === 0 && in_array($parts['scheme'], ['http', 'https'], true)) {
+        if (is_array($parts) && isset($parts['host'], $parts['scheme']) && strcasecmp($parts['host'], $host) === 0 && in_array($parts['scheme'], ['http', 'https'], true) && ($sourcePath === null || rtrim($parts['path'] ?? '/', '/') === rtrim($sourcePath, '/'))) {
             return $parts['scheme'] . '://' . $parts['host'] . (isset($parts['port']) ? ':' . $parts['port'] : '') . ($parts['path'] ?? '/');
+        }
+        if ($sourcePath !== null) {
+            $parts = parse_url(self::currentUrl());
+            return $parts['scheme'] . '://' . $parts['host'] . (isset($parts['port']) ? ':' . $parts['port'] : '') . $sourcePath;
         }
         return self::currentUrl();
     }
