@@ -11,8 +11,12 @@
     const progress = page.querySelector('[data-release-progress]');
     const percent = page.querySelector('[data-release-percent]');
     const status = page.querySelector('[data-release-status]');
+    const instruction = page.querySelector('[data-release-instruction]');
+    const jump = page.querySelector('[data-release-jump]');
     const track = page.querySelector('[data-release-track]');
     const material = page.querySelector('[data-release-material]');
+    const materialTitle = page.querySelector('[data-release-material-title]');
+    const materialDescription = page.querySelector('[data-release-material-description]');
     const coverLabel = page.querySelector('[data-release-cover-label]');
     const buttons = Array.from(page.querySelectorAll('[data-release-download]'));
     const buttonTexts = Array.from(page.querySelectorAll('[data-release-button-text]'));
@@ -45,6 +49,10 @@
         buttonTexts.forEach(function (item) { item.textContent = 'Baixar o Mapa agora'; });
         coverLabel.textContent = 'Download disponível';
         status.textContent = 'Seu Mapa está pronto para baixar';
+        if (instruction) instruction.hidden = false;
+        if (jump) jump.hidden = false;
+        if (materialTitle) materialTitle.textContent = 'Seu Mapa do Dinheiro está pronto.';
+        if (materialDescription) materialDescription.textContent = 'Toque no botão abaixo para baixar seu Mapa em PDF.';
         if (kicker) kicker.textContent = 'Seu Mapa está pronto';
     }
 

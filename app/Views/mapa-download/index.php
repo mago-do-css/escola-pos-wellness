@@ -21,6 +21,14 @@ declare(strict_types=1);
                 <a class="download-release__next-step" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>"><span>Próximo passo</span>Clique aqui para continuar com o Por Trás do Dinheiro <b aria-hidden="true">✦</b></a>
             </header>
 
+            <div class="download-release__progress" aria-live="polite">
+                <div class="download-release__progress-copy"><strong data-release-status>Preparando seu Mapa do Dinheiro...</strong><span data-release-percent>0%</span></div>
+                <div class="download-release__track" role="progressbar" aria-label="Preparação do download" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-release-track><span data-release-progress></span></div>
+                <p class="download-release__ready-hint" data-release-instruction hidden><span class="download-release__ready-desktop">Seu Mapa está pronto. Toque no botão abaixo para baixar o PDF.</span><span class="download-release__ready-mobile">Seu Mapa está pronto. O botão para baixar está na última seção.</span></p>
+                <button class="download-release__download download-release__download--progress" type="button" disabled data-release-download><span data-release-button-text>Aguarde: preparando o PDF</span><b aria-hidden="true">↓</b></button>
+                <a class="download-release__jump" href="#baixar-mapa" data-release-jump hidden>Ir para o download <span aria-hidden="true">↓</span></a>
+            </div>
+
             <p class="download-release__video-intro">O Mapa ajuda você a reconhecer situações que se repetem. Neste vídeo, conheça o próximo passo para observar o que acontece antes, durante e depois delas.</p>
             <div class="download-release__video">
                 <video data-release-video playsinline preload="metadata" poster="<?= htmlspecialchars($vslPosterUrl, ENT_QUOTES, 'UTF-8') ?>">
@@ -33,23 +41,18 @@ declare(strict_types=1);
                 </button>
             </div>
             <p class="download-release__play-hint"><?= !empty($playText) ? htmlspecialchars($playText, ENT_QUOTES, 'UTF-8') : 'Aperte o play para assistir ao vídeo.' ?></p>
-
-            <div class="download-release__progress" aria-live="polite">
-                <div class="download-release__progress-copy"><strong data-release-status>Preparando seu Mapa do Dinheiro...</strong><span data-release-percent>0%</span></div>
-                <div class="download-release__track" role="progressbar" aria-label="Preparação do download" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-release-track><span data-release-progress></span></div>
-                <button class="download-release__download download-release__download--progress" type="button" disabled data-release-download><span data-release-button-text>Aguarde: preparando o PDF</span><b aria-hidden="true">↓</b></button>
-            </div>
+            <a class="download-release__next-step download-release__next-step--mobile" href="<?= htmlspecialchars($nextProductUrl, ENT_QUOTES, 'UTF-8') ?>"><span>Próximo passo</span>Clique aqui para continuar com o Por Trás do Dinheiro <b aria-hidden="true">✦</b></a>
         </section>
 
-        <section class="download-release__material is-locked" data-release-material aria-labelledby="material-title">
+        <section id="baixar-mapa" class="download-release__material is-locked" data-release-material aria-labelledby="material-title">
             <figure class="download-release__cover">
                 <img src="/assets/images/mapa/mapa-do-dinheiro-capa-v2.webp" alt="Capa do Mapa do Dinheiro">
                 <span data-release-cover-label>Preparando...</span>
             </figure>
             <div class="download-release__material-copy">
                 <p class="download-release__eyebrow">Seu material</p>
-                <h2 id="material-title">O Mapa do Dinheiro está sendo preparado para você.</h2>
-                <p>Quando a barra chegar a 100%, a capa ganha cor e o botão de download é liberado.</p>
+                <h2 id="material-title" data-release-material-title>O Mapa do Dinheiro está sendo preparado para você.</h2>
+                <p data-release-material-description>Quando a barra chegar a 100%, a capa ganha cor e o botão de download é liberado.</p>
                 <button class="download-release__download" type="button" disabled data-release-download><span data-release-button-text>Aguarde: preparando o PDF</span><b aria-hidden="true">↓</b></button>
                 <p class="download-release__feedback" data-release-feedback aria-live="polite"></p>
                 <div class="download-release__browser-help" data-in-app-browser-help hidden>
@@ -61,4 +64,4 @@ declare(strict_types=1);
         </section>
     </div>
 </main>
-<script src="/assets/js/mapa-download-release.js?v=20261102-4" defer></script>
+<script src="/assets/js/mapa-download-release.js?v=20261111-2" defer></script>
