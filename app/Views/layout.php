@@ -30,6 +30,8 @@ $metaPageEvents = [
     '/radar-do-dinheiro' => 'PaginaRadarDinheiro',
     '/obrigado-radar-do-dinheiro' => 'ObrigadoRadarDinheiro',
     '/dinheiro-e-fruto' => 'PaginaDinheiroFruto',
+    '/aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaGratuita',
+    '/garantir-acesso-completo' => 'PaginaOfertaAssinatura',
 ];
 $metaPageEvent = $metaPageEvents[$metaPath] ?? null;
 $metaProduct = [
@@ -37,6 +39,7 @@ $metaProduct = [
     '/por-tras-do-dinheiro-oferta' => 'Por Trás do Dinheiro - oferta',
     '/radar-do-dinheiro' => 'Radar do Dinheiro',
     '/dinheiro-e-fruto' => 'Dinheiro é Fruto',
+    '/garantir-acesso-completo' => 'Área de membros Pós-Wellness',
 ][$metaPath] ?? null;
 ?>
 <!doctype html>
@@ -53,10 +56,10 @@ $metaProduct = [
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/cta-pulse.css?v=1">
-    <script src="/assets/js/app.js?v=20261104-2" defer></script>
+    <script src="/assets/js/app.js?v=20261115-1" defer></script>
     <?php if ($metaPixelId !== ''): ?>
     <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
-    <script src="/assets/js/meta-journey.js?v=1"></script>
+    <script src="/assets/js/meta-journey.js?v=2"></script>
     <!-- Meta Pixel + Conversions API deduplication -->
     <script>
     !function(f,b,e,v,n,t,s)

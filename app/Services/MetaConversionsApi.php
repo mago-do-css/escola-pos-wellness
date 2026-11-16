@@ -17,10 +17,10 @@ final class MetaConversionsApi
     public static function trackLead(string $eventId, array $lead, ?string $sourcePath = null, ?string $entryPath = null): void
     {
         self::send('Lead', $eventId, $lead, [
-            'content_name' => 'Mapa do Dinheiro',
-            'content_category' => 'Lead magnet',
+            'content_name' => $sourcePath === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita Por Trás do Dinheiro' : 'Mapa do Dinheiro',
+            'content_category' => $sourcePath === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita' : 'Lead magnet',
             'entry_path' => $entryPath ?? '',
-            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito'], true) ? 'formulario' : 'vendas'),
+            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'formulario' : 'vendas'),
         ], $sourcePath);
     }
 

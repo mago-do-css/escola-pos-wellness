@@ -30,9 +30,7 @@ window.addEventListener('scroll', () => {
   header?.classList.toggle('is-scrolled', window.scrollY > 24);
 }, { passive: true });
 
-const captureForm = document.querySelector('[data-capture-form]');
-const captureFeedback = document.querySelector('[data-capture-feedback]');
-const whatsappInput = document.querySelector('[data-whatsapp-input]');
+const captureForms = document.querySelectorAll('[data-capture-form]');
 
 const captureLead = async (form) => {
   const endpoint = form.dataset.captureEndpoint;
@@ -54,11 +52,12 @@ const captureLead = async (form) => {
   if (!response.ok || result.status !== 'ok') throw new Error(result.message || 'Não foi possível concluir o envio.');
 
   if (result.is_new_lead && window.metaTracking?.pixelId) {
-    window.fbq?.('track', 'Lead', { content_name: 'Mapa do Dinheiro', page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney?.entry_path || '', entry_type: window.metaJourney?.entry_type || 'desconhecida' }, { eventID: eventId });
+    const contentName = window.location.pathname === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita Por Trás do Dinheiro' : 'Mapa do Dinheiro';
+    window.fbq?.('track', 'Lead', { content_name: contentName, page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney?.entry_path || '', entry_type: window.metaJourney?.entry_type || 'desconhecida' }, { eventID: eventId });
   }
 };
 
-whatsappInput?.addEventListener('input', () => {
+document.querySelectorAll('[data-whatsapp-input]').forEach((whatsappInput) => whatsappInput.addEventListener('input', () => {
   const digits = whatsappInput.value.replace(/\D/g, '').slice(0, 11);
 
   if (digits.length <= 2) {
@@ -77,10 +76,11 @@ whatsappInput?.addEventListener('input', () => {
   }
 
   whatsappInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-});
+}));
 
-captureForm?.addEventListener('submit', async (event) => {
+captureForms.forEach((captureForm) => captureForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const captureFeedback = captureForm.querySelector('[data-capture-feedback]');
   if (captureForm.dataset.submitting === 'true') return;
 
   if (!captureForm.checkValidity()) {
@@ -104,7 +104,7 @@ captureForm?.addEventListener('submit', async (event) => {
     captureForm.dataset.submitting = 'false';
     if (submitButton) submitButton.disabled = false;
   }
-});
+}));
 
 document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
   const stage = video.parentElement;
@@ -117,8 +117,14 @@ document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
   const playButton = document.createElement('button');
   playButton.type = 'button';
   playButton.className = 'video-play-stage__button';
-  playButton.setAttribute('aria-label', 'Assistir vídeo com som');
-  playButton.innerHTML = '<span aria-hidden="true">▶</span><small>Aperte para assistir</small>';
+  const playLabel = video.dataset.playLabel || 'Aperte para assistir';
+  playButton.setAttribute('aria-label', playLabel);
+  const playIcon = document.createElement('span');
+  playIcon.setAttribute('aria-hidden', 'true');
+  playIcon.textContent = '▶';
+  const playText = document.createElement('small');
+  playText.textContent = playLabel;
+  playButton.append(playIcon, playText);
   stage.append(playButton);
 
   const start = async () => {

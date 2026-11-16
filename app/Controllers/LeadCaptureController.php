@@ -71,8 +71,8 @@ final class LeadCaptureController
                 $sourcePath = (string) ($payload['source_path'] ?? '');
                 if ($sourcePath !== '') $sourcePath = '/' . ltrim(rtrim($sourcePath, '/'), '/');
                 $entryPath = (string) ($payload['entry_path'] ?? '');
-                $entryPaths = ['/', '/mapa-do-dinheiro-gratuito', '/por-tras-do-dinheiro', '/por-tras-do-dinheiro-oferta', '/radar-do-dinheiro', '/dinheiro-e-fruto'];
-                MetaConversionsApi::trackLead($eventId, $lead, in_array($sourcePath, ['/', '/mapa-do-dinheiro-gratuito'], true) ? $sourcePath : null, in_array($entryPath, $entryPaths, true) ? $entryPath : null);
+                $entryPaths = ['/', '/mapa-do-dinheiro-gratuito', '/por-tras-do-dinheiro', '/por-tras-do-dinheiro-oferta', '/radar-do-dinheiro', '/dinheiro-e-fruto', '/aula-completa-entenda-por-tras-do-dinheiro', '/garantir-acesso-completo'];
+                MetaConversionsApi::trackLead($eventId, $lead, in_array($sourcePath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro'], true) ? $sourcePath : null, in_array($entryPath, $entryPaths, true) ? $entryPath : null);
             }
         }
 

@@ -21,6 +21,12 @@ npm run dev
 
 O Apache usa `public/` como raiz pública. As rotas entram por `public/index.php`; controllers e views ficam em `app/`.
 
+## Funil de assinatura
+
+A página de aula fica em `/aula-completa-entenda-por-tras-do-dinheiro` e a oferta em `/garantir-acesso-completo`. Configure no ambiente do container `ASSINATURA_AULA_VIDEO_URL` e `ASSINATURA_AULA_POSTER_URL` com os caminhos públicos dos arquivos; sem vídeo, a página exibe um espaço reservado. Configure `ASSINATURA_CHECKOUT_URL` com a URL HTTPS do checkout da assinatura; enquanto estiver vazia, a contratação permanece desabilitada. `ASSINATURA_GARANTIA_TEXTO` pode receber as condições confirmadas de garantia.
+
+Os títulos, descrições e miniaturas das aulas seguintes, assim como os depoimentos autorizados, são configurados em `app/Config/Assinatura.php`. `ASSINATURA_DEMO_SOCIAL=true` mostra exemplos identificados como fictícios para revisão; mantenha `false` em produção. A demonstração não acompanha compras nem representa vagas reais. Confirme os materiais e a oferta antes de publicar.
+
 ## Escopo desta etapa
 
 - estrutura MVC e front controller;

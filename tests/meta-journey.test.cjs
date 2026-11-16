@@ -16,6 +16,10 @@ assert.deepEqual(visit('/mapa-do-dinheiro-gratuito', formSession), { entry_path:
 assert.deepEqual(visit('/obrigado-mapa-do-dinheiro-gratuito', formSession), { entry_path: '/mapa-do-dinheiro-gratuito', entry_type: 'formulario' });
 assert.deepEqual(visit('/por-tras-do-dinheiro-oferta', formSession), { entry_path: '/mapa-do-dinheiro-gratuito', entry_type: 'formulario' });
 const salesSession = session();
+const lessonSession = session();
+assert.deepEqual(visit('/aula-completa-entenda-por-tras-do-dinheiro', lessonSession), { entry_path: '/aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
+assert.deepEqual(visit('/garantir-acesso-completo', lessonSession), { entry_path: '/aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
+assert.deepEqual(visit('/garantir-acesso-completo', session()), { entry_path: '/garantir-acesso-completo', entry_type: 'vendas' });
 assert.deepEqual(visit('/por-tras-do-dinheiro-oferta', salesSession), { entry_path: '/por-tras-do-dinheiro-oferta', entry_type: 'vendas' });
 assert.deepEqual(visit('/obrigado-por-tras-do-dinheiro', salesSession), { entry_path: '/por-tras-do-dinheiro-oferta', entry_type: 'vendas' });
 const otherSession = session();

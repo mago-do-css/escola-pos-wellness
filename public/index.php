@@ -27,11 +27,14 @@ use App\Controllers\PorTrasObrigadoController;
 use App\Controllers\LeadCaptureController;
 use App\Controllers\DinheiroFrutoController;
 use App\Controllers\AdminLeadsController;
+use App\Controllers\AssinaturaController;
 use App\Core\Router;
 
 $router = new Router();
 
 $router->get('/', [HomeController::class, 'index']);
+$router->get('/aula-completa-entenda-por-tras-do-dinheiro', [AssinaturaController::class, 'aula']);
+$router->get('/garantir-acesso-completo', [AssinaturaController::class, 'oferta']);
 $router->get('/mapa-do-dinheiro-gratuito', [HomeController::class, 'gratuito']);
 $router->get('/obrigado-mapa-gratuito', [MapaDownloadController::class, 'gratuito']);
 $router->get('/obrigado-mapa-do-dinheiro-gratuito', [MapaDownloadController::class, 'gratuitoOferta']);
