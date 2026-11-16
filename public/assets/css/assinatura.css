@@ -35,6 +35,14 @@
 .members-comparison td .members-comparison__free { color:#f8e6c7; font-size:.8rem; font-weight:700; }
 .members-comparison .members-comparison__was { margin-top:.75rem; color:#dbc6ad; font-size:.8rem; }
 .members-comparison__was s { color:#fff1dc; font-size:1.35rem; font-weight:700; text-decoration-color:#e28e6c; text-decoration-thickness:2px; }
+.members-comparison--three thead th:first-child { width:45%; }
+.members-comparison--three thead th:nth-child(2) { width:23%; }
+.members-comparison--three thead th:nth-child(3) { width:32%; }
+.members-comparison--three .members-comparison__individual { color:#eee0ce; font-weight:700; font-size:1.05rem; }
+.members-comparison--three .members-comparison__individual s { text-decoration-color:#e28e6c; text-decoration-thickness:2px; }
+.members-comparison--three .members-comparison__total th,.members-comparison--three .members-comparison__total td { border-top:2px solid #bd9562; }
+.members-comparison--three .members-comparison__offer th,.members-comparison--three .members-comparison__offer td { background:rgba(202,158,96,.2); }
+@media (max-width:520px) { .members-comparison--three thead th { font-size:.6rem; letter-spacing:0; overflow-wrap:anywhere; } .members-comparison--three tbody th strong,.members-comparison--three td strong,.members-comparison--three .members-comparison__individual { font-size:.78rem; } .members-comparison--three td span { font-size:.7rem; } }
 @media (max-width:520px) { .members-comparison thead th,.members-comparison tbody th,.members-comparison tbody td { padding:.85rem .55rem; } .members-comparison__was s { font-size:1.15rem; } }
 .members-benefits p { max-width:25rem; margin:.45rem 0 0; color:#c2b3a2; font-size:.83rem; line-height:1.5; }
 .members-benefit-price { flex:none; text-align:right; font-size:.8rem; }
@@ -55,6 +63,9 @@
 .members-availability > strong[data-test-remaining] { min-width:4rem; text-align:center; font-size:1.8rem; line-height:1; color:#f8d9a2; }
 .members-customer-popup { background:#135f40; border-color:#70ba8c; }
 .members-customer-popup strong { color:#c9f4d7; }
+ .members-customer-popup:not([hidden]) { display:flex; align-items:center; gap:.85rem; }
+.members-customer-popup__icon { flex:none; width:2rem; height:2rem; color:#d9f4e3; }
+.members-customer-popup > div { display:grid; gap:.25rem; }
 .members-customer-popup [data-customer-name] { font-size:1rem; font-weight:700; color:#fff; }
 .members-customer-popup [data-customer-name] + span { font-size:.8rem; color:#d9f4e3; }
 .members-story-slider { max-width:46rem; margin-top:2rem; }
@@ -62,6 +73,7 @@
 .members-story-card[hidden] { display:none; }
 .members-story-card small { color:#e4bd84; }
 .members-story-quote { font-family:Georgia,serif; font-size:clamp(1.3rem,2.4vw,2rem); line-height:1.4; }
+@media (min-width:768px) { .members-story-quote { font-size:clamp(1rem,1.25vw,1.2rem); line-height:1.55; } }
 .members-story-person { display:flex; align-items:center; gap:1rem; }
 .members-story-person img,.members-story-photo { width:3.5rem; height:3.5rem; border-radius:50%; object-fit:cover; background:#80684f; display:grid; place-items:center; }
 .members-story-person strong,.members-story-person div span { display:block; }
@@ -86,6 +98,11 @@
 .members-story-slider { max-width:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
 .members-story-controls { grid-column:1/-1; order:10; }
 @media (max-width:767px) { .members-story-slider { grid-template-columns:1fr; } }
+.members-benefit-track.members-carousel-ready { display:block; overflow:visible; padding-bottom:0; }
+.members-story-slider.members-carousel-ready { display:block; }
+.members-swiper { width:100%; overflow:hidden; }
+.members-swiper .swiper-wrapper { align-items:stretch; }
+.members-swiper .swiper-slide { height:auto; box-sizing:border-box; }
 .members-customer-popup { position:fixed; z-index:75; left:1rem; bottom:1rem; display:grid; gap:.3rem; width:min(17rem,calc(100vw - 2rem)); padding:1rem 1.2rem; border:1px solid #c69c65; border-radius:.6rem; background:#211a15; color:#f9eedf; box-shadow:0 .7rem 2rem #0007; animation:customer-arrive .5s ease-out; }
 .members-customer-popup[hidden] { display:none; }
 .members-customer-popup strong { color:#e8c18a; font-size:.75rem; }
@@ -148,8 +165,8 @@
 .members-page--offer .members-offer-hero__image img { transform:scale(1.14); }
 .members-includes__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; } .members-includes__grid article { min-height:13rem; padding:1.4rem; border:1px solid #ddcdb9; background:#fffaf2; } .members-includes__grid span { color:#ab7b49; font-size:.68rem; font-weight:700; letter-spacing:.12em; } .members-includes__grid h3 { margin:1.2rem 0 .65rem; font-size:1.4rem; line-height:1.1; } .members-includes__grid p { margin:0; color:#716254; font-size:.83rem; line-height:1.6; }
 .members-stories { padding:clamp(4rem,8vw,7rem) 0; background:#30251d; } .members-stories > div > p:last-child { max-width:30rem; margin:1.1rem 0 0; color:#c9b9a5; line-height:1.6; }
-.members-journey-copy { max-width:52rem; margin:1.5rem 0 2rem; font-family:'Arizona Flare',Georgia,serif; font-size:clamp(1.5rem,2.6vw,2.4rem); line-height:1.3; }
-.members-journey-copy p { margin:.5rem 0; color:#f5eee2; }
+.members-journey-copy { max-width:42rem; margin:1.25rem 0 2rem; font-size:clamp(.95rem,1.2vw,1.05rem); line-height:1.65; }
+.members-journey-copy p { margin:.35rem 0; color:#d5c6b3; }
 .members-stories__list { display:grid; gap:1rem; margin-top:2rem; } .members-stories__list blockquote { margin:0; padding:1.3rem; border:1px solid rgba(216,184,142,.25); } .members-stories__list p { margin:0 0 .8rem; line-height:1.6; } .members-stories__list cite { color:#d7ad76; font-size:.8rem; font-style:normal; } .members-demo { margin-top:2rem; padding:1rem; border:1px dashed #d7ad76; color:#f5eee2; } .members-demo p { margin:.5rem 0 0; }
 .members-pricing { padding:clamp(4rem,8vw,7rem) 0; background:radial-gradient(circle at center,rgba(170,117,58,.2),transparent 37rem),#1c1713; } .members-pricing__intro { max-width:42rem; margin:0 auto 2.5rem; text-align:center; } .members-pricing__intro .members-kicker { justify-content:center; } .members-pricing__intro h2 { margin:auto; } .members-pricing__intro > p:last-child { color:#c6b8a5; margin:1rem 0 0; }
 .members-plan { max-width:35rem; margin:auto; padding:clamp(1.6rem,4vw,2.7rem); border:1px solid #e4c793; border-radius:.8rem; background:linear-gradient(140deg,#c59250,#e3c284 55%,#bd873f); color:#2b211a; box-shadow:0 1.4rem 3rem rgba(0,0,0,.28); } .members-plan__badge { display:inline-block; margin:0 0 1.5rem; padding:.45rem .7rem; border-radius:2rem; background:#2a211a; color:#f6e7d0; font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .members-plan__eyebrow { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; } .members-plan h3 { margin:.4rem 0 .7rem; font-size:2.7rem; line-height:1; } .members-plan__description { line-height:1.55; color:#514031; } .members-plan ul { display:grid; gap:.75rem; padding:1.2rem 0; margin:1.25rem 0; border-block:1px solid rgba(43,33,26,.25); list-style:none; } .members-plan li::before { content:'✓'; margin-right:.65rem; color:#765023; font-weight:700; } .members-plan__price-label { margin:0; font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; } .members-plan__price { margin:.35rem 0 1.4rem; font-size:clamp(3.2rem,6vw,4.4rem); letter-spacing:-.07em; line-height:1; } .members-plan__price span { font-size:1.3rem; letter-spacing:0; } .members-plan .members-button { width:100%; justify-content:center; } .members-button--dark { background:#2b211a; border-color:#2b211a; color:#f8e9d1; } .members-button--dark:hover,.members-button--dark:focus-visible { color:#2b211a; background:#f7e5c7; } .members-button--disabled { background:#66523e; color:#f3e4d0; cursor:not-allowed; } .members-plan__renewal { margin:1rem 0 0; color:#33251a; font-size:.9rem; line-height:1.5; text-align:center; } .members-plan__pending,.members-plan__secure { margin:.65rem 0 0; color:#4e3a28; font-size:.75rem; line-height:1.5; text-align:center; }
@@ -209,11 +226,14 @@
 .whatsapp-float:hover,.whatsapp-float:focus-visible { background:#147642; }
 @keyframes members-pulse { 0%,100% { box-shadow:0 0 0 0 rgba(212,172,113,.5); } 55% { box-shadow:0 0 0 9px rgba(212,172,113,0); } }
 @keyframes members-plan-bounce { 0%, 100% { transform:translateY(0) scale(1); box-shadow:0 0 0 0 rgba(43,33,26,.35); } 40% { transform:translateY(-5px) scale(1.025); box-shadow:0 .7rem 1.4rem rgba(43,33,26,.3), 0 0 0 8px rgba(43,33,26,0); } 65% { transform:translateY(0) scale(1); box-shadow:0 0 0 0 rgba(43,33,26,0); } }
-.members-plan .members-plan__cta { animation:members-plan-bounce 1.8s ease-in-out infinite; }
+.members-plan .members-plan__cta { background:linear-gradient(110deg,#3a2418 0%,#78401f 55%,#a45b26 100%); border-color:#6d381c; color:#fff9ef; font-weight:700; animation:members-plan-bounce 1.8s ease-in-out infinite; }
+.members-plan .members-plan__cta:hover,.members-plan .members-plan__cta:focus-visible { background:linear-gradient(110deg,#58301c,#a45b26); color:#fff; }
+@media (min-width:768px) { .members-plan .members-plan__cta { font-size:1.05rem; line-height:1.35; text-align:center; } }
 @media (max-width:767px) { .members-plan .members-plan__cta { box-sizing:border-box; min-width:0; padding:1rem .85rem; font-size:1rem; line-height:1.35; text-align:center; white-space:normal; overflow-wrap:anywhere; } }
 .members-plan .members-plan__cta:disabled { opacity:1; cursor:not-allowed; }
 .members-plan__price .members-plan__reais { font-size:1em; letter-spacing:-.04em; }
 .members-plan__price .members-plan__cents { font-size:.48em; letter-spacing:0; vertical-align:baseline; }
+.members-plan__price .members-plan__price-period { display:inline-block; max-width:12rem; margin-left:.4rem; color:#5c432d; font-size:.9rem; font-weight:500; letter-spacing:0; line-height:1.4; vertical-align:middle; }
 .members-plan__coupon { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.4rem 1rem; margin:.8rem 0; padding:.7rem .85rem; border:1px dashed rgba(43,33,26,.6); color:#33251a; }
 .members-plan__coupon span { font-size:.75rem; }
 .members-plan__coupon strong { font-size:.88rem; letter-spacing:.06em; }
