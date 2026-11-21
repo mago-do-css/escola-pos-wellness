@@ -68,7 +68,7 @@ if ($subscriptionCapi && $metaEventId !== '') {
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/cta-pulse.css?v=1">
-    <script src="/assets/js/app.js?v=20261120-3" defer></script>
+    <script src="/assets/js/app.js?v=20261120-4" defer></script>
     <?php if ($metaPixelId !== ''): ?>
     <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId, 'pageName' => $metaPageName], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
     <script src="/assets/js/meta-journey.js?v=3"></script>

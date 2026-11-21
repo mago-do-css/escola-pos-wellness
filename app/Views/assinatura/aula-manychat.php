@@ -1,11 +1,12 @@
 <?php declare(strict_types=1); ?>
-<link rel="stylesheet" href="/assets/css/assinatura.css?v=51">
+<link rel="stylesheet" href="/assets/css/assinatura.css?v=55">
 <main class="members-page members-page--lesson">
     <header class="members-header"><div class="members-container"><a href="/" aria-label="Pós-Wellness, página inicial"><img src="/assets/images/logo-pos-wellness-offwhite.svg" alt="Pós-Wellness"></a><div class="members-header__actions"><a href="#aulas" class="members-header__cta">Continuar <span aria-hidden="true">→</span></a></div></div></header>
     <section class="members-hero"><div class="members-container members-container--narrow"><p class="members-kicker"><span></span> Uma aula para começar</p><h1>Você já parou para observar o que acontece <em>antes de uma decisão com dinheiro?</em></h1><p class="members-lead">Nesta aula gratuita, descubra um jeito de observar situações que se repetem e dê o primeiro passo para entender suas escolhas com mais clareza.</p>
         <div class="members-video-wrap">
+        <div class="members-video-heading"><div class="members-video-heading__progress">Aula <strong>01</strong></div><div class="members-video-heading__copy"><p>Sua jornada começa aqui</p><h2>Antes de procurar a raiz</h2><p>Comece observando o que acontece antes das suas escolhas com dinheiro.</p></div></div>
         <?php if ($videoUrl !== ''): ?>
-            <div class="members-video"><video data-video-play-overlay data-click-to-pause data-play-label="Clique para iniciar a aula" playsinline preload="metadata"<?= $posterUrl !== '' ? ' poster="' . htmlspecialchars($posterUrl, ENT_QUOTES, 'UTF-8') . '"' : '' ?>><source src="<?= htmlspecialchars($videoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div>
+            <div class="members-video"><video data-video-play-overlay data-click-to-pause data-video-fullscreen data-play-label="Clique para iniciar a aula" playsinline preload="metadata"<?= $posterUrl !== '' ? ' poster="' . htmlspecialchars($posterUrl, ENT_QUOTES, 'UTF-8') . '"' : '' ?>><source src="<?= htmlspecialchars($videoUrl, ENT_QUOTES, 'UTF-8') ?>" type="video/mp4">Seu navegador não oferece suporte à reprodução deste vídeo.</video></div>
         <?php else: ?>
             <div class="members-video-placeholder"><span class="members-video-placeholder__icon" aria-hidden="true">▶</span><strong>Sua aula estará disponível aqui</strong><span>O vídeo será adicionado em breve.</span></div>
         <?php endif; ?>

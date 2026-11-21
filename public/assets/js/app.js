@@ -127,6 +127,38 @@ document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
   playButton.append(playIcon, playText);
   stage.append(playButton);
 
+  if (video.hasAttribute('data-video-fullscreen') && (stage.requestFullscreen || stage.webkitRequestFullscreen || video.webkitEnterFullscreen)) {
+    const fullscreenButton = document.createElement('button');
+    fullscreenButton.type = 'button';
+    fullscreenButton.className = 'video-play-stage__fullscreen';
+    fullscreenButton.setAttribute('aria-label', 'Abrir vídeo em tela cheia');
+    fullscreenButton.title = 'Tela cheia';
+    fullscreenButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg>';
+    stage.append(fullscreenButton);
+
+    fullscreenButton.addEventListener('click', async () => {
+      try {
+        if (document.fullscreenElement || document.webkitFullscreenElement) {
+          if (document.exitFullscreen) await document.exitFullscreen();
+          else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        } else if (stage.requestFullscreen) await stage.requestFullscreen();
+        else if (stage.webkitRequestFullscreen) stage.webkitRequestFullscreen();
+        else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+      } catch (_) {
+        if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+      }
+    });
+
+    const updateFullscreenLabel = () => {
+      const active = document.fullscreenElement === stage || document.webkitFullscreenElement === stage;
+      const label = active ? 'Sair da tela cheia' : 'Abrir vídeo em tela cheia';
+      fullscreenButton.setAttribute('aria-label', label);
+      fullscreenButton.title = label;
+    };
+    document.addEventListener('fullscreenchange', updateFullscreenLabel);
+    document.addEventListener('webkitfullscreenchange', updateFullscreenLabel);
+  }
+
   const start = async () => {
     video.defaultMuted = false;
     video.muted = false;
