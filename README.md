@@ -23,20 +23,36 @@ O Apache usa `public/` como raiz pública. As rotas entram por `public/index.php
 
 ## Funil de assinatura
 
-A página de aula fica em `/aula-completa-entenda-por-tras-do-dinheiro` e a oferta em `/garantir-acesso-completo`. A aula usa por padrão o vídeo `aula-1-antes-de-procurar-a-raiz.mp4`. Para substituí-lo ou adicionar uma capa, configure `ASSINATURA_AULA_VIDEO_URL` ou `ASSINATURA_AULA_POSTER_URL` com os caminhos públicos dos arquivos. O checkout da assinatura usa o link da Kiwify configurado no projeto; para substituí-lo, defina uma URL HTTPS em `ASSINATURA_CHECKOUT_URL`. `ASSINATURA_GARANTIA_TEXTO` pode receber as condições confirmadas de garantia.
+A página de aula fica em `/aula-completa-entenda-por-tras-do-dinheiro` e a oferta em `/garantir-acesso-completo`.
 
-Os títulos, descrições e miniaturas das aulas seguintes, assim como os depoimentos autorizados, são configurados em `app/Config/Assinatura.php`. `ASSINATURA_DEMO_SOCIAL=true` mostra exemplos identificados como fictícios para revisão; mantenha `false` em produção. A demonstração não acompanha compras nem representa vagas reais. Confirme os materiais e a oferta antes de publicar.
+A aula usa por padrão o vídeo `aula-1-antes-de-procurar-a-raiz.mp4`. Para substituí-lo ou adicionar uma capa, configure `ASSINATURA_AULA_VIDEO_URL` ou `ASSINATURA_AULA_POSTER_URL` com os caminhos públicos dos arquivos.
 
-Nos funis principal e ManyChat, `PageView` é enviado pelo Pixel e pela API com o mesmo identificador. Nas páginas de oferta, `ViewContent` também usa um identificador compartilhado; `Lead` usa o mesmo ID no navegador e no servidor para cadastros novos. A URL de origem distingue as páginas. A Kiwify continua responsável pelos eventos do checkout e da compra. Para ativar a API, configure `META_CAPI_ENABLED=true`, `META_PIXEL_ID` e `META_CAPI_ACCESS_TOKEN` no ambiente. Para validar sem misturar com a produção, informe `META_TEST_EVENT_CODE` na prévia de testes e consulte o Gerenciador de Eventos; `META_CAPI_DEBUG=true` é opcional para registrar o resultado no log. O teste `php tests/meta-subscription-capi.php` simula os envios localmente e não acessa a Meta.
+O checkout da assinatura usa o link da Kiwify configurado no projeto; para substituí-lo, defina uma URL HTTPS em `ASSINATURA_CHECKOUT_URL`.
+
+`ASSINATURA_GARANTIA_TEXTO` pode receber as condições confirmadas de garantia.
+
+Os títulos, descrições e miniaturas das aulas seguintes, assim como os depoimentos autorizados, são configurados em `app/Config/Assinatura.php`.
+
+Confirme os materiais e as condições da oferta antes de publicar.
+
+Nos funis principal e ManyChat, `PageView` é enviado pelo Pixel e pela API com o mesmo identificador. Nas páginas de oferta, `ViewContent` também usa um identificador compartilhado; `Lead` usa o mesmo ID no navegador e no servidor para cadastros novos.
+
+A URL de origem distingue as páginas. A Kiwify continua responsável pelos eventos do checkout e da compra.
+
+Para ativar a API, configure `META_CAPI_ENABLED=true`, `META_PIXEL_ID` e `META_CAPI_ACCESS_TOKEN` no ambiente.
+
+Para validar sem misturar com a produção, informe `META_TEST_EVENT_CODE` na prévia de testes e consulte o Gerenciador de Eventos; `META_CAPI_DEBUG=true` é opcional para registrar o resultado no log.
+
+O teste `php tests/meta-subscription-capi.php` simula os envios localmente e não acessa a Meta.
 
 ## Escopo desta etapa
 
-- estrutura MVC e front controller;
-- container PHP 8.3 + Apache;
+- Estrutura MVC e front controller;
+- Container PHP 8.3 + Apache;
 - Tailwind com tokens da identidade visual;
-- navbar desktop/mobile;
-- hero responsivo em 1440px e 390px;
-- fontes e assets oficiais versionados localmente.
+- Navbar desktop/mobile;
+- Hero responsivo em 1440px e 390px;
+- Fontes e assets oficiais versionados localmente.
 
 ## Meta Pixel e Conversions API
 
@@ -76,7 +92,9 @@ O Pixel Helper valida apenas os eventos do navegador. Para validar a CAPI, use *
 
 ## Painel de leads
 
-O painel de leitura dos contatos fica em `/admin/leads`. Ele mostra total de leads, novos registros de hoje e dos últimos sete dias, busca e paginação. Dados técnicos, como IP e user-agent, não são exibidos.
+O painel de leitura dos contatos fica em `/admin/leads`.
+
+Ele mostra total de leads, novos registros de hoje e dos últimos sete dias, busca e paginação. Dados técnicos, como IP e user-agent, não são exibidos.
 
 O acesso só é ativado quando estas duas variáveis estiverem configuradas no Portainer:
 
@@ -85,4 +103,8 @@ O acesso só é ativado quando estas duas variáveis estiverem configuradas no P
 | `ADMIN_USERNAME` | Usuário do painel |
 | `ADMIN_PASSWORD` | Senha forte e exclusiva do painel |
 
-Defina as duas variáveis na Stack ou no container e recrie o container. Em seguida, abra `https://seu-dominio/admin/leads`; o navegador solicitará as credenciais. Sem as duas variáveis, a rota responde como página não encontrada. Nunca versione esses valores no Git.
+Defina as duas variáveis na Stack ou no container e recrie o container.
+
+Em seguida, abra `https://seu-dominio/admin/leads`; o navegador solicitará as credenciais.
+
+Sem as duas variáveis, a rota responde como página não encontrada. Nunca versione esses valores no Git.
