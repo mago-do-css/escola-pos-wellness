@@ -40,9 +40,9 @@ final class AssinaturaController
         $checkoutUrl = trim((string) getenv('ASSINATURA_CHECKOUT_URL'));
         if ($checkoutUrl === '') $checkoutUrl = 'https://kiwify.app/jyt1K19';
         if (!filter_var($checkoutUrl, FILTER_VALIDATE_URL) || parse_url($checkoutUrl, PHP_URL_SCHEME) !== 'https') $checkoutUrl = '';
-        $testimonials = Assinatura::TESTIMONIALS;
+        
         $guarantee = trim((string) getenv('ASSINATURA_GARANTIA_TEXTO'));
-        $demo = filter_var(getenv('ASSINATURA_DEMO_SOCIAL') ?: false, FILTER_VALIDATE_BOOL);
+        
         $this->render($manychat ? 'oferta-manychat' : 'oferta', get_defined_vars());
     }
 
