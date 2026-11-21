@@ -26,9 +26,9 @@ final class MetaConversionsApi
     {
         self::send('Lead', $eventId, $lead, [
             'content_name' => MetaTracking::pageName($sourcePath ?? '') ?: 'Mapa do Dinheiro',
-            'content_category' => in_array($sourcePath, ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'Aula gratuita' : 'Lead magnet',
+            'content_category' => in_array($sourcePath, ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/assistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'Aula gratuita' : 'Lead magnet',
             'entry_path' => $entryPath ?? '',
-            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'formulario' : 'vendas'),
+            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/assistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'formulario' : 'vendas'),
         ], $sourcePath);
     }
 

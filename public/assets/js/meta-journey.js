@@ -6,6 +6,7 @@
     '/aula-completa-entenda-por-tras-do-dinheiro': 'formulario',
     '/garantir-acesso-completo': 'vendas',
     '/asistir-aula-completa-entenda-por-tras-do-dinheiro': 'formulario',
+    '/assistir-aula-completa-entenda-por-tras-do-dinheiro': 'formulario',
     '/garantir-acesso-completo-agora': 'vendas',
     '/por-tras-do-dinheiro': 'vendas',
     '/por-tras-do-dinheiro-oferta': 'vendas',

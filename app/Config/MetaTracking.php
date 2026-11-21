@@ -14,6 +14,7 @@ final class MetaTracking
             '/aula-completa-entenda-por-tras-do-dinheiro' => 'Aula gratuita - funil principal',
             '/garantir-acesso-completo' => 'Oferta de assinatura - funil principal',
             '/asistir-aula-completa-entenda-por-tras-do-dinheiro' => 'Aula gratuita - ManyChat',
+            '/assistir-aula-completa-entenda-por-tras-do-dinheiro' => 'Aula gratuita - ManyChat',
             '/garantir-acesso-completo-agora' => 'Oferta de assinatura - ManyChat',
         ][$path] ?? '';
     }

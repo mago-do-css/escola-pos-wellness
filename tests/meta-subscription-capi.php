@@ -14,7 +14,7 @@ stream_wrapper_register('https', FakeHttps::class);
 putenv('META_PIXEL_ID=123456789'); putenv('META_CAPI_ACCESS_TOKEN=test-token'); putenv('META_CAPI_ENABLED=true'); putenv('META_TEST_EVENT_CODE=TEST_LOCAL');
 $_SERVER['HTTP_HOST']='example.test'; $_SERVER['HTTPS']='on'; $_SERVER['HTTP_USER_AGENT']='local-test';
 $pageTitle='Teste'; $content=''; $showWhatsapp=false;
-foreach (['/aula-completa-entenda-por-tras-do-dinheiro'=>false, '/asistir-aula-completa-entenda-por-tras-do-dinheiro'=>false, '/garantir-acesso-completo'=>true, '/garantir-acesso-completo-agora'=>true] as $path=>$offer) {
+foreach (['/aula-completa-entenda-por-tras-do-dinheiro'=>false, '/assistir-aula-completa-entenda-por-tras-do-dinheiro'=>false, '/garantir-acesso-completo'=>true, '/garantir-acesso-completo-agora'=>true] as $path=>$offer) {
   $GLOBALS['captured']=[]; $_SERVER['REQUEST_URI']=$path;
   ob_start(); require dirname(__DIR__) . '/app/Views/layout.php'; $html=ob_get_clean();
   $events=array_map(static fn($p)=>$p['data'][0], $GLOBALS['captured']);
@@ -28,7 +28,7 @@ foreach (['/aula-completa-entenda-por-tras-do-dinheiro'=>false, '/asistir-aula-c
   if (array_column($events, 'event_name') !== ($offer?['PageView','ViewContent']:['PageView'])) throw new RuntimeException('Eventos incorretos em '.$path);
 }
 $GLOBALS['captured']=[]; $_SERVER['REQUEST_URI']='/leads/capture'; unset($_SERVER['HTTP_REFERER']);
-App\Services\MetaConversionsApi::trackLead('lead_test_123', ['name'=>'Teste', 'email'=>'teste@example.com', 'whatsapp'=>'61999999999'], '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro');
+App\Services\MetaConversionsApi::trackLead('lead_test_123', ['name'=>'Teste', 'email'=>'teste@example.com', 'whatsapp'=>'61999999999'], '/assistir-aula-completa-entenda-por-tras-do-dinheiro', '/assistir-aula-completa-entenda-por-tras-do-dinheiro');
 $lead=$GLOBALS['captured'][0]['data'][0];
-if ($lead['event_name'] !== 'Lead' || $lead['event_id'] !== 'lead_test_123' || $lead['event_source_url'] !== 'https://example.test/asistir-aula-completa-entenda-por-tras-do-dinheiro' || ($lead['custom_data']['page_name'] ?? '') !== 'Aula gratuita - ManyChat') throw new RuntimeException('Lead incorreto');
+if ($lead['event_name'] !== 'Lead' || $lead['event_id'] !== 'lead_test_123' || $lead['event_source_url'] !== 'https://example.test/assistir-aula-completa-entenda-por-tras-do-dinheiro' || ($lead['custom_data']['page_name'] ?? '') !== 'Aula gratuita - ManyChat') throw new RuntimeException('Lead incorreto');
 echo "PageView, ViewContent e Lead: URLs e IDs verificados sem envio externo.\n";

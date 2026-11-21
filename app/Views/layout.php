@@ -35,6 +35,7 @@ $metaPageEvents = [
     '/aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaGratuita',
     '/garantir-acesso-completo' => 'PaginaOfertaAssinatura',
     '/asistir-aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaManychat',
+    '/assistir-aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaManychat',
     '/garantir-acesso-completo-agora' => 'PaginaOfertaManychat',
 ];
 $metaPageEvent = $metaPageEvents[$metaPath] ?? null;
@@ -46,7 +47,7 @@ $metaProduct = [
     '/garantir-acesso-completo' => 'Área de membros Pós-Wellness',
     '/garantir-acesso-completo-agora' => 'Área de membros Pós-Wellness - Manychat',
 ][$metaPath] ?? null;
-$subscriptionPaths = ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/garantir-acesso-completo', '/garantir-acesso-completo-agora'];
+$subscriptionPaths = ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/assistir-aula-completa-entenda-por-tras-do-dinheiro', '/garantir-acesso-completo', '/garantir-acesso-completo-agora'];
 $subscriptionCapi = in_array($metaPath, $subscriptionPaths, true) && MetaTracking::isEnabled();
 $metaViewContentId = ($subscriptionCapi && $metaProduct !== null) ? 'vc_' . bin2hex(random_bytes(12)) : '';
 if ($subscriptionCapi && $metaEventId !== '') {
@@ -71,7 +72,7 @@ if ($subscriptionCapi && $metaEventId !== '') {
     <script src="/assets/js/app.js?v=20261120-4" defer></script>
     <?php if ($metaPixelId !== ''): ?>
     <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId, 'pageName' => $metaPageName], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
-    <script src="/assets/js/meta-journey.js?v=3"></script>
+    <script src="/assets/js/meta-journey.js?v=4"></script>
     <!-- Meta Pixel + Conversions API deduplication -->
     <script>
     !function(f,b,e,v,n,t,s)

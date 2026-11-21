@@ -38,7 +38,7 @@ final class AssinaturaController
     {
         $pageTitle = 'Acesso completo | Pós-Wellness';
         $checkoutUrl = trim((string) getenv('ASSINATURA_CHECKOUT_URL'));
-        if ($checkoutUrl === '') $checkoutUrl = 'https://kiwify.app/jyt1K19';
+        if ($checkoutUrl === '') $checkoutUrl = 'https://pay.kiwify.com.br/oX83aQK';
         if (!filter_var($checkoutUrl, FILTER_VALIDATE_URL) || parse_url($checkoutUrl, PHP_URL_SCHEME) !== 'https') $checkoutUrl = '';
         
         $guarantee = trim((string) getenv('ASSINATURA_GARANTIA_TEXTO'));
