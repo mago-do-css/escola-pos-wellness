@@ -23,9 +23,11 @@ O Apache usa `public/` como raiz pública. As rotas entram por `public/index.php
 
 ## Funil de assinatura
 
-A página de aula fica em `/aula-completa-entenda-por-tras-do-dinheiro` e a oferta em `/garantir-acesso-completo`. Configure no ambiente do container `ASSINATURA_AULA_VIDEO_URL` e `ASSINATURA_AULA_POSTER_URL` com os caminhos públicos dos arquivos; sem vídeo, a página exibe um espaço reservado. Configure `ASSINATURA_CHECKOUT_URL` com a URL HTTPS do checkout da assinatura; enquanto estiver vazia, a contratação permanece desabilitada. `ASSINATURA_GARANTIA_TEXTO` pode receber as condições confirmadas de garantia.
+A página de aula fica em `/aula-completa-entenda-por-tras-do-dinheiro` e a oferta em `/garantir-acesso-completo`. A aula usa por padrão o vídeo `aula-1-antes-de-procurar-a-raiz.mp4`. Para substituí-lo ou adicionar uma capa, configure `ASSINATURA_AULA_VIDEO_URL` ou `ASSINATURA_AULA_POSTER_URL` com os caminhos públicos dos arquivos. O checkout da assinatura usa o link da Kiwify configurado no projeto; para substituí-lo, defina uma URL HTTPS em `ASSINATURA_CHECKOUT_URL`. `ASSINATURA_GARANTIA_TEXTO` pode receber as condições confirmadas de garantia.
 
 Os títulos, descrições e miniaturas das aulas seguintes, assim como os depoimentos autorizados, são configurados em `app/Config/Assinatura.php`. `ASSINATURA_DEMO_SOCIAL=true` mostra exemplos identificados como fictícios para revisão; mantenha `false` em produção. A demonstração não acompanha compras nem representa vagas reais. Confirme os materiais e a oferta antes de publicar.
+
+Nos funis principal e ManyChat, `PageView` é enviado pelo Pixel e pela API com o mesmo identificador. Nas páginas de oferta, `ViewContent` também usa um identificador compartilhado; `Lead` usa o mesmo ID no navegador e no servidor para cadastros novos. A URL de origem distingue as páginas. A Kiwify continua responsável pelos eventos do checkout e da compra. Para ativar a API, configure `META_CAPI_ENABLED=true`, `META_PIXEL_ID` e `META_CAPI_ACCESS_TOKEN` no ambiente. Para validar sem misturar com a produção, informe `META_TEST_EVENT_CODE` na prévia de testes e consulte o Gerenciador de Eventos; `META_CAPI_DEBUG=true` é opcional para registrar o resultado no log. O teste `php tests/meta-subscription-capi.php` simula os envios localmente e não acessa a Meta.
 
 ## Escopo desta etapa
 

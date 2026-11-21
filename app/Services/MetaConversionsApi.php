@@ -13,14 +13,22 @@ final class MetaConversionsApi
         self::send('PageView', $eventId);
     }
 
+    public static function trackViewContent(string $eventId, string $contentName): void
+    {
+        self::send('ViewContent', $eventId, [], [
+            'content_name' => $contentName,
+            'content_category' => 'produto',
+        ]);
+    }
+
     /** @param array{name?: string, email?: string, whatsapp?: string} $lead */
     public static function trackLead(string $eventId, array $lead, ?string $sourcePath = null, ?string $entryPath = null): void
     {
         self::send('Lead', $eventId, $lead, [
-            'content_name' => $sourcePath === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita Por Trás do Dinheiro' : 'Mapa do Dinheiro',
-            'content_category' => $sourcePath === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita' : 'Lead magnet',
+            'content_name' => MetaTracking::pageName($sourcePath ?? '') ?: 'Mapa do Dinheiro',
+            'content_category' => in_array($sourcePath, ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'Aula gratuita' : 'Lead magnet',
             'entry_path' => $entryPath ?? '',
-            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'formulario' : 'vendas'),
+            'entry_type' => $entryPath === null ? 'desconhecida' : (in_array($entryPath, ['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro'], true) ? 'formulario' : 'vendas'),
         ], $sourcePath);
     }
 
@@ -32,9 +40,14 @@ final class MetaConversionsApi
         }
 
         $sourceUrl = $eventName === 'Lead' ? self::leadSourceUrl($sourcePath) : self::currentUrl();
-        if ($eventName === 'Lead') {
+        if (in_array($eventName, ['Lead', 'PageView', 'ViewContent'], true)) {
             $customData['page_url'] = $sourceUrl;
             $customData['page_path'] = (string) (parse_url($sourceUrl, PHP_URL_PATH) ?: '/');
+            $pageName = MetaTracking::pageName(rtrim($customData['page_path'], '/') ?: '/');
+            if ($pageName !== '') {
+                $customData['page_name'] = $pageName;
+                if ($eventName === 'PageView') $customData['content_name'] = $pageName;
+            }
         }
         $payload = [
             'data' => [[

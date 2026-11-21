@@ -30,6 +30,8 @@ $paths = [
     '/dinheiro-e-fruto' => 'PaginaDinheiroFruto',
     '/aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaGratuita',
     '/garantir-acesso-completo' => 'PaginaOfertaAssinatura',
+    '/asistir-aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaManychat',
+    '/garantir-acesso-completo-agora' => 'PaginaOfertaManychat',
 ];
 foreach ($paths as $path => $event) {
     $_SERVER['REQUEST_URI'] = $path;
@@ -42,7 +44,7 @@ foreach ($paths as $path => $event) {
 }
 $source = new ReflectionMethod(App\Services\MetaConversionsApi::class, 'leadSourceUrl');
 $_SERVER['REQUEST_URI'] = '/leads/capture';
-foreach (['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro'] as $path) {
+foreach (['/', '/mapa-do-dinheiro-gratuito', '/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro'] as $path) {
     if ($source->invoke(null, $path) !== 'https://example.test' . $path) {
         throw new RuntimeException('Origem incorreta para Lead em ' . $path);
     }

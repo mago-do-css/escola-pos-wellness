@@ -8,6 +8,16 @@ final class MetaTracking
 {
     public const GRAPH_API_VERSION = 'v24.0';
 
+    public static function pageName(string $path): string
+    {
+        return [
+            '/aula-completa-entenda-por-tras-do-dinheiro' => 'Aula gratuita - funil principal',
+            '/garantir-acesso-completo' => 'Oferta de assinatura - funil principal',
+            '/asistir-aula-completa-entenda-por-tras-do-dinheiro' => 'Aula gratuita - ManyChat',
+            '/garantir-acesso-completo-agora' => 'Oferta de assinatura - ManyChat',
+        ][$path] ?? '';
+    }
+
     public static function pixelId(): string
     {
         return trim((string) getenv('META_PIXEL_ID'));

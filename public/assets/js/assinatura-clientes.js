@@ -7,11 +7,18 @@
   const counter = counters[0];
   const minimum = counter ? Number(counter.dataset.minimum) : 0;
   let remaining = counter ? Number(counter.dataset.initial) : 0;
-  let index = 0;
+  let remainingCustomers = [];
+  let lastCustomer = null;
   let intervalId;
   const showCustomer = () => {
     if (counter && remaining <= minimum) return;
-    name.textContent = customers[index++ % customers.length];
+    if (!remainingCustomers.length) remainingCustomers = [...customers];
+    const choices = remainingCustomers.filter((customer) => customer !== lastCustomer);
+    const pool = choices.length ? choices : remainingCustomers;
+    const selected = pool[Math.floor(Math.random() * pool.length)];
+    remainingCustomers.splice(remainingCustomers.indexOf(selected), 1);
+    lastCustomer = selected;
+    name.textContent = selected;
     popup.hidden = false;
     if (counter) {
       remaining = Math.max(minimum, remaining - 1);

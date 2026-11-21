@@ -1,5 +1,5 @@
 <?php $formId = $formId ?? 'principal'; ?>
-<form class="members-form" data-capture-form data-capture-endpoint="/leads/capture" data-thank-you-url="/garantir-acesso-completo" novalidate>
+<form class="members-form" data-capture-form data-capture-endpoint="/leads/capture" data-thank-you-url="<?= htmlspecialchars($thankYouUrl ?? '/garantir-acesso-completo', ENT_QUOTES, 'UTF-8') ?>" novalidate>
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($leadFormToken, ENT_QUOTES, 'UTF-8') ?>">
     <input type="hidden" name="form_started_at" value="<?= (int) $leadFormStartedAt ?>">
     <div class="members-form__trap" aria-hidden="true"><label for="empresa-<?= $formId ?>">Não preencha</label><input id="empresa-<?= $formId ?>" name="company_website" tabindex="-1" autocomplete="off"></div>

@@ -17,6 +17,9 @@ assert.deepEqual(visit('/obrigado-mapa-do-dinheiro-gratuito', formSession), { en
 assert.deepEqual(visit('/por-tras-do-dinheiro-oferta', formSession), { entry_path: '/mapa-do-dinheiro-gratuito', entry_type: 'formulario' });
 const salesSession = session();
 const lessonSession = session();
+const manychatSession = session();
+assert.deepEqual(visit('/asistir-aula-completa-entenda-por-tras-do-dinheiro', manychatSession), { entry_path: '/asistir-aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
+assert.deepEqual(visit('/garantir-acesso-completo-agora', manychatSession), { entry_path: '/asistir-aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
 assert.deepEqual(visit('/aula-completa-entenda-por-tras-do-dinheiro', lessonSession), { entry_path: '/aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
 assert.deepEqual(visit('/garantir-acesso-completo', lessonSession), { entry_path: '/aula-completa-entenda-por-tras-do-dinheiro', entry_type: 'formulario' });
 assert.deepEqual(visit('/garantir-acesso-completo', session()), { entry_path: '/garantir-acesso-completo', entry_type: 'vendas' });

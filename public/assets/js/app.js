@@ -52,8 +52,8 @@ const captureLead = async (form) => {
   if (!response.ok || result.status !== 'ok') throw new Error(result.message || 'Não foi possível concluir o envio.');
 
   if (result.is_new_lead && window.metaTracking?.pixelId) {
-    const contentName = window.location.pathname === '/aula-completa-entenda-por-tras-do-dinheiro' ? 'Aula gratuita Por Trás do Dinheiro' : 'Mapa do Dinheiro';
-    window.fbq?.('track', 'Lead', { content_name: contentName, page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney?.entry_path || '', entry_type: window.metaJourney?.entry_type || 'desconhecida' }, { eventID: eventId });
+    const contentName = window.metaTracking.pageName || 'Mapa do Dinheiro';
+    window.fbq?.('track', 'Lead', { content_name: contentName, page_name: window.metaTracking.pageName || '', page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney?.entry_path || '', entry_type: window.metaJourney?.entry_type || 'desconhecida' }, { eventID: eventId });
   }
 };
 
@@ -133,7 +133,7 @@ document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
     video.volume = 1;
     try {
       await video.play();
-      playButton.hidden = true;
+      playButton.hidden = !video.paused;
     } catch (_) {
       playButton.hidden = false;
     }
@@ -141,6 +141,10 @@ document.querySelectorAll('[data-video-play-overlay]').forEach((video) => {
 
   playButton.addEventListener('click', start);
   video.addEventListener('play', () => { playButton.hidden = true; });
+  video.addEventListener('pause', () => { if (video.hasAttribute('data-click-to-pause')) playButton.hidden = false; });
   video.addEventListener('ended', () => { playButton.hidden = false; });
-  video.addEventListener('click', () => { if (video.paused) start(); });
+  video.addEventListener('click', () => {
+    if (video.paused) start();
+    else if (video.hasAttribute('data-click-to-pause')) video.pause();
+  });
 });

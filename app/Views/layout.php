@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 use App\Config\MetaTracking;
 use App\Config\WhatsAppSupport;
+use App\Services\MetaConversionsApi;
 
 $metaPixelId = MetaTracking::pixelId();
 $metaEventId = $metaPixelId !== '' ? 'pv_' . bin2hex(random_bytes(12)) : '';
@@ -17,6 +18,7 @@ $showWhatsapp = $showWhatsapp ?? true;
 $whatsappUrl = WhatsAppSupport::link($whatsappMessage ?? WhatsAppSupport::DEFAULT_MESSAGE);
 
 $metaPath = '/' . ltrim(rtrim((string) (parse_url((string) ($_SERVER['REQUEST_URI'] ?? '/'), PHP_URL_PATH) ?: '/'), '/'), '/');
+$metaPageName = MetaTracking::pageName($metaPath);
 $metaPageEvents = [
     '/' => 'PaginaMapaOriginal',
     '/mapa-do-dinheiro-gratuito' => 'PaginaMapaGratuitoB',
@@ -32,6 +34,8 @@ $metaPageEvents = [
     '/dinheiro-e-fruto' => 'PaginaDinheiroFruto',
     '/aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaGratuita',
     '/garantir-acesso-completo' => 'PaginaOfertaAssinatura',
+    '/asistir-aula-completa-entenda-por-tras-do-dinheiro' => 'PaginaAulaManychat',
+    '/garantir-acesso-completo-agora' => 'PaginaOfertaManychat',
 ];
 $metaPageEvent = $metaPageEvents[$metaPath] ?? null;
 $metaProduct = [
@@ -40,7 +44,15 @@ $metaProduct = [
     '/radar-do-dinheiro' => 'Radar do Dinheiro',
     '/dinheiro-e-fruto' => 'Dinheiro é Fruto',
     '/garantir-acesso-completo' => 'Área de membros Pós-Wellness',
+    '/garantir-acesso-completo-agora' => 'Área de membros Pós-Wellness - Manychat',
 ][$metaPath] ?? null;
+$subscriptionPaths = ['/aula-completa-entenda-por-tras-do-dinheiro', '/asistir-aula-completa-entenda-por-tras-do-dinheiro', '/garantir-acesso-completo', '/garantir-acesso-completo-agora'];
+$subscriptionCapi = in_array($metaPath, $subscriptionPaths, true) && MetaTracking::isEnabled();
+$metaViewContentId = ($subscriptionCapi && $metaProduct !== null) ? 'vc_' . bin2hex(random_bytes(12)) : '';
+if ($subscriptionCapi && $metaEventId !== '') {
+    MetaConversionsApi::trackPageView($metaEventId);
+    if ($metaViewContentId !== '') MetaConversionsApi::trackViewContent($metaViewContentId, $metaProduct);
+}
 ?>
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
@@ -56,10 +68,10 @@ $metaProduct = [
     <link rel="icon" href="/assets/images/favicon/favicon-192x192.png" type="image/png" sizes="192x192">
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/css/cta-pulse.css?v=1">
-    <script src="/assets/js/app.js?v=20261115-1" defer></script>
+    <script src="/assets/js/app.js?v=20261120-3" defer></script>
     <?php if ($metaPixelId !== ''): ?>
-    <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
-    <script src="/assets/js/meta-journey.js?v=2"></script>
+    <script>window.metaTracking = <?= json_encode(['pixelId' => $metaPixelId, 'pageEventId' => $metaEventId, 'pageName' => $metaPageName], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+    <script src="/assets/js/meta-journey.js?v=3"></script>
     <!-- Meta Pixel + Conversions API deduplication -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -73,17 +85,18 @@ $metaProduct = [
     fbq('init', <?= json_encode($metaPixelId) ?>);
     window.metaJourney = window.metaJourney || {entry_path: '', entry_type: 'desconhecida'};
     var metaPageData = {page_url: window.location.origin + window.location.pathname, page_path: window.location.pathname, entry_path: window.metaJourney.entry_path, entry_type: window.metaJourney.entry_type};
+    if (window.metaTracking.pageName) { metaPageData.page_name = window.metaTracking.pageName; metaPageData.content_name = window.metaTracking.pageName; }
     fbq('track', 'PageView', metaPageData, {eventID: <?= json_encode($metaEventId) ?>});
     <?php if ($metaPageEvent !== null): ?>
     fbq('trackCustom', <?= json_encode($metaPageEvent, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>, metaPageData);
     <?php endif; ?>
     <?php if ($metaProduct !== null): ?>
-    fbq('track', 'ViewContent', {content_name: <?= json_encode($metaProduct, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>, content_category: 'produto', page_url: metaPageData.page_url, page_path: metaPageData.page_path, entry_path: metaPageData.entry_path, entry_type: metaPageData.entry_type});
+    fbq('track', 'ViewContent', {content_name: <?= json_encode($metaProduct, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>, content_category: 'produto', page_name: metaPageData.page_name || '', page_url: metaPageData.page_url, page_path: metaPageData.page_path, entry_path: metaPageData.entry_path, entry_type: metaPageData.entry_type}<?= $metaViewContentId !== '' ? ', {eventID: ' . json_encode($metaViewContentId) . '}' : '' ?>);
     <?php endif; ?>
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <?php if (!$subscriptionCapi): ?><noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=<?= rawurlencode($metaPixelId) ?>&ev=PageView&noscript=1"
-    /></noscript>
+    /></noscript><?php endif; ?>
     <!-- End Meta Pixel + Conversions API deduplication -->
     <?php endif; ?>
 </head>

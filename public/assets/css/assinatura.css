@@ -74,7 +74,8 @@
 .members-story-card small { color:#e4bd84; }
 .members-story-quote { font-family:Georgia,serif; font-size:clamp(1.3rem,2.4vw,2rem); line-height:1.4; }
 @media (min-width:768px) { .members-story-quote { font-size:clamp(1rem,1.25vw,1.2rem); line-height:1.55; } }
-.members-story-person { display:flex; align-items:center; gap:1rem; }
+.members-story-person { display:flex; align-items:center; gap:1.4rem; margin-top:2rem; }
+.members-story-stars { display:block; margin-top:.8rem; color:#e9bd74; font-size:1.05rem; letter-spacing:.16em; }
 .members-story-person img,.members-story-photo { width:3.5rem; height:3.5rem; border-radius:50%; object-fit:cover; background:#80684f; display:grid; place-items:center; }
 .members-story-person strong,.members-story-person div span { display:block; }
 .members-story-person div span { margin-top:.2rem; color:#ccbca8; font-size:.8rem; }
@@ -187,6 +188,8 @@
 .members-about__intro > p:last-child,.members-about__mission { color:#d0c0ae; line-height:1.7; }
 .members-about__people { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2.5rem; }
 .members-about__people article { padding:clamp(1.4rem,3vw,2rem); border:1px solid rgba(216,184,142,.3); background:#30251d; }
+.members-about__people article::after { content:''; display:block; clear:both; }
+.members-about__photo { float:right; width:clamp(7rem,32%,10rem); height:auto; aspect-ratio:3/4; object-fit:cover; object-position:center top; margin:0 0 1rem 1.25rem; border:1px solid rgba(216,184,142,.3); }
 .members-about__number,.members-about__role { color:#dbb47e; }
 .members-about__number { font-size:.7rem; letter-spacing:.12em; }
 .members-about__people h3 { margin:.8rem 0 .25rem; font-size:2rem; }
@@ -240,3 +243,48 @@
 @media (prefers-reduced-motion:reduce) { .members-plan .members-plan__cta { animation:none; } }
 .members-page--lesson .members-header__cta,.members-page--lesson .members-button,.members-page--lesson .video-play-stage__button,.members-page--lesson .members-material a,body:has(.members-page--lesson) .whatsapp-float { animation:members-pulse 2s ease-in-out infinite; }
 @media (prefers-reduced-motion:reduce) { .members-page--lesson .members-header__cta,.members-page--lesson .members-button,.members-page--lesson .video-play-stage__button,.members-page--lesson .members-material a,body:has(.members-page--lesson) .whatsapp-float { animation:none; } }
+.members-page--lesson .members-playlist { background:linear-gradient(180deg,#211a15,#18130f); }
+.members-page--lesson .members-hero { padding:clamp(1.4rem,3vh,2.5rem) 0 3rem; }
+.members-page--lesson .members-hero .members-kicker { justify-content:center; margin-bottom:.7rem; }
+.members-page--lesson .members-hero h1 { max-width:25ch; margin:0 auto; font-size:clamp(2rem,3.3vw,3.2rem); line-height:1.08; text-align:center; }
+.members-page--lesson .members-hero .members-lead { max-width:42rem; margin:.8rem auto 0; font-size:clamp(.9rem,1.1vw,1rem); line-height:1.5; text-align:center; }
+.members-page--lesson .members-video-wrap { width:min(100%,42rem); margin:1.2rem auto 0; }
+.members-video-toggle { display:block; margin:.8rem auto 0; padding:.55rem 1rem; border:1px solid #b99468; background:#30241c; color:#f5eee2; font-family:inherit; font-size:.85rem; font-weight:600; line-height:1.3; cursor:pointer; }
+.members-video-toggle[hidden] { display:none; }
+.members-video-toggle:hover,.members-video-toggle:focus-visible { background:#d4ac71; color:#251c15; outline:2px solid #d4ac71; outline-offset:3px; }
+.members-next-lesson { display:flex; justify-content:center; margin:1.25rem auto 0; }
+.members-next-lesson .members-button { justify-content:center; text-align:center; }
+@media(max-width:767px) { .members-page--lesson .members-hero { padding:1.3rem 0 2.5rem; } .members-page--lesson .members-hero h1 { font-size:clamp(1.8rem,7vw,2.4rem); } .members-page--lesson .members-hero .members-lead { font-size:.88rem; } .members-page--lesson .members-video-wrap { margin-top:1rem; } }
+.members-page--lesson .members-section-heading .members-kicker { color:#d7ad76; }
+.members-page--lesson .members-section-heading h2 em { color:#dcb985; }
+.members-page--lesson .members-lesson { position:relative; padding:1.8rem 0; }
+.members-page--lesson .members-lesson__text { position:relative; z-index:1; }
+.members-lesson__action { display:inline-flex; align-items:center; gap:.8rem; margin-top:1rem; padding:.65rem .85rem; border:1px solid #c19a68; background:transparent; color:#f0d5aa; font-family:inherit; font-size:.8rem; font-weight:600; line-height:1.3; cursor:pointer; }
+.members-lesson__action:hover,.members-lesson__action:focus-visible { background:#d4ac71; color:#211a15; outline:2px solid #e2c28f; outline-offset:3px; }
+.members-lesson--last::after { content:''; position:absolute; z-index:2; inset:0; pointer-events:none; background:linear-gradient(to top,#1a1511 0%,rgba(26,21,17,.9) 12%,rgba(26,21,17,.48) 42%,transparent 85%); }
+.members-lesson--last .members-lesson__thumb { opacity:.48; }
+.members-playlist__continuation { margin:0; padding:1rem 0 0; text-align:center; color:#bb9f80; font-size:.8rem; }
+.members-lesson-cta { margin-top:3.5rem; padding:clamp(1.5rem,4vw,2.8rem); border:1px solid rgba(216,184,142,.4); background:linear-gradient(135deg,#3b2b1f,#282019); }
+.members-lesson-cta h2 { margin:0; font-size:clamp(2rem,3.5vw,3rem); line-height:1.1; }
+.members-lesson-cta > p:not(.members-kicker) { color:#d2c0a9; line-height:1.6; }
+.members-lesson-cta .members-button { margin-top:.8rem; }
+@keyframes members-lesson-cta-pulse { 0%,100% { transform:scale(1); box-shadow:0 0 0 0 rgba(228,188,125,.5); } 50% { transform:scale(1.035); box-shadow:0 0 0 10px rgba(228,188,125,0); } }
+.members-page--lesson .members-next-lesson .members-button,.members-page--lesson .members-lesson-cta .members-button { justify-content:center; padding:1rem 1.4rem; font-size:clamp(1rem,1.3vw,1.15rem); line-height:1.35; font-weight:700; text-align:center; animation:members-lesson-cta-pulse 1.8s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce) { .members-page--lesson .members-next-lesson .members-button,.members-page--lesson .members-lesson-cta .members-button { animation:none; } }
+.members-lesson-dialog { box-sizing:border-box; width:min(34rem,calc(100% - 2rem)); max-height:calc(100% - 2rem); padding:0; border:1px solid #a67b4d; background:#2c221b; color:#f5eee2; box-shadow:0 1.5rem 5rem #0009; }
+.members-lesson-dialog::backdrop { background:rgba(12,9,7,.82); }
+.members-lesson-dialog__inner { position:relative; padding:clamp(1.4rem,5vw,2.4rem); }
+.members-lesson-dialog__inner h2 { margin:0; padding-right:1rem; font-size:clamp(1.9rem,5vw,2.6rem); line-height:1.1; }
+.members-lesson-dialog__inner > p:not(.members-kicker) { margin:.8rem 0 1.5rem; color:#cdbda9; font-size:.9rem; line-height:1.6; }
+.members-lesson-dialog__close { position:absolute; right:1rem; top:.8rem; width:2.5rem; height:2.5rem; border:0; background:transparent; color:#f4e1c3; font-size:2rem; line-height:1; cursor:pointer; }
+.members-lesson-dialog .members-form__fields label { color:#e6d3b9; }
+.members-page--lesson .members-lesson-dialog .members-form__fields input { color:#fffaf3; border-bottom-color:#a8845b; }
+.members-page--lesson .members-lesson-dialog .members-form__fields input::placeholder { color:#b5a28e; }
+.members-page--lesson .members-lesson-dialog .members-form__fields input:focus { border-bottom-color:#f1d39e; }
+.members-page--lesson .members-lesson-dialog .members-form__consent { color:#dccbb7; }
+.members-page--lesson .members-lesson-dialog .members-form__consent { align-items:center; gap:.75rem; padding:.35rem 0; font-size:.85rem; line-height:1.45; cursor:pointer; }
+.members-page--lesson .members-lesson-dialog .members-form__consent input { width:1.2rem; height:1.2rem; margin:0; accent-color:#d4ac71; }
+@media (max-width:767px) { .members-page--lesson .members-lesson-dialog .members-form__consent { min-height:2.75rem; font-size:.95rem; } .members-page--lesson .members-lesson-dialog .members-form__consent input { width:1.4rem; height:1.4rem; } }
+.members-page--lesson .members-lesson-dialog .members-form .members-button { background:#d4ac71; color:#251c15; border-color:#e0bd86; }
+.members-lesson-dialog .members-form__feedback { color:#f2c492; }
+@media(max-width:767px) { .members-page--lesson .members-lesson { grid-template-columns:minmax(0,1fr) minmax(6rem,38%); gap:.8rem; } .members-lesson__action { padding:.55rem .65rem; font-size:.72rem; } }
